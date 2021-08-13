@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.86.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.86.0" /><link rel="alternate" type="application/rss&#43;xml" href="https://docs.hyte.jp/docs/bungeecord/index.xml">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -19,25 +20,20 @@
 
 <title>BungeeCord | Docs</title>
 <meta name="description" content="Docsy does docs"><meta property="og:title" content="BungeeCord" />
-<meta property="og:description" content="サブタイトル" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://docs.hyte.jp/docs/bungeecord/" /><meta property="article:section" content="docs" />
-<meta property="article:published_time" content="2021-07-13T19:50:31+09:00" />
-<meta property="article:modified_time" content="2021-08-02T19:24:18+09:00" /><meta property="og:site_name" content="Docs" />
+<meta property="og:description" content="BungeeCordの構築方法" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.hyte.jp/docs/bungeecord/" /><meta property="og:site_name" content="Docs" />
 
 <meta itemprop="name" content="BungeeCord">
-<meta itemprop="description" content="サブタイトル"><meta itemprop="datePublished" content="2021-07-13T19:50:31+09:00" />
-<meta itemprop="dateModified" content="2021-08-02T19:24:18+09:00" />
-<meta itemprop="wordCount" content="1">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="BungeeCordの構築方法"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="BungeeCord"/>
-<meta name="twitter:description" content="サブタイトル"/>
+<meta name="twitter:description" content="BungeeCordの構築方法"/>
 
 
 
 
-<link rel="preload" href="/scss/main.min.6566f4d81cca5274812d1be9a30cda2eb52eb1326be5dd5ed82b3e95ad2ada4c.css" as="style">
-<link href="/scss/main.min.6566f4d81cca5274812d1be9a30cda2eb52eb1326be5dd5ed82b3e95ad2ada4c.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.204d623147f1055d519cac6a5c8af3399c4a9ec45c81affbf274ab3fe4f05fc6.css" as="style">
+<link href="/scss/main.min.204d623147f1055d519cac6a5c8af3399c4a9ec45c81affbf274ab3fe4f05fc6.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -54,8 +50,11 @@
 
 
 
+
+<link rel="stylesheet" href="https://docs.hyte.jp/css/custom_heading.css">
+
   </head>
-  <body class="td-page">
+  <body class="td-section">
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
@@ -65,6 +64,18 @@
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
 		<ul class="navbar-nav mt-2 mt-lg-0">
 			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/about/" ><i class='fas fa-info'></i><span>このサイトについて</span></a>
+			</li>
 			
 			<li class="nav-item mr-4 mb-2 mb-lg-0">
 				
@@ -93,7 +104,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.63417f992e4dd90f74126939d5d6ece6.json"
+  data-offline-search-index-json-src="/offline-search-index.abba5abcd68231896b8726f3af62ccb7.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -112,9 +123,23 @@
 
 
   
+  <script>
+    $(function() {
+    $("#td-section-nav a").removeClass("active");
+    $("#td-section-nav #m-docsbungeecord").addClass("active"); 
+    $("#td-section-nav #m-docsbungeecord-li span").addClass("td-sidebar-nav-active-item"); 
+    $("#td-section-nav #m-docsbungeecord").parents("li").addClass("active-path"); 
+    $("#td-section-nav li.active-path").addClass("show"); 
+    $("#td-section-nav li.active-path").children("input").prop('checked', true);
+    $("#td-section-nav #m-docsbungeecord-li").siblings("li").addClass("show");  
+    $("#td-section-nav #m-docsbungeecord-li").children("ul").children("li").addClass("show");  
+    $("#td-sidebar-menu").toggleClass("d-none"); 
+    });
+  </script>
+  
 
 
-<div id="td-sidebar-menu" class="td-sidebar__inner">
+<div id="td-sidebar-menu" class="td-sidebar__inner d-none">
   
   <form class="td-sidebar__search d-flex align-items-center">
     
@@ -128,7 +153,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.63417f992e4dd90f74126939d5d6ece6.json"
+  data-offline-search-index-json-src="/offline-search-index.abba5abcd68231896b8726f3af62ccb7.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -162,7 +187,7 @@
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docs-li">
     
       <a href="/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">サーバーを建てる</span></a>
     
@@ -188,10 +213,66 @@
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsbungeecord-li">
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docssoftware-li">
     
-      <input type="checkbox" id="m-docsbungeecord-check" checked/>
-      <label for="m-docsbungeecord-check"><a href="/docs/bungeecord/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-docsbungeecord"><span class="td-sidebar-nav-active-item">BungeeCord</span></a></label>
+      <input type="checkbox" id="m-docssoftware-check"/>
+      <label for="m-docssoftware-check"><a href="/docs/software/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docssoftware"><span class="">サーバーソフト</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsjava-li">
+    
+      <input type="checkbox" id="m-docsjava-check"/>
+      <label for="m-docsjava-check"><a href="/docs/java/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docsjava"><span class="">Javaのインストール</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbungeecord-li">
+    
+      <input type="checkbox" id="m-docsbungeecord-check"/>
+      <label for="m-docsbungeecord-check"><a href="/docs/bungeecord/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docsbungeecord"><span class="">BungeeCord</span></a></label>
     
     
   </li>
@@ -220,25 +301,7 @@
   
   <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
   
-    
-    
-      
-    
-    
-    
-    
-    
-    
-    
-
-    <a href="https://github.com/hayate09273/docs/edit/master/content/ja/docs/BungeeCord/index.md" target="_blank"><i class="fa fa-edit fa-fw"></i> ページの編集</a>
-    <a href="https://github.com/hayate09273/docs/new/master/content/ja/docs/BungeeCord/index.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" target="_blank"><i class="fa fa-edit fa-fw"></i> 子ページを作成</a>
-    <a href="https://github.com/hayate09273/docs/issues/new?title=BungeeCord" target="_blank"><i class="fab fa-github fa-fw"></i> ドキュメントのissueを作成</a>
-    
-      
-      <a href="https://github.com/google/docsy/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> プロジェクトのissueを作成</a>
-    
-
+     <a href="https://github.com/Hayate09273/docs_content/edit/main/docs/BungeeCord/index.md" target="_blank"><i class="fa fa-edit fa-fw"></i> ページの編集</a>     
   
   
   </div>
@@ -246,6 +309,18 @@
 
             
 
+
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#linux">Linux</a>
+      <ul>
+        <li><a href="#bungeecordをダウンロード">BungeeCordをダウンロード</a></li>
+        <li><a href="#bungeecordを実行する">BungeeCordを実行する</a></li>
+      </ul>
+    </li>
+    <li><a href="#参考にしたサイト">参考にしたサイト</a></li>
+  </ul>
+</nav></div>
 
 
 
@@ -301,7 +376,7 @@
             
 <div class="td-content">
 	<h1>BungeeCord</h1>
-	<div class="lead">サブタイトル</div>
+  <div class="lead">BungeeCordの構築方法</div>
 	<header class="article-meta">
 		
 		
@@ -316,21 +391,63 @@
 			
 		
 		
-	</header>    
-	<p>本文</p>
+	</header>
+	<p>このページでは、BungeeCordを構築する方法について説明していきます。<br>
+Javaがインストール済みであることが前提です。
+Javaのインストール方法は<a href="/docs/java/">こちら</a></p>
+<h2 id="linux">Linux</h2>
+<h3 id="bungeecordをダウンロード">BungeeCordをダウンロード</h3>
+<p>まず、BungeeCord用のディレクトリを作成し、そのディレクトリに移動します。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir BungeeCord <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#204a87">cd</span> BungeeCord
+</code></pre></div><p>BungeeCord.jarをダウンロードします。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
+</code></pre></div><p>lsコマンドでBungeeCord.jarが存在することを確認しておきます。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls
+BungeeCord.jar
+</code></pre></div><h3 id="bungeecordを実行する">BungeeCordを実行する</h3>
+<p>まず、BungeeCordを実行するためのスクリプトを作成し、お好きなエディタで編集します。
+ここでは、start.shを作成し、vimで編集します。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch start.sh <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> vim start.sh
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">#!/bin/sh
+</span><span style="color:#8f5902;font-style:italic"></span>java -Xms512M -Xmx512M -jar BungeeCord.jar
+</code></pre></div><p>所有者を設定して、所有者にstart.shを実行する権限を与えます。
+ここでは、所有者のユーザー名をubuntuとします。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chown ubuntu start.sh
+chmod <span style="color:#0000cf;font-weight:bold">700</span> start.sh
+</code></pre></div><p>実行します。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./start.sh
+</code></pre></div><p>画面にログが流れ、最後がこのような文で終わっていたら成功です！</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>INFO<span style="color:#ce5c00;font-weight:bold">]</span> Listening on /0.0.0.0:25577
+</code></pre></div><h2 id="参考にしたサイト">参考にしたサイト</h2>
+<p><a href="https://ja.wikipedia.org/wiki/Java%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E5%B1%A5%E6%AD%B4">https://ja.wikipedia.org/wiki/Java%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E5%B1%A5%E6%AD%B4</a>
+<a href="https://www.spigotmc.org/wiki/bungeecord-installation/">https://www.spigotmc.org/wiki/bungeecord-installation/</a></p>
+
+        <div class="section-index">
+    
+    
+    
+    
+    
+    <hr class="panel-line">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+</div>
 
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
 
-    最終更新
-    August 2, 2021
-    : <a  href="https://github.com/hayate09273/docs/commit/73a286910a49ed9a780f0a6499cf55a82175e818">first commit (73a2869)</a>
-
 </div>
 
 </div>
-
 
           </main>
         </div>
@@ -346,10 +463,10 @@
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2021 The Docsy Authors All Rights Reserved</small>
-        <small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">プライバシーポリシー</a></small>
+        <small class="text-white">&copy; 2021 Hayate_0927 All Rights Reserved</small>
+        <small class="ml-1"><a href="/privacy_policy" target="_blank" rel="noopener">プライバシーポリシー</a></small>
 	
-		
+		<p class="mt-2"><a href="/about/">このサイトについて</a></p>
 	
       </div>
     </div>

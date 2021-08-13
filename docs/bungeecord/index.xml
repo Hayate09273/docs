@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs – BungeeCord</title>
+    <link>https://docs.hyte.jp/docs/bungeecord/</link>
+    <description>Recent content in BungeeCord on Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 13 Jul 2021 19:50:31 +0900</lastBuildDate>
+    
+	  <atom:link href="https://docs.hyte.jp/docs/bungeecord/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

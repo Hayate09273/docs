@@ -15,16 +15,36 @@
     
     
     <item>
-      <title>Docs: BungeeCord</title>
-      <link>https://docs.hyte.jp/docs/bungeecord/</link>
-      <pubDate>Tue, 13 Jul 2021 19:50:31 +0900</pubDate>
+      <title>Docs: サーバーソフト</title>
+      <link>https://docs.hyte.jp/docs/software/</link>
+      <pubDate>Sun, 08 Aug 2021 21:03:01 +0900</pubDate>
       
-      <guid>https://docs.hyte.jp/docs/bungeecord/</guid>
+      <guid>https://docs.hyte.jp/docs/software/</guid>
       <description>
         
         
-        &lt;p&gt;本文&lt;/p&gt;
-
+        &lt;h2 id=&#34;サーバーソフトの種類&#34;&gt;サーバーソフトの種類&lt;/h2&gt;
+&lt;p&gt;Minecraftのサーバーソフトには様々な種類があります。そのため、それぞれの違いについて最初に解説します。&lt;/p&gt;
+&lt;h3 id=&#34;公式サーバー&#34;&gt;公式サーバー&lt;/h3&gt;
+&lt;p&gt;公式が配布しているサーバーソフトです。バニラサーバーとも呼ばれます。&lt;/p&gt;
+&lt;p&gt;他のものと比べると機能が少ないため、難易度は一番低いです。初めての方はこれを使用してみると良いと思います。&lt;/p&gt;
+&lt;h3 id=&#34;spigot&#34;&gt;Spigot&lt;/h3&gt;
+&lt;p&gt;有志が開発しているサーバーソフトです。&lt;/p&gt;
+&lt;p&gt;プラグインが使用出来るため、自由度が高いです。&lt;br&gt;
+プラグインを使用することで、建物の保護が出来たり（&lt;a href=&#34;https://dev.bukkit.org/projects/worldguard&#34;&gt;WorldGuard&lt;/a&gt;）、Discordとサーバー内のチャットを繋げることが出来るようになります（&lt;a href=&#34;https://www.spigotmc.org/resources/discordsrv.18494/&#34;&gt;DiscordSRV&lt;/a&gt;）。&lt;/p&gt;
+&lt;h3 id=&#34;paper&#34;&gt;Paper&lt;/h3&gt;
+&lt;p&gt;Spigotを改良したサーバーソフトです。&lt;/p&gt;
+&lt;p&gt;「Spigotに比べて高速」と公式は謳っています。Spigotと互換性があるため、Spigotのプラグインが使用出来ます。&lt;/p&gt;
+&lt;h3 id=&#34;bungeecord&#34;&gt;BungeeCord&lt;/h3&gt;
+&lt;p&gt;サーバーとサーバーを繋げるためのソフトです。&lt;/p&gt;
+&lt;p&gt;図に表すとこのようになります。
+プレイヤーはBungeeCordを経由して、複数のサーバーを行き来することが出来ます。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;flowchart TD
+	プレイヤー &amp;lt;--&amp;gt; BungeeCord
+	BungeeCord &amp;lt;--&amp;gt; ロビーサーバー
+	BungeeCord &amp;lt;--&amp;gt; 生活サーバー
+	BungeeCord &amp;lt;--&amp;gt; ミニゲームサーバー
+&lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>
     
