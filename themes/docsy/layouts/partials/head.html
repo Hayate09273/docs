@@ -41,3 +41,6 @@
 {{ if eq (getenv "HUGO_ENV") "production" }}
 {{ template "_internal/google_analytics_async.html" . }}
 {{ end }}
+{{ range .Site.Params.customCSS }}
+<link rel="stylesheet" href="{{ . | absURL}}">
+{{ end }}
