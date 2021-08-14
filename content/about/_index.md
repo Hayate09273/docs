@@ -27,6 +27,10 @@ menu:
 制定日 2021年8月4日
 {{% /blocks/section %}}
 
-{{% blocks/lead %}}
-
-{{% /blocks/lead %}}
+{{% blocks/section type="section" %}}
+## 各コンテンツの説明
+### サーバーを建てる
+  ドキュメント
+### 雑記帳
+  ブログ
+{{% /blocks/section %}}
