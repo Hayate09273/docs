@@ -13494,7 +13494,7 @@ readers do not read off random characters that represent icons */
       margin-right: -30px; }
     .td-navbar .navbar-brand svg {
       display: inline-block;
-      margin: 0 10px;
+      margin: -100px;
       height: 30px; }
   .td-navbar .nav-link {
     text-transform: none;

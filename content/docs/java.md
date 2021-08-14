@@ -1,9 +1,9 @@
 ---
 title: "Javaのインストール"
 date: 2021-08-13T17:23:33+09:00
-github_url: "https://github.com/Hayate09273/docs_content/edit/main/docs/Java/index.md"
 draft: false
 description: Javaのインストール方法
+weight: 2
 ---
 
 このページでは、サーバーを動作させるために必要なJavaのインストール方法について説明していきます。
@@ -29,7 +29,7 @@ OpenJDK 64-Bit Server VM (build 16.0.1+9-Ubuntu-120.04, mixed mode, sharing)
 ```
 
 
-## Tips: バージョンの選び方
+## Tip: バージョンの選び方
 2021年8月現在、サポートされているJavaのバージョンは、8、11、16の3つです。
 
 Minecraft Java Edition 1.17ではJava 16以降が必要であるため、Minecraft Java Edition 1.17以降のサーバーが必要な場合、Java 16をインストールする必要があります。  

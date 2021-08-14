@@ -2,7 +2,6 @@
 title: "BungeeCord"
 date: 2021-07-13T19:50:31+09:00
 draft: false
-github_url: "https://github.com/Hayate09273/docs_content/edit/main/docs/BungeeCord/index.md"
 description: BungeeCordの構築方法
 ---
 
@@ -14,6 +13,7 @@ Javaのインストール方法は[こちら](/docs/java/)
 
 ### BungeeCordをダウンロード
 まず、BungeeCord用のディレクトリを作成し、そのディレクトリに移動します。
+名前はわかりやすいものにしておくと良いと思います。
 ```bash
 mkdir BungeeCord && cd BungeeCord
 ```
@@ -32,9 +32,10 @@ BungeeCord.jar
 ```bash
 touch start.sh && vim start.sh
 ```
-
+下の内容をstart.shに書き込みます。
+vimの場合は、iキーを押して入力モードに変更し、入力が終わったらEscを押したあとに:wqと入力してEnterキーを押してください。
 ```bash
-#!/bin/sh
+#!/bin/bash
 java -Xms512M -Xmx512M -jar BungeeCord.jar
 ```
 所有者を設定して、所有者にstart.shを実行する権限を与えます。
