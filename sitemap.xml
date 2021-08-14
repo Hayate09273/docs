@@ -3,16 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://docs.hyte.jp/docs/software/</loc>
-    <lastmod>2021-08-13T22:21:45+09:00</lastmod>
+    <lastmod>2021-08-08T21:03:01+09:00</lastmod>
+  </url><url>
+    <loc>https://docs.hyte.jp/docs/</loc>
+    <lastmod>2021-08-13T23:55:09+09:00</lastmod>
   </url><url>
     <loc>https://docs.hyte.jp/docs/java/</loc>
-    <lastmod>2021-08-13T22:21:45+09:00</lastmod>
+    <lastmod>2021-08-13T17:23:33+09:00</lastmod>
+  </url><url>
+    <loc>https://docs.hyte.jp/docs/vanilla/</loc>
+    <lastmod>2021-08-14T20:26:19+09:00</lastmod>
   </url><url>
     <loc>https://docs.hyte.jp/privacy_policy/</loc>
     <lastmod>2021-08-13T22:21:45+09:00</lastmod>
   </url><url>
     <loc>https://docs.hyte.jp/docs/bungeecord/</loc>
-    <lastmod>2021-08-13T22:21:45+09:00</lastmod>
+    <lastmod>2021-07-13T19:50:31+09:00</lastmod>
   </url><url>
     <loc>https://docs.hyte.jp/readme/</loc>
     <priority>0</priority>
@@ -25,9 +31,6 @@
     <loc>https://docs.hyte.jp/tags/</loc>
   </url><url>
     <loc>https://docs.hyte.jp/about/</loc>
-    <lastmod>2021-08-13T22:21:45+09:00</lastmod>
-  </url><url>
-    <loc>https://docs.hyte.jp/docs/</loc>
     <lastmod>2021-08-13T22:21:45+09:00</lastmod>
   </url>
 </urlset>
