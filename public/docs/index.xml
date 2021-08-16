@@ -5,7 +5,7 @@
     <description>Recent content in サーバーを建てる on みんなでマイクラ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 16 Aug 2021 18:43:50 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 16 Aug 2021 20:52:28 +0900</lastBuildDate>
     
 	  <atom:link href="https://docs.hyte.jp/docs/index.xml" rel="self" type="application/rss+xml" />
     
@@ -37,6 +37,46 @@ openjdk version &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;16.0.1&amp;#3
 OpenJDK Runtime Environment &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;build 16.0.1+9-Ubuntu-120.04&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
 OpenJDK 64-Bit Server VM &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;build 16.0.1+9-Ubuntu-120.04, mixed mode, sharing&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Ubuntuに構築する</title>
+      <link>https://docs.hyte.jp/docs/bungeecord/ubuntu/</link>
+      <pubDate>Mon, 16 Aug 2021 20:52:28 +0900</pubDate>
+      
+      <guid>https://docs.hyte.jp/docs/bungeecord/ubuntu/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;bungeecordをダウンロード&#34;&gt;BungeeCordをダウンロード&lt;/h2&gt;
+&lt;p&gt;まず、BungeeCord用のディレクトリを作成し、そのディレクトリに移動します。&lt;br&gt;
+名前はわかりやすいものにしておくと良いと思います。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;mkdir BungeeCord &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; BungeeCord
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;BungeeCord.jarをダウンロードします。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;wget https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;lsコマンドでBungeeCord.jarが存在することを確認しておきます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ls
+BungeeCord.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;bungeecordを実行する&#34;&gt;BungeeCordを実行する&lt;/h2&gt;
+&lt;p&gt;まず、BungeeCordを実行するためのスクリプトを作成し、お好きなエディタで編集します。
+ここでは、start.shを作成し、vimで編集します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;touch start.sh &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; vim start.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;下の内容をstart.shに書き込みます。
+vimの場合は、iキーを押して入力モードに変更し、入力が終わったらEscを押したあとに:wqと入力してEnterキーを押してください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;java -Xms512M -Xmx512M -jar BungeeCord.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;所有者を設定して、所有者にstart.shを実行する権限を与えます。
+ここでは、所有者のユーザー名をubuntuとします。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;chown ubuntu start.sh
+chmod &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;700&lt;/span&gt; start.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;実行します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;./start.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;画面にログが流れ、最後がこのような文で終わっていたら成功です！&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;INFO&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt; Listening on /0.0.0.0:25577
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;参考にしたサイト&#34;&gt;参考にしたサイト&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.spigotmc.org/wiki/bungeecord-installation&#34;&gt;BungeeCord Installation | SpigotMC - High Performance Minecraft&lt;/a&gt;&lt;/p&gt;
+
       </description>
     </item>
     
