@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>みんなでマイクラ – サーバーソフト</title>
+    <link>https://docs.hyte.jp/docs/software/</link>
+    <description>Recent content in サーバーソフト on みんなでマイクラ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 08 Aug 2021 21:03:01 +0900</lastBuildDate>
+    
+	  <atom:link href="https://docs.hyte.jp/docs/software/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>
