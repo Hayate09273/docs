@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>みんなでマイクラ – Linux</title>
+    <link>https://docs.hyte.jp/docs/linux/</link>
+    <description>Recent content in Linux on みんなでマイクラ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 16 Aug 2021 18:43:50 +0900</lastBuildDate>
+    
+	  <atom:link href="https://docs.hyte.jp/docs/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>
