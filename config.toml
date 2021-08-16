@@ -1,5 +1,5 @@
 baseURL = "https://docs.hyte.jp/"
-title = "Docs"
+title = "test"
 
 enableRobotsTXT = true
 
@@ -10,7 +10,7 @@ theme = ["docsy"]
 enableGitInfo = true
 
 # Language settings
-contentDir = "content/"
+contentDir = "content/ja"
 defaultContentLanguage = "ja"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
@@ -69,13 +69,13 @@ anchor = "smart"
 [services]
 [services.googleAnalytics]
 # Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].
-id = "UA-00000000-0"
+id = "G-2XRVZJXW2W"
 
 # Language configuration
 
 [languages]
 [languages.ja]
-title = "Docs"
+title = "みんなでマイクラ"
 description = "Docsy does docs"
 languageCode = "ja"
 languageName ="日本語"
@@ -96,7 +96,7 @@ weight = 1
 
 [params]
 copyright = "Hayate_0927"
-privacy_policy = "/privacy_policy"
+privacy_policy = "/about/#プライバシーポリシー"
 customCSS = ["/css/custom_heading.css"]
 
 # Menu title if your navbar has a versions selector to access old versions of your site.
@@ -118,7 +118,7 @@ version = "0.0"
 url_latest_version = "https://example.com"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/hayate09273/docs_content"
+github_repo = "https://github.com/hayate09273/docs"
 github_branch = "main"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
 github_project_repo = "https://github.com/google/docsy"
@@ -126,7 +126,7 @@ github_project_repo = "https://github.com/google/docsy"
 # Specify a value here if your content directory is not in your repo's root directory
 github_subdir = ""
 
-time_format_blog = "2006/01/02 月"
+time_format_blog = "Monday, January 02, 2006"
 time_format_default = "2006/01/02"
 # Sections to publish in the main RSS feed.
 rss_sections = ["blog"]
