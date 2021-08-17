@@ -3,7 +3,7 @@ title: このサイトについて
 linkTitle: このサイトについて
 menu:
   main:
-    weight: 10
+    weight: 1
     pre: <i class='fas fa-info'></i>
 ---
 

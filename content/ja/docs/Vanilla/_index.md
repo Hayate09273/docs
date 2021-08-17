@@ -2,7 +2,7 @@
 title: "公式サーバー"
 date: 2021-08-14T20:26:19+09:00
 draft: false
-description: 公式サーバーを構築する方法についての解説
+description: 公式サーバーの構築方法
 weight: 3
 ---
 

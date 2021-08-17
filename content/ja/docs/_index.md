@@ -4,7 +4,7 @@ title: "サーバーを建てる"
 linkTitle: "サーバーを建てる"
 menu:
   main:
-    weight: 20
+    weight: 2
     pre: <i class='fas fa-server'></i>
 weight: 1
 ---
