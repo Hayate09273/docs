@@ -4,7 +4,7 @@ linktitle: "サーバーソフト"
 date: 2021-08-08T21:03:01+09:00
 draft: false
 weight: 1
-description: サーバーソフトについての解説
+description: サーバーソフトの解説
 ---
 
 ## サーバーソフトの種類

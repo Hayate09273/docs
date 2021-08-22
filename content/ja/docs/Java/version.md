@@ -2,7 +2,7 @@
 title: "バージョンの選び方"
 date: 2021-08-16T18:23:15+09:00
 draft: false
-description: Javaバージョンの選び方についての解説
+description: Javaバージョンの選び方の解説
 ---
 
 ## バージョンの選び方

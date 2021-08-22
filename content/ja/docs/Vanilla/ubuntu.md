@@ -2,7 +2,7 @@
 title: "Ubuntuに構築する"
 date: 2021-08-16T18:27:50+09:00
 draft: false
-description: Ubuntuに公式サーバーを構築する方法についての解説
+description: Ubuntuに公式サーバーを構築する方法の解説
 ---
 
 ## サーバーのファイルをダウンロード
@@ -29,7 +29,7 @@ ubuntu@ubuntu-server:~/server$ nano start.sh
 下の内容をstart.shに書き込みます。
 ```bash
 #!/bin/bash
-java -Xmx1G -Xms1G -jar server.jar nogui
+java -Xms1G -Xmx1G -jar server.jar nogui
 ```
 所有者を設定して、所有者にstart.shを実行する権限を与えます。
 ここでは、所有者のユーザー名をubuntuとします。
@@ -67,3 +67,6 @@ Done!と表示されたら成功です！
 [Server thread/INFO]: Done (62.449s)! For help, type "help"
 ```
 サーバーを終了する場合は、「stop」と入力してEnterキーを押してください。
+```bash
+>stop
+```
