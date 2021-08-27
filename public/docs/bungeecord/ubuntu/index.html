@@ -28,7 +28,7 @@
 <meta itemprop="name" content="Ubuntuに構築する">
 <meta itemprop="description" content="UbuntuにBungeeCordを構築する方法の解説"><meta itemprop="datePublished" content="2021-08-16T20:52:28+09:00" />
 <meta itemprop="dateModified" content="2021-08-22T20:07:47+09:00" />
-<meta itemprop="wordCount" content="54">
+<meta itemprop="wordCount" content="62">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ubuntuに構築する"/>
 <meta name="twitter:description" content="UbuntuにBungeeCordを構築する方法の解説"/>
@@ -120,7 +120,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0959ee68481de81d07b2ca0cbb314527.json"
+  data-offline-search-index-json-src="/offline-search-index.54d05eecad25f222ebcaa388b27a9cac.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -169,7 +169,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0959ee68481de81d07b2ca0cbb314527.json"
+  data-offline-search-index-json-src="/offline-search-index.54d05eecad25f222ebcaa388b27a9cac.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -679,28 +679,29 @@
 	<h2 id="bungeecordをダウンロード">BungeeCordをダウンロード</h2>
 <p>まず、BungeeCord用のディレクトリを作成し、そのディレクトリに移動します。<br>
 名前はわかりやすいものにしておくと良いと思います。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir BungeeCord <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#204a87">cd</span> BungeeCord
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir BungeeCord <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#204a87">cd</span> BungeeCord
 </code></pre></div><p>BungeeCord.jarをダウンロードします。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
 </code></pre></div><p>lsコマンドでBungeeCord.jarが存在することを確認しておきます。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls
 BungeeCord.jar
 </code></pre></div><h2 id="bungeecordを実行する">BungeeCordを実行する</h2>
 <p>まず、BungeeCordを実行するためのスクリプトを作成し、お好きなエディタで編集します。
-ここでは、start.shを作成し、vimで編集します。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch start.sh <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> vim start.sh
-</code></pre></div><p>下の内容をstart.shに書き込みます。
-vimの場合は、iキーを押して入力モードに変更し、入力が終わったらEscを押したあとに:wqと入力してEnterキーを押してください。</p>
+ここでは、start.shを作成し、nanoで編集します。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ touch start.sh <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> nano start.sh
+</code></pre></div><p>下の内容をstart.shに書き込みます。</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">#!/bin/bash
 </span><span style="color:#8f5902;font-style:italic"></span>java -Xms512M -Xmx512M -jar BungeeCord.jar
 </code></pre></div><p>所有者を設定して、所有者にstart.shを実行する権限を与えます。
 ここでは、所有者のユーザー名をubuntuとします。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chown ubuntu start.sh
-chmod <span style="color:#0000cf;font-weight:bold">700</span> start.sh
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ chown ubuntu start.sh
+$ chmod <span style="color:#0000cf;font-weight:bold">700</span> start.sh
 </code></pre></div><p>実行します。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./start.sh
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./start.sh
 </code></pre></div><p>画面にログが流れ、最後がこのような文で終わっていたら成功です！</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>INFO<span style="color:#ce5c00;font-weight:bold">]</span> Listening on /0.0.0.0:25577
+</code></pre></div><p>BungeeCordを終了する場合は、「end」と入力してください。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;end
 </code></pre></div><h2 id="参考にしたサイト">参考にしたサイト</h2>
 <p><a href="https://www.spigotmc.org/wiki/bungeecord-installation">BungeeCord Installation | SpigotMC - High Performance Minecraft</a></p>
 
