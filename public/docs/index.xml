@@ -40,6 +40,37 @@ OpenJDK 64-Bit Server VM &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;
     </item>
     
     <item>
+      <title>Docs: コマンド</title>
+      <link>https://docs.hyte.jp/docs/linux/command/</link>
+      <pubDate>Sat, 28 Aug 2021 21:43:18 +0900</pubDate>
+      
+      <guid>https://docs.hyte.jp/docs/linux/command/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;ls&#34;&gt;ls&lt;/h3&gt;
+&lt;p&gt;ディレクトリの中に存在するファイルやディレクトリを表示するコマンドです。&lt;/p&gt;
+&lt;h3 id=&#34;pwd&#34;&gt;pwd&lt;/h3&gt;
+&lt;p&gt;現在いるディレクトリを表示するコマンドです。&lt;/p&gt;
+&lt;h3 id=&#34;cd&#34;&gt;cd&lt;/h3&gt;
+&lt;p&gt;指定したディレクトリへ移動するコマンドです。&lt;/p&gt;
+&lt;h3 id=&#34;mkdir&#34;&gt;mkdir&lt;/h3&gt;
+&lt;p&gt;ディレクトリを作成するコマンドです。&lt;/p&gt;
+&lt;h3 id=&#34;rmdir&#34;&gt;rmdir&lt;/h3&gt;
+&lt;p&gt;ディレクトリを削除するコマンドです。&lt;/p&gt;
+&lt;h3 id=&#34;touch&#34;&gt;touch&lt;/h3&gt;
+&lt;p&gt;ファイルを作成するコマンドです。&lt;/p&gt;
+&lt;h3 id=&#34;rm&#34;&gt;rm&lt;/h3&gt;
+&lt;p&gt;ファイルを削除するコマンドです。ディレクトリを削除することもできます。&lt;/p&gt;
+&lt;h3 id=&#34;cp&#34;&gt;cp&lt;/h3&gt;
+&lt;p&gt;ファイルやディレクトリをコピーするコマンドです。&lt;/p&gt;
+&lt;h3 id=&#34;mv&#34;&gt;mv&lt;/h3&gt;
+&lt;p&gt;ファイルやディレクトリを移動するコマンドです。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Ubuntuに構築する</title>
       <link>https://docs.hyte.jp/docs/spigot/ubuntu/</link>
       <pubDate>Wed, 18 Aug 2021 23:40:32 +0900</pubDate>
