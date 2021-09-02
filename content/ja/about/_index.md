@@ -42,3 +42,13 @@ Minecraftサーバーを建てるために必要なこと、サーバーを構�
 + 雑記帳  
 Minecraftサーバーを運営していて思ったことなどを適当に書きます。
 {{% /blocks/section %}}
+
+{{% blocks/section type="section" color="primary" %}}
+## 使用しているソフトウェアなど
++ Hugo  
+静的サイトを生成するソフトウェア。
++ Docsy  
+技術文書のためのHugoテーマ。
++ GitHub Pages  
+GitHubが運営しているWebサイトホスティングサービス。
+{{% /blocks/section %}}
