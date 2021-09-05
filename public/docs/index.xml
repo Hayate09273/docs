@@ -50,6 +50,22 @@ OpenJDK 64-Bit Server VM &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;
         
         &lt;h3 id=&#34;ls&#34;&gt;ls&lt;/h3&gt;
 &lt;p&gt;ディレクトリの中に存在するファイルやディレクトリを表示するコマンドです。&lt;/p&gt;
+&lt;h4 id=&#34;オプション&#34;&gt;オプション&lt;/h4&gt;
+&lt;p&gt;lsコマンドのオプションです。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ls -la
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;などのように、複数のオプションを同時に使うこともできます。&lt;br&gt;
+-laの場合は、隠しファイルなども含めて、ファイルやディレクトリの詳細を表示するということになります。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-a 隠しファイルなども全て表示&lt;/li&gt;
+&lt;li&gt;-l 最終更新時間などの詳細も表示&lt;/li&gt;
+&lt;li&gt;-t 最終更新時間の新しい順に表示&lt;/li&gt;
+&lt;li&gt;-r 逆順に表示&lt;/li&gt;
+&lt;li&gt;-1 縦に並べて表示&lt;/li&gt;
+&lt;li&gt;-x 横に並べて表示&lt;/li&gt;
+&lt;li&gt;-S ファイルサイズ順に表示&lt;/li&gt;
+&lt;li&gt;-X 拡張子順に表示&lt;/li&gt;
+&lt;li&gt;-R ディレクトリの中身も表示&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;pwd&#34;&gt;pwd&lt;/h3&gt;
 &lt;p&gt;現在いるディレクトリを表示するコマンドです。&lt;/p&gt;
 &lt;h3 id=&#34;cd&#34;&gt;cd&lt;/h3&gt;
