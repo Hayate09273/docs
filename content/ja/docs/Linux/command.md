@@ -25,16 +25,47 @@ $ ls -la
 + -R ディレクトリの中身も表示
 ### pwd  
 現在いるディレクトリを表示するコマンドです。
+```bash
+$ pwd
+/home/ubuntu
+```
 ### cd  
 指定したディレクトリへ移動するコマンドです。
+```bash
+$ cd dir1
+```
 ### mkdir  
 ディレクトリを作成するコマンドです。
+```bash
+$ mkdir dir1
+$ ls
+dir1
+```
 ### rmdir  
 ディレクトリを削除するコマンドです。
+```bash
+$ ls
+dir1
+$ rmdir dir1
+$ ls
+
+```
 ### touch  
 ファイルを作成するコマンドです。
+```bash
+$ touch file
+$ ls
+file
+```
 ### rm  
 ファイルを削除するコマンドです。ディレクトリを削除することもできます。
+```bash
+$ ls
+file
+$ rm file
+$ ls
+
+```
 ### cp  
 ファイルやディレクトリをコピーするコマンドです。
 ### mv

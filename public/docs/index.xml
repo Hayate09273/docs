@@ -68,17 +68,36 @@ OpenJDK 64-Bit Server VM &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;
 &lt;/ul&gt;
 &lt;h3 id=&#34;pwd&#34;&gt;pwd&lt;/h3&gt;
 &lt;p&gt;現在いるディレクトリを表示するコマンドです。&lt;/p&gt;
-&lt;h3 id=&#34;cd&#34;&gt;cd&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ &lt;span style=&#34;color:#204a87&#34;&gt;pwd&lt;/span&gt;
+/home/ubuntu
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;cd&#34;&gt;cd&lt;/h3&gt;
 &lt;p&gt;指定したディレクトリへ移動するコマンドです。&lt;/p&gt;
-&lt;h3 id=&#34;mkdir&#34;&gt;mkdir&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ &lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; dir1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;mkdir&#34;&gt;mkdir&lt;/h3&gt;
 &lt;p&gt;ディレクトリを作成するコマンドです。&lt;/p&gt;
-&lt;h3 id=&#34;rmdir&#34;&gt;rmdir&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ mkdir dir1
+$ ls
+dir1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;rmdir&#34;&gt;rmdir&lt;/h3&gt;
 &lt;p&gt;ディレクトリを削除するコマンドです。&lt;/p&gt;
-&lt;h3 id=&#34;touch&#34;&gt;touch&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ls
+dir1
+$ rmdir dir1
+$ ls
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;touch&#34;&gt;touch&lt;/h3&gt;
 &lt;p&gt;ファイルを作成するコマンドです。&lt;/p&gt;
-&lt;h3 id=&#34;rm&#34;&gt;rm&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ touch file
+$ ls
+file
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;rm&#34;&gt;rm&lt;/h3&gt;
 &lt;p&gt;ファイルを削除するコマンドです。ディレクトリを削除することもできます。&lt;/p&gt;
-&lt;h3 id=&#34;cp&#34;&gt;cp&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ls
+file
+$ rm file
+$ ls
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;cp&#34;&gt;cp&lt;/h3&gt;
 &lt;p&gt;ファイルやディレクトリをコピーするコマンドです。&lt;/p&gt;
 &lt;h3 id=&#34;mv&#34;&gt;mv&lt;/h3&gt;
 &lt;p&gt;ファイルやディレクトリを移動するコマンドです。&lt;/p&gt;
