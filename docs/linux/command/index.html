@@ -23,12 +23,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.hyte.jp/docs/linux/command/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2021-08-28T21:43:18+09:00" />
-<meta property="article:modified_time" content="2021-08-28T21:57:39+09:00" /><meta property="og:site_name" content="みんなでマイクラ" />
+<meta property="article:modified_time" content="2021-09-05T21:32:37+09:00" /><meta property="og:site_name" content="みんなでマイクラ" />
 
 <meta itemprop="name" content="コマンド">
 <meta itemprop="description" content="基本的なLinuxコマンドの解説"><meta itemprop="datePublished" content="2021-08-28T21:43:18+09:00" />
-<meta itemprop="dateModified" content="2021-08-28T21:57:39+09:00" />
-<meta itemprop="wordCount" content="43">
+<meta itemprop="dateModified" content="2021-09-05T21:32:37+09:00" />
+<meta itemprop="wordCount" content="77">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="コマンド"/>
 <meta name="twitter:description" content="基本的なLinuxコマンドの解説"/>
@@ -120,7 +120,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.851db2c5e03b092e138bb79c129a8e93.json"
+  data-offline-search-index-json-src="/offline-search-index.3656b99357d5f2a40deed4596565057a.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -169,7 +169,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.851db2c5e03b092e138bb79c129a8e93.json"
+  data-offline-search-index-json-src="/offline-search-index.3656b99357d5f2a40deed4596565057a.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -739,17 +739,36 @@
 </ul>
 <h3 id="pwd">pwd</h3>
 <p>現在いるディレクトリを表示するコマンドです。</p>
-<h3 id="cd">cd</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#204a87">pwd</span>
+/home/ubuntu
+</code></pre></div><h3 id="cd">cd</h3>
 <p>指定したディレクトリへ移動するコマンドです。</p>
-<h3 id="mkdir">mkdir</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#204a87">cd</span> dir1
+</code></pre></div><h3 id="mkdir">mkdir</h3>
 <p>ディレクトリを作成するコマンドです。</p>
-<h3 id="rmdir">rmdir</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir dir1
+$ ls
+dir1
+</code></pre></div><h3 id="rmdir">rmdir</h3>
 <p>ディレクトリを削除するコマンドです。</p>
-<h3 id="touch">touch</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls
+dir1
+$ rmdir dir1
+$ ls
+
+</code></pre></div><h3 id="touch">touch</h3>
 <p>ファイルを作成するコマンドです。</p>
-<h3 id="rm">rm</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ touch file
+$ ls
+file
+</code></pre></div><h3 id="rm">rm</h3>
 <p>ファイルを削除するコマンドです。ディレクトリを削除することもできます。</p>
-<h3 id="cp">cp</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls
+file
+$ rm file
+$ ls
+
+</code></pre></div><h3 id="cp">cp</h3>
 <p>ファイルやディレクトリをコピーするコマンドです。</p>
 <h3 id="mv">mv</h3>
 <p>ファイルやディレクトリを移動するコマンドです。</p>
@@ -759,8 +778,8 @@
 	<div class="text-muted mt-5 pt-3 border-top">
 
     最終更新
-    2021/08/28
-    : <a  href="https://github.com/hayate09273/docs/commit/2855c4021bf0cd1c3941a07353397d51ec40509d">docs/Linux/commandを追加 (2855c40)</a>
+    2021/09/05
+    : <a  href="https://github.com/hayate09273/docs/commit/2744af7eba8648459d4f9604ac314fb69a840e68">docs/Linux/commandを編集 (2744af7)</a>
 
 </div>
 
