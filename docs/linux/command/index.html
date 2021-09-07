@@ -23,12 +23,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.hyte.jp/docs/linux/command/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2021-08-28T21:43:18+09:00" />
-<meta property="article:modified_time" content="2021-09-05T21:32:37+09:00" /><meta property="og:site_name" content="みんなでマイクラ" />
+<meta property="article:modified_time" content="2021-09-06T23:20:00+09:00" /><meta property="og:site_name" content="みんなでマイクラ" />
 
 <meta itemprop="name" content="コマンド">
 <meta itemprop="description" content="基本的なLinuxコマンドの解説"><meta itemprop="datePublished" content="2021-08-28T21:43:18+09:00" />
-<meta itemprop="dateModified" content="2021-09-05T21:32:37+09:00" />
-<meta itemprop="wordCount" content="77">
+<meta itemprop="dateModified" content="2021-09-06T23:20:00+09:00" />
+<meta itemprop="wordCount" content="127">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="コマンド"/>
 <meta name="twitter:description" content="基本的なLinuxコマンドの解説"/>
@@ -120,7 +120,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.3656b99357d5f2a40deed4596565057a.json"
+  data-offline-search-index-json-src="/offline-search-index.d71d547506a5178e98124bf126d5c59b.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -169,7 +169,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.3656b99357d5f2a40deed4596565057a.json"
+  data-offline-search-index-json-src="/offline-search-index.d71d547506a5178e98124bf126d5c59b.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -769,8 +769,46 @@ $ rm file
 $ ls
 
 </code></pre></div><h3 id="cp">cp</h3>
-<p>ファイルやディレクトリをコピーするコマンドです。</p>
-<h3 id="mv">mv</h3>
+<p>ファイルやディレクトリをコピーするコマンドです。<br>
+使用例の解説を書こうと思ったらめっちゃ長くなりました。</p>
+<ol>
+<li>pwdコマンドで現在のディレクトリを確認</li>
+<li>lsコマンドで現在のディレクトリに保存されているファイルやディレクトリの一覧を表示<br>
+-Rオプションが付いているので、現在のディレクトリに保存されているディレクトリの中身も表示されますが、現在は中身がないので何も表示されていません。</li>
+<li>catコマンドでfile1の中身を表示</li>
+<li>file1をdir1の中に「file1_copy」というファイル名でコピー</li>
+<li>再びlsコマンドでファイルやディレクトリの一覧を表示</li>
+<li>dir1の中に「file1_copy」があることを確認</li>
+<li>catコマンドでdir1/file1_copyの中身がfile1と同じ「Hello World!」であることを確認</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#204a87">pwd</span>
+/home/ubuntu
+
+$ ls -R
+dir1 file1
+
+./dir1:
+
+$ cat file1
+Hello World!
+
+$ cp file1 dir1/file1_copy
+
+$ ls -R
+dir1 file1
+
+./dir1:
+file1_copy
+
+$ cat dir1/file1_copy
+Hello World!
+</code></pre></div><p>グラフで表すとこのようになります。  青で囲んだものはディレクトリです。</p>
+<pre><code class="language-mermaid" data-lang="mermaid">graph LR
+	home:::dir---ubuntu:::dir---dir1:::dir
+	ubuntu:::dir---file1
+	dir1:::dir---file1_copy
+	classDef dir stroke:blue
+</code></pre><h3 id="mv">mv</h3>
 <p>ファイルやディレクトリを移動するコマンドです。</p>
 
 	
@@ -778,8 +816,8 @@ $ ls
 	<div class="text-muted mt-5 pt-3 border-top">
 
     最終更新
-    2021/09/05
-    : <a  href="https://github.com/hayate09273/docs/commit/2744af7eba8648459d4f9604ac314fb69a840e68">docs/Linux/commandを編集 (2744af7)</a>
+    2021/09/06
+    : <a  href="https://github.com/hayate09273/docs/commit/2e8600751a60908878624b3404b643e21a87750b">docs/Linux/commandを編集 (2e86007)</a>
 
 </div>
 
