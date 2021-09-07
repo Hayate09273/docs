@@ -98,8 +98,46 @@ $ rm file
 $ ls
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;cp&#34;&gt;cp&lt;/h3&gt;
-&lt;p&gt;ファイルやディレクトリをコピーするコマンドです。&lt;/p&gt;
-&lt;h3 id=&#34;mv&#34;&gt;mv&lt;/h3&gt;
+&lt;p&gt;ファイルやディレクトリをコピーするコマンドです。&lt;br&gt;
+使用例の解説を書こうと思ったらめっちゃ長くなりました。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;pwdコマンドで現在のディレクトリを確認&lt;/li&gt;
+&lt;li&gt;lsコマンドで現在のディレクトリに保存されているファイルやディレクトリの一覧を表示&lt;br&gt;
+-Rオプションが付いているので、現在のディレクトリに保存されているディレクトリの中身も表示されますが、現在は中身がないので何も表示されていません。&lt;/li&gt;
+&lt;li&gt;catコマンドでfile1の中身を表示&lt;/li&gt;
+&lt;li&gt;file1をdir1の中に「file1_copy」というファイル名でコピー&lt;/li&gt;
+&lt;li&gt;再びlsコマンドでファイルやディレクトリの一覧を表示&lt;/li&gt;
+&lt;li&gt;dir1の中に「file1_copy」があることを確認&lt;/li&gt;
+&lt;li&gt;catコマンドでdir1/file1_copyの中身がfile1と同じ「Hello World!」であることを確認&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ &lt;span style=&#34;color:#204a87&#34;&gt;pwd&lt;/span&gt;
+/home/ubuntu
+
+$ ls -R
+dir1 file1
+
+./dir1:
+
+$ cat file1
+Hello World!
+
+$ cp file1 dir1/file1_copy
+
+$ ls -R
+dir1 file1
+
+./dir1:
+file1_copy
+
+$ cat dir1/file1_copy
+Hello World!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;グラフで表すとこのようになります。  青で囲んだものはディレクトリです。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph LR
+	home:::dir---ubuntu:::dir---dir1:::dir
+	ubuntu:::dir---file1
+	dir1:::dir---file1_copy
+	classDef dir stroke:blue
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;mv&#34;&gt;mv&lt;/h3&gt;
 &lt;p&gt;ファイルやディレクトリを移動するコマンドです。&lt;/p&gt;
 
       </description>

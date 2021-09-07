@@ -67,7 +67,47 @@ $ ls
 
 ```
 ### cp  
-ファイルやディレクトリをコピーするコマンドです。
+ファイルやディレクトリをコピーするコマンドです。  
+使用例の解説を書こうと思ったらめっちゃ長くなりました。
+1. pwdコマンドで現在のディレクトリを確認  
+2. lsコマンドで現在のディレクトリに保存されているファイルやディレクトリの一覧を表示  
+-Rオプションが付いているので、現在のディレクトリに保存されているディレクトリの中身も表示されますが、現在は中身がないので何も表示されていません。
+3. catコマンドでfile1の中身を表示  
+4. file1をdir1の中に「file1_copy」というファイル名でコピー  
+5. 再びlsコマンドでファイルやディレクトリの一覧を表示  
+6. dir1の中に「file1_copy」があることを確認  
+7. catコマンドでdir1/file1_copyの中身がfile1と同じ「Hello World!」であることを確認 
+```bash
+$ pwd
+/home/ubuntu
+
+$ ls -R
+dir1 file1
+
+./dir1:
+
+$ cat file1
+Hello World!
+
+$ cp file1 dir1/file1_copy
+
+$ ls -R
+dir1 file1
+
+./dir1:
+file1_copy
+
+$ cat dir1/file1_copy
+Hello World!
+```
+グラフで表すとこのようになります。  青で囲んだものはディレクトリです。
+```mermaid
+graph LR
+	home:::dir---ubuntu:::dir---dir1:::dir
+	ubuntu:::dir---file1
+	dir1:::dir---file1_copy
+	classDef dir stroke:blue
+```
 ### mv
 ファイルやディレクトリを移動するコマンドです。
 
