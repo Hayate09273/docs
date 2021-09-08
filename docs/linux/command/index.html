@@ -23,12 +23,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.hyte.jp/docs/linux/command/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2021-08-28T21:43:18+09:00" />
-<meta property="article:modified_time" content="2021-09-06T23:20:00+09:00" /><meta property="og:site_name" content="みんなでマイクラ" />
+<meta property="article:modified_time" content="2021-09-07T23:53:16+09:00" /><meta property="og:site_name" content="みんなでマイクラ" />
 
 <meta itemprop="name" content="コマンド">
 <meta itemprop="description" content="基本的なLinuxコマンドの解説"><meta itemprop="datePublished" content="2021-08-28T21:43:18+09:00" />
-<meta itemprop="dateModified" content="2021-09-06T23:20:00+09:00" />
-<meta itemprop="wordCount" content="127">
+<meta itemprop="dateModified" content="2021-09-07T23:53:16+09:00" />
+<meta itemprop="wordCount" content="158">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="コマンド"/>
 <meta name="twitter:description" content="基本的なLinuxコマンドの解説"/>
@@ -120,7 +120,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.d71d547506a5178e98124bf126d5c59b.json"
+  data-offline-search-index-json-src="/offline-search-index.7bd737a29d03027a016c434124a07d02.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -169,7 +169,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.d71d547506a5178e98124bf126d5c59b.json"
+  data-offline-search-index-json-src="/offline-search-index.7bd737a29d03027a016c434124a07d02.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -750,9 +750,13 @@
 $ ls
 dir1
 </code></pre></div><h3 id="rmdir">rmdir</h3>
-<p>ディレクトリを削除するコマンドです。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls
+<p>空のディレクトリを削除するコマンドです。<br>
+中身ごと削除したい場合は、rmコマンドを使用します。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls -R
 dir1
+
+./dir1:
+
 $ rmdir dir1
 $ ls
 
@@ -762,7 +766,7 @@ $ ls
 $ ls
 file
 </code></pre></div><h3 id="rm">rm</h3>
-<p>ファイルを削除するコマンドです。ディレクトリを削除することもできます。</p>
+<p>ファイルやディレクトリを削除するコマンドです。</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls
 file
 $ rm file
@@ -809,15 +813,33 @@ Hello World!
 	dir1:::dir---file1_copy
 	classDef dir stroke:blue
 </code></pre><h3 id="mv">mv</h3>
-<p>ファイルやディレクトリを移動するコマンドです。</p>
+<p>ファイル名やディレクトリ名を変更したり、ファイルやディレクトリを移動させるコマンドです。</p>
+<p>例　ファイル名を「file」から「file1」へ変更</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls
+file
 
+$ mv file file1
+
+<span style="color:#000">$ls</span>
+file1
+</code></pre></div><p>例　「file」を「dir」の中へ移動</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls -R
+dir file
+
+$ mv file dir/.
+
+$ ls -R
+dir
+
+./dir: file
+</code></pre></div>
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
 
     最終更新
-    2021/09/06
-    : <a  href="https://github.com/hayate09273/docs/commit/2e8600751a60908878624b3404b643e21a87750b">docs/Linux/commandを編集 (2e86007)</a>
+    2021/09/07
+    : <a  href="https://github.com/hayate09273/docs/commit/2f8ab8f14e59a2acdf870a1759a239d3e5e3c9cc">docs/Linux/commandを編集 (2f8ab8f)</a>
 
 </div>
 
