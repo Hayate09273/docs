@@ -55,9 +55,13 @@
 $ ls
 dir1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;rmdir&#34;&gt;rmdir&lt;/h3&gt;
-&lt;p&gt;ディレクトリを削除するコマンドです。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ls
+&lt;p&gt;空のディレクトリを削除するコマンドです。&lt;br&gt;
+中身ごと削除したい場合は、rmコマンドを使用します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ls -R
 dir1
+
+./dir1:
+
 $ rmdir dir1
 $ ls
 
@@ -67,7 +71,7 @@ $ ls
 $ ls
 file
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;rm&#34;&gt;rm&lt;/h3&gt;
-&lt;p&gt;ファイルを削除するコマンドです。ディレクトリを削除することもできます。&lt;/p&gt;
+&lt;p&gt;ファイルやディレクトリを削除するコマンドです。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ls
 file
 $ rm file
@@ -114,8 +118,26 @@ Hello World!
 	dir1:::dir---file1_copy
 	classDef dir stroke:blue
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;mv&#34;&gt;mv&lt;/h3&gt;
-&lt;p&gt;ファイルやディレクトリを移動するコマンドです。&lt;/p&gt;
+&lt;p&gt;ファイル名やディレクトリ名を変更したり、ファイルやディレクトリを移動させるコマンドです。&lt;/p&gt;
+&lt;p&gt;例　ファイル名を「file」から「file1」へ変更&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ls
+file
 
+$ mv file file1
+
+&lt;span style=&#34;color:#000&#34;&gt;$ls&lt;/span&gt;
+file1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;例　「file」を「dir」の中へ移動&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ls -R
+dir file
+
+$ mv file dir/.
+
+$ ls -R
+dir
+
+./dir: file
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     

@@ -42,10 +42,14 @@ $ ls
 dir1
 ```
 ### rmdir  
-ディレクトリを削除するコマンドです。
+空のディレクトリを削除するコマンドです。  
+中身ごと削除したい場合は、rmコマンドを使用します。
 ```bash
-$ ls
+$ ls -R
 dir1
+
+./dir1:
+
 $ rmdir dir1
 $ ls
 
@@ -58,7 +62,7 @@ $ ls
 file
 ```
 ### rm  
-ファイルを削除するコマンドです。ディレクトリを削除することもできます。
+ファイルやディレクトリを削除するコマンドです。
 ```bash
 $ ls
 file
@@ -109,5 +113,28 @@ graph LR
 	classDef dir stroke:blue
 ```
 ### mv
-ファイルやディレクトリを移動するコマンドです。
+ファイル名やディレクトリ名を変更したり、ファイルやディレクトリを移動させるコマンドです。  
 
+例　ファイル名を「file」から「file1」へ変更
+```bash
+$ ls
+file
+
+$ mv file file1
+
+$ls
+file1
+```
+
+例　「file」を「dir」の中へ移動
+```bash
+$ ls -R
+dir file
+
+$ mv file dir/.
+
+$ ls -R
+dir
+
+./dir: file
+```
