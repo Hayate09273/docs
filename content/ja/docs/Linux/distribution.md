@@ -1,7 +1,7 @@
 ---
 title: "Linuxディストリビューション"
 date: 2021-09-09T23:27:23+09:00
-draft: true
+draft: false
 description: Linuxディストリビューションの解説
 ---
 
