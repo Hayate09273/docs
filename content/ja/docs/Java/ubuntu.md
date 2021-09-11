@@ -2,7 +2,7 @@
 title: "Ubuntuにインストールする"
 date: 2021-08-16T18:21:10+09:00
 draft: false
-description: UbuntuにJavaをインストールする方法の解説
+description: UbuntuにJavaをインストールする方法
 weight: 1
 ---
 

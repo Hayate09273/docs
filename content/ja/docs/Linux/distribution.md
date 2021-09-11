@@ -8,11 +8,11 @@ description: Linuxディストリビューションの解説
 このページでは、Linuxディストリビューションについて解説していきます。
 Linuxディストリビューションを大きく3つに分けると次のようになります。
 
-## Debian系
+### Debian系
 Debian、Ubuntu、Linux Mintなど
 
-## RedHat系
+### RedHat系
 RedHat Enterprise Linux、Cent OS、Fedoraなど
 
-## Arch系
+### Arch系
 Arch Linux、Manjaroなど

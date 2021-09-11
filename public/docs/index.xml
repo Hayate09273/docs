@@ -50,11 +50,11 @@ OpenJDK 64-Bit Server VM &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;
         
         &lt;p&gt;このページでは、Linuxディストリビューションについて解説していきます。
 Linuxディストリビューションを大きく3つに分けると次のようになります。&lt;/p&gt;
-&lt;h2 id=&#34;debian系&#34;&gt;Debian系&lt;/h2&gt;
+&lt;h3 id=&#34;debian系&#34;&gt;Debian系&lt;/h3&gt;
 &lt;p&gt;Debian、Ubuntu、Linux Mintなど&lt;/p&gt;
-&lt;h2 id=&#34;redhat系&#34;&gt;RedHat系&lt;/h2&gt;
+&lt;h3 id=&#34;redhat系&#34;&gt;RedHat系&lt;/h3&gt;
 &lt;p&gt;RedHat Enterprise Linux、Cent OS、Fedoraなど&lt;/p&gt;
-&lt;h2 id=&#34;arch系&#34;&gt;Arch系&lt;/h2&gt;
+&lt;h3 id=&#34;arch系&#34;&gt;Arch系&lt;/h3&gt;
 &lt;p&gt;Arch Linux、Manjaroなど&lt;/p&gt;
 
       </description>
