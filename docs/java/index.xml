@@ -41,6 +41,42 @@ OpenJDK 64-Bit Server VM &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;
     </item>
     
     <item>
+      <title>Docs: Windowsにインストールする</title>
+      <link>https://docs.hyte.jp/docs/java/windows/</link>
+      <pubDate>Sat, 11 Sep 2021 22:27:45 +0900</pubDate>
+      
+      <guid>https://docs.hyte.jp/docs/java/windows/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;インストーラーのダウンロード&#34;&gt;インストーラーのダウンロード&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.oracle.com/jp/java/technologies/javase-downloads.html&#34;&gt;Oracleの公式サイト&lt;/a&gt;からJavaをダウンロードします。&lt;br&gt;
+バージョンは8、11、16がありますが、Minecraft Java Edition 1.17ではJava 16が要件となっているので、16をお勧めします。&lt;br&gt;
+「JDK Download」をクリックし、「Windows x64 Installer」の右にあるファイル名をクリックします。&lt;br&gt;
+チェックボックスにチェックを入れて同意し、緑色のダウンロードボタンをクリックします。&lt;/p&gt;
+&lt;h3 id=&#34;インストール&#34;&gt;インストール&lt;/h3&gt;
+&lt;p&gt;先ほどダウンロードしたインストーラーを起動します。ユーザーアカウント制御の確認画面が表示されたら「はい」をクリックしてください。
+セットアップが始まります。&lt;/p&gt;
+&lt;p&gt;「Java SE Development Kit 16.0.2のインストール・ウィザードへようこそ&lt;/p&gt;
+&lt;p&gt;このウィザードでは、Java SE Development Kit 16.0.2のインストール・プロセスを順を追って説明します。」&lt;br&gt;
+この画面では次を選択します。&lt;/p&gt;
+&lt;p&gt;「プライベートJREおよびsrc.zipを含むJava(TM) SE Development Kit 16.0.2 (64-bit)。
+ハードドライブに420MBが必要です。インストール・フォルダを変更するには、『変更』ボタンをクリックします。」&lt;br&gt;
+この画面では、インストールフォルダを変更しない場合は次を選択します。&lt;/p&gt;
+&lt;p&gt;コンピューターにJavaがインストールされるので、少し待ちます。&lt;/p&gt;
+&lt;p&gt;「Java(TM) SE Development Kit 16.0.2 (64-bit)が正常にインストールされました」&lt;br&gt;
+この画面が表示されたら、閉じるを選択して終了します。&lt;/p&gt;
+&lt;h3 id=&#34;javaのpathの確認&#34;&gt;JavaのPATHの確認&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;スタートボタンを右クリックし、「Windows PowerShell(I)」をクリックします。&lt;/li&gt;
+&lt;li&gt;「java -version」と入力してEnterキーを押します。&lt;/li&gt;
+&lt;li&gt;Javaのバージョンが表示されていたらOKです。&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: バージョンの選び方</title>
       <link>https://docs.hyte.jp/docs/java/version/</link>
       <pubDate>Mon, 16 Aug 2021 18:23:15 +0900</pubDate>
