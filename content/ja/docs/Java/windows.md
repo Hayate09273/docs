@@ -1,7 +1,7 @@
 ---
-title: "Windows"
+title: "Windowsにインストールする"
 date: 2021-09-11T22:27:45+09:00
-draft: true
+draft: false
 description: WindowsにJavaをインストールする方法
 ---
 
@@ -17,17 +17,17 @@ description: WindowsにJavaをインストールする方法
 
 「Java SE Development Kit 16.0.2のインストール・ウィザードへようこそ
 
-このウィザードでは、Java SE Development Kit 16.0.2のインストール・プロセスを順を追って説明します。」
+このウィザードでは、Java SE Development Kit 16.0.2のインストール・プロセスを順を追って説明します。」  
 この画面では次を選択します。
 
 
-「プレイベートJREおよびsrc.zipを含むJava(TM) SE Development Kit 16.0.2 (64-bit)。
-ハードドライブに420MBが必要です。インストール・フォルダを変更するには、『変更』ボタンをクリックします。」
+「プライベートJREおよびsrc.zipを含むJava(TM) SE Development Kit 16.0.2 (64-bit)。
+ハードドライブに420MBが必要です。インストール・フォルダを変更するには、『変更』ボタンをクリックします。」  
 この画面では、インストールフォルダを変更しない場合は次を選択します。
 
 コンピューターにJavaがインストールされるので、少し待ちます。
 
-「Java(TM) SE Development Kit 16.0.2 (64-bit)が正常にインストールされました」
+「Java(TM) SE Development Kit 16.0.2 (64-bit)が正常にインストールされました」  
 この画面が表示されたら、閉じるを選択して終了します。
 
 ### JavaのPATHの確認
