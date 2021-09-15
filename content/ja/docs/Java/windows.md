@@ -1,17 +1,17 @@
 ---
-title: "Windowsにインストールする"
+title: "Windows"
 date: 2021-09-11T22:27:45+09:00
 draft: false
 description: WindowsにJavaをインストールする方法
 ---
 
-### インストーラーのダウンロード
+## インストーラーのダウンロード
 [Oracleの公式サイト](https://www.oracle.com/jp/java/technologies/javase-downloads.html)からJavaをダウンロードします。  
 バージョンは8、11、16がありますが、Minecraft Java Edition 1.17ではJava 16が要件となっているので、16をお勧めします。  
 「JDK Download」をクリックし、「Windows x64 Installer」の右にあるファイル名をクリックします。  
 チェックボックスにチェックを入れて同意し、緑色のダウンロードボタンをクリックします。  
 
-### インストール
+## インストール
 先ほどダウンロードしたインストーラーを起動します。ユーザーアカウント制御の確認画面が表示されたら「はい」をクリックしてください。
 セットアップが始まります。
 
@@ -30,7 +30,7 @@ description: WindowsにJavaをインストールする方法
 「Java(TM) SE Development Kit 16.0.2 (64-bit)が正常にインストールされました」  
 この画面が表示されたら、閉じるを選択して終了します。
 
-### JavaのPATHの確認
+## JavaのPATHの確認
 1. スタートボタンを右クリックし、「Windows PowerShell(I)」をクリックします。
 2. 「java -version」と入力してEnterキーを押します。
 3. Javaのバージョンが表示されていたらOKです。

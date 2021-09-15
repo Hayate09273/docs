@@ -1,5 +1,5 @@
 ---
-title: "Ubuntuにインストールする"
+title: "Ubuntu"
 date: 2021-08-16T18:21:10+09:00
 draft: false
 description: UbuntuにJavaをインストールする方法

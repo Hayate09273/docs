@@ -1,5 +1,5 @@
 ---
-title: "Ubuntuに構築する"
+title: "Ubuntu"
 date: 2021-08-16T18:27:50+09:00
 draft: false
 description: Ubuntuに公式サーバーを構築する方法
