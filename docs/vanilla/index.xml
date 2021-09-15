@@ -16,7 +16,143 @@
     
     
     <item>
-      <title>Docs: Ubuntuに構築する</title>
+      <title>Docs: Windows</title>
+      <link>https://docs.hyte.jp/docs/vanilla/windows/</link>
+      <pubDate>Sat, 11 Sep 2021 22:24:43 +0900</pubDate>
+      
+      <guid>https://docs.hyte.jp/docs/vanilla/windows/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;サーバーファイルのダウンロード&#34;&gt;サーバーファイルのダウンロード&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;サーバーのファイルを保管するためのフォルダを好きな場所に作成してください。&lt;/li&gt;
+&lt;li&gt;Minecraft Launcherを開き、「起動構成」タブ、「New installation」をクリックします。&lt;/li&gt;
+&lt;li&gt;バージョンの欄でお好きなバージョンを選び、右上の「サーバー」をクリックします。&lt;/li&gt;
+&lt;li&gt;1.で作成したフォルダの中にserver.jarを保存します。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;現在のフォルダの中身&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;server.jar&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;サーバーを実行&#34;&gt;サーバーを実行&lt;/h2&gt;
+&lt;h3 id=&#34;スタートスクリプトを作成&#34;&gt;スタートスクリプトを作成&lt;/h3&gt;
+&lt;p&gt;server.jarと同じフォルダ内に、スタートスクリプトを作成します。&lt;br&gt;
+名前は「start.bat」など分かりやすいものに変更してください。&lt;br&gt;
+拡張子は一度txtファイルを作成してから、batに変更してください。&lt;/p&gt;
+&lt;h3 id=&#34;作成したスタートスクリプトを編集&#34;&gt;作成したスタートスクリプトを編集&lt;/h3&gt;
+&lt;p&gt;拡張子が.batの場合、ダブルクリックするとコマンドプロンプトが起動するので、編集する場合はstart.batを選択して右クリック→編集(E)をクリックしてください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;@ECHO OFF
+java -Xms1G -Xmx1G -jar server.jar nogui
+PAUSE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;現在のフォルダの中身&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;server.jar&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;start.bat&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;startbatを実行&#34;&gt;start.batを実行&lt;/h3&gt;
+&lt;p&gt;start.batを実行してください。&lt;br&gt;
+コマンドプロンプトが起動しますが、怖くありません。&lt;br&gt;
+初回起動時には「You need to agree to the EULA in order to run the server. Go to eula.txt for more info.」という表示が出て、強制的に終了されます。&lt;br&gt;
+これは、「EULAに同意してください」というメッセージです。&lt;br&gt;
+EULAに同意するために、「eula.txt」を編集します。
+eula=falseをeula=trueに変更し、保存します。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;現在のフォルダの中身&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;logs&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;eula.txt&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;server.jar&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;server.properties&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;start.bat&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;もう一度startbatを実行&#34;&gt;もう一度start.batを実行&lt;/h3&gt;
+&lt;p&gt;もう一度start.batを実行します。&lt;br&gt;
+設定が読み込まれ、ワールドが生成されます。「Done!」と表示されていたらOKです！&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;現在のフォルダの中身&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;logs&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;world&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;banned-ips.json&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;banned-players.json&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;eula.txt&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ops.json&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;server.jar&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;server.properties&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;start.bat&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;usercache.json&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;whitelist.json&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;サーバーを終了する&#34;&gt;サーバーを終了する&lt;/h3&gt;
+&lt;p&gt;コンソールに「stop」と入力してEnterキーを押してください。&lt;br&gt;
+データが保存された後、「続行するには何かキーを押してください」と表示されたら、何かキーを押してウインドウを閉じます。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Ubuntu</title>
       <link>https://docs.hyte.jp/docs/vanilla/ubuntu/</link>
       <pubDate>Mon, 16 Aug 2021 18:27:50 +0900</pubDate>
       
