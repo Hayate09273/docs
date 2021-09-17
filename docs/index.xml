@@ -23,13 +23,18 @@
       <description>
         
         
-        &lt;p&gt;このページでは、UbuntuにJavaをインストールする方法について解説していきます。&lt;/p&gt;
+        &lt;h2 id=&#34;インストール&#34;&gt;インストール&lt;/h2&gt;
 &lt;p&gt;Ubuntuの場合は、aptを使用してインストールするのが良いと思います。&lt;br&gt;
 このコマンドを実行すると、Java 16がインストールされます。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo apt update
 
 $ sudo apt install openjdk-16-jre -y
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;「java -version」でバージョンを確認します。このように表示されたらインストール完了です。&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;古いバージョンのJavaを使用したい場合は、「16」の部分を他の数字に置き換えてください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo apt install openjdk-11-jre -y
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo apt install openjdk-8-jre -y
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;バージョンを確認&#34;&gt;バージョンを確認&lt;/h2&gt;
+&lt;p&gt;「java -version」でバージョンを確認します。このように表示されたらインストール完了です。&lt;br&gt;
+ダブルクオーテーションで囲まれた部分がバージョンになります。これはインストール時期によって違うかもしれません。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ java -version
 
 openjdk version &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;16.0.1&amp;#34;&lt;/span&gt; 2021-04-20
@@ -359,7 +364,7 @@ dir
     </item>
     
     <item>
-      <title>Docs: Ubuntuに構築する</title>
+      <title>Docs: Ubuntu</title>
       <link>https://docs.hyte.jp/docs/spigot/ubuntu/</link>
       <pubDate>Wed, 18 Aug 2021 23:40:32 +0900</pubDate>
       
@@ -421,7 +426,7 @@ Done!と表示されたら成功です！&lt;/p&gt;
     </item>
     
     <item>
-      <title>Docs: Ubuntuに構築する</title>
+      <title>Docs: Ubuntu</title>
       <link>https://docs.hyte.jp/docs/bungeecord/ubuntu/</link>
       <pubDate>Mon, 16 Aug 2021 20:52:28 +0900</pubDate>
       
@@ -538,7 +543,7 @@ Done!と表示されたら成功です！&lt;/p&gt;
 &lt;p&gt;基本はJava 16で、必要に迫られた時のみJava 8か11を使用すると良いと思います。&lt;/p&gt;
 &lt;h3 id=&#34;javaとminecraftサーバーのバージョン別互換性&#34;&gt;JavaとMinecraftサーバーのバージョン別互換性&lt;/h3&gt;
 &lt;p&gt;JavaとMinecraftサーバーのバージョン別互換性についていくつかの組み合わせで検証し、下の表にまとめました。&lt;br&gt;
-Javaには後方互換性があるため、最新のJava 16で古いソフトウェアを動作させることも可能です。&lt;/p&gt;
+Javaには後方互換性があるため、最新のJava 16で古いソフトウェアを動作させることも可能ですが、安定して動作するかは分かりません。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
