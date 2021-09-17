@@ -6,7 +6,7 @@ description: UbuntuにJavaをインストールする方法
 weight: 1
 ---
 
-このページでは、UbuntuにJavaをインストールする方法について解説していきます。
+## インストール
 
 Ubuntuの場合は、aptを使用してインストールするのが良いと思います。  
 このコマンドを実行すると、Java 16がインストールされます。
@@ -15,7 +15,17 @@ $ sudo apt update
 
 $ sudo apt install openjdk-16-jre -y
 ```
-「java -version」でバージョンを確認します。このように表示されたらインストール完了です。
+
+古いバージョンのJavaを使用したい場合は、「16」の部分を他の数字に置き換えてください。
+```bash
+$ sudo apt install openjdk-11-jre -y
+```
+```bash
+$ sudo apt install openjdk-8-jre -y
+```
+## バージョンを確認
+「java -version」でバージョンを確認します。このように表示されたらインストール完了です。  
+ダブルクオーテーションで囲まれた部分がバージョンになります。これはインストール時期によって違うかもしれません。
 ```bash
 $ java -version
 

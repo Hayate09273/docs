@@ -1,8 +1,8 @@
 ---
-title: "Ubuntuに構築する"
+title: "Ubuntu"
 date: 2021-08-18T23:40:32+09:00
 draft: false
-description: UbuntuにSpigotサーバーを構築する方法の解説
+description: UbuntuにSpigotサーバーを構築する方法
 ---
 
 ## Gitをインストール
