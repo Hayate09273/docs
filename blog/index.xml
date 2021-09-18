@@ -16,11 +16,33 @@
     
     
     <item>
+      <title>Blog: Japan Minecraft ServersのバナーをMarkdownで埋め込む</title>
+      <link>https://docs.hyte.jp/blog/jms-banner/</link>
+      <pubDate>Sat, 18 Sep 2021 23:43:56 +0900</pubDate>
+      
+      <guid>https://docs.hyte.jp/blog/jms-banner/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;導入&#34;&gt;導入&lt;/h2&gt;
+&lt;p&gt;Japan Minecraft Serversは、Minecraftでマルチプレイを楽しんでいる人が一度は見たことがあると思います。&lt;br&gt;
+Japan Minecraft Serversにはバナーという機能があり、これをWebサイトに埋め込むことで、現在のオンラインプレイヤー数やIPアドレスをお洒落に表示されることができます。&lt;/p&gt;
+&lt;p&gt;サーバーのページに飛び、「バナー」タブをクリックして、バナータイプを選択します。&lt;br&gt;
+するとこのようなHTMLのコードが生成されます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;リンク&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;img&lt;/span&gt; &lt;span style=&#34;color:#c4a000&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;画像リンク&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;markdown&#34;&gt;Markdown&lt;/h2&gt;
+&lt;p&gt;これをMarkdownで表示させるには、このようにします。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;[&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;![&lt;/span&gt;](&lt;span style=&#34;color:#c4a000&#34;&gt;画像リンク&lt;/span&gt;)](リンク)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
       <title>Blog: NFSが原因でLuckPermsが動かなかった話</title>
-      <link>https://docs.hyte.jp/blog/nfs_vs_luckperms/</link>
+      <link>https://docs.hyte.jp/blog/nfs-vs-luckperms/</link>
       <pubDate>Thu, 19 Aug 2021 00:29:16 +0900</pubDate>
       
-      <guid>https://docs.hyte.jp/blog/nfs_vs_luckperms/</guid>
+      <guid>https://docs.hyte.jp/blog/nfs-vs-luckperms/</guid>
       <description>
         
         
