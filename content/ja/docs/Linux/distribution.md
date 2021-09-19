@@ -9,10 +9,21 @@ description: Linuxディストリビューションの解説
 Linuxディストリビューションを大きく3つに分けると次のようになります。
 
 ### Debian系
-Debian、Ubuntu、Linux Mintなど
+- Debian  
+100%自由ソフトウェアであることを理念として開発されたOS。
+- Ubuntu  
+Debianから派生したOS。世界的にかなり人気です。デスクトップ用途とサーバー用途どちらにも使われることが多いと思います。また、Ubuntuから派生したOSもかなり多いです。
+- Linux Mint  
+Ubuntuから派生したOSの一つ。デスクトップ用途で使われることが多いと思います。
 
 ### RedHat系
-RedHat Enterprise Linux、Cent OS、Fedoraなど
+- RedHat Enterprise Linux (RHEL)  
+主に企業向けのOS。個人で使うことはあまりないと思います。
+- CentOS  
+RHELとの完全互換を目指したOS。サーバー用途で使われることが多いと思います。
 
 ### Arch系
-Arch Linux、Manjaroなど
+- Arch Linux  
+シンプルなOS。初期状態でインストールされているソフトはかなり少ないですが、カスタマイズ性が高いとも言えます。
+- Manjaro  
+Arch Linuxにお洒落なデスクトップ環境を纏わせたOS。Arch Linuxに比べるとハードルが低いです。デスクトップ用途で使われることが多いと思います。

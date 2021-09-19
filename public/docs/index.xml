@@ -258,11 +258,28 @@ eula=falseをeula=trueに変更し、保存します。&lt;/p&gt;
         &lt;p&gt;このページでは、Linuxディストリビューションについて解説していきます。
 Linuxディストリビューションを大きく3つに分けると次のようになります。&lt;/p&gt;
 &lt;h3 id=&#34;debian系&#34;&gt;Debian系&lt;/h3&gt;
-&lt;p&gt;Debian、Ubuntu、Linux Mintなど&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Debian&lt;br&gt;
+100%自由ソフトウェアであることを理念として開発されたOS。&lt;/li&gt;
+&lt;li&gt;Ubuntu&lt;br&gt;
+Debianから派生したOS。世界的にかなり人気です。デスクトップ用途とサーバー用途どちらにも使われることが多いと思います。また、Ubuntuから派生したOSもかなり多いです。&lt;/li&gt;
+&lt;li&gt;Linux Mint&lt;br&gt;
+Ubuntuから派生したOSの一つ。デスクトップ用途で使われることが多いと思います。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;redhat系&#34;&gt;RedHat系&lt;/h3&gt;
-&lt;p&gt;RedHat Enterprise Linux、Cent OS、Fedoraなど&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RedHat Enterprise Linux (RHEL)&lt;br&gt;
+主に企業向けのOS。個人で使うことはあまりないと思います。&lt;/li&gt;
+&lt;li&gt;CentOS&lt;br&gt;
+RHELとの完全互換を目指したOS。サーバー用途で使われることが多いと思います。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;arch系&#34;&gt;Arch系&lt;/h3&gt;
-&lt;p&gt;Arch Linux、Manjaroなど&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Arch Linux&lt;br&gt;
+シンプルなOS。初期状態でインストールされているソフトはかなり少ないですが、カスタマイズ性が高いとも言えます。&lt;/li&gt;
+&lt;li&gt;Manjaro&lt;br&gt;
+Arch Linuxにお洒落なデスクトップ環境を纏わせたOS。Arch Linuxに比べるとハードルが低いです。デスクトップ用途で使われることが多いと思います。&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>
