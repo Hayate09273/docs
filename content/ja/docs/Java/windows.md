@@ -1,5 +1,6 @@
 ---
-title: "Windows"
+title: "WindowsにJavaをインストール"
+linktitle: "Windows"
 date: 2021-09-11T22:27:45+09:00
 draft: false
 description: WindowsにJavaをインストールする方法

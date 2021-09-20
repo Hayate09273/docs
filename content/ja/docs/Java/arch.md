@@ -1,5 +1,6 @@
 ---
-title: "Arch Linux"
+title: "Arch LinuxにJavaをインストール"
+linktitle: "Arch Linux"
 date: 2021-09-17T17:34:33+09:00
 draft: false
 description: Arch LinuxにJavaをインストールする方法
