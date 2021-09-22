@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.86.0" /><link rel="alternate" type="application/rss&#43;xml" href="https://docs.hyte.jp/docs/vanilla/index.xml">
-<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.86.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -18,16 +17,21 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>公式サーバー | みんなでマイクラ</title>
-<meta name="description" content="Docsy does docs"><meta property="og:title" content="公式サーバー" />
-<meta property="og:description" content="公式サーバーの構築方法" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.hyte.jp/docs/vanilla/" /><meta property="og:site_name" content="みんなでマイクラ" />
+<title>BungeeCordの設定 | みんなでマイクラ</title>
+<meta name="description" content="Docsy does docs"><meta property="og:title" content="BungeeCordの設定" />
+<meta property="og:description" content="BungeeCordのconfigファイルの解説" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://docs.hyte.jp/docs/bungeecord/config/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2021-09-22T20:36:33+09:00" />
+<meta property="article:modified_time" content="2021-09-22T21:26:31+09:00" /><meta property="og:site_name" content="みんなでマイクラ" />
 
-<meta itemprop="name" content="公式サーバー">
-<meta itemprop="description" content="公式サーバーの構築方法"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="公式サーバー"/>
-<meta name="twitter:description" content="公式サーバーの構築方法"/>
+<meta itemprop="name" content="BungeeCordの設定">
+<meta itemprop="description" content="BungeeCordのconfigファイルの解説"><meta itemprop="datePublished" content="2021-09-22T20:36:33+09:00" />
+<meta itemprop="dateModified" content="2021-09-22T21:26:31+09:00" />
+<meta itemprop="wordCount" content="25">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="BungeeCordの設定"/>
+<meta name="twitter:description" content="BungeeCordのconfigファイルの解説"/>
 
 
 
@@ -54,7 +58,7 @@
 <link rel="stylesheet" href="https://docs.hyte.jp/css/custom_heading.css">
 
   </head>
-  <body class="td-section">
+  <body class="td-page">
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
@@ -138,13 +142,13 @@
   <script>
     $(function() {
     $("#td-section-nav a").removeClass("active");
-    $("#td-section-nav #m-docsvanilla").addClass("active"); 
-    $("#td-section-nav #m-docsvanilla-li span").addClass("td-sidebar-nav-active-item"); 
-    $("#td-section-nav #m-docsvanilla").parents("li").addClass("active-path"); 
+    $("#td-section-nav #m-docsbungeecordconfig").addClass("active"); 
+    $("#td-section-nav #m-docsbungeecordconfig-li span").addClass("td-sidebar-nav-active-item"); 
+    $("#td-section-nav #m-docsbungeecordconfig").parents("li").addClass("active-path"); 
     $("#td-section-nav li.active-path").addClass("show"); 
     $("#td-section-nav li.active-path").children("input").prop('checked', true);
-    $("#td-section-nav #m-docsvanilla-li").siblings("li").addClass("show");  
-    $("#td-section-nav #m-docsvanilla-li").children("ul").children("li").addClass("show");  
+    $("#td-section-nav #m-docsbungeecordconfig-li").siblings("li").addClass("show");  
+    $("#td-section-nav #m-docsbungeecordconfig-li").children("ul").children("li").addClass("show");  
     $("#td-sidebar-menu").toggleClass("d-none"); 
     });
   </script>
@@ -769,9 +773,9 @@
     
     
 
-    <a href="https://github.com/hayate09273/docs/edit/main/content/ja/docs/Vanilla/_index.md" target="_blank"><i class="fa fa-edit fa-fw"></i> ページの編集</a>
-    <a href="https://github.com/hayate09273/docs/new/main/content/ja/docs/Vanilla/_index.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" target="_blank"><i class="fa fa-edit fa-fw"></i> 子ページを作成</a>
-    <a href="https://github.com/hayate09273/docs/issues/new?title=%e5%85%ac%e5%bc%8f%e3%82%b5%e3%83%bc%e3%83%90%e3%83%bc" target="_blank"><i class="fab fa-github fa-fw"></i> ドキュメントのissueを作成</a>
+    <a href="https://github.com/hayate09273/docs/edit/main/content/ja/docs/BungeeCord/config.md" target="_blank"><i class="fa fa-edit fa-fw"></i> ページの編集</a>
+    <a href="https://github.com/hayate09273/docs/new/main/content/ja/docs/BungeeCord/config.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" target="_blank"><i class="fa fa-edit fa-fw"></i> 子ページを作成</a>
+    <a href="https://github.com/hayate09273/docs/issues/new?title=BungeeCord%e3%81%ae%e8%a8%ad%e5%ae%9a" target="_blank"><i class="fab fa-github fa-fw"></i> ドキュメントのissueを作成</a>
     
       
       <a href="https://github.com/google/docsy/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> プロジェクトのissueを作成</a>
@@ -784,6 +788,23 @@
 
             
 
+
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#権限">権限</a>
+      <ul>
+        <li><a href="#adminを追加する">Adminを追加する</a></li>
+      </ul>
+    </li>
+    <li><a href="#設定項目">設定項目</a>
+      <ul>
+        <li><a href="#player_limit">player_limit</a></li>
+        <li><a href="#max_players">max_players</a></li>
+        <li><a href="#servers">servers</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 
 
 
@@ -822,6 +843,9 @@
 
 
 
+
+
+
 <li class="breadcrumb-item" >
 	<a href="https://docs.hyte.jp/docs/">サーバーを建てる</a>
 </li>
@@ -829,8 +853,15 @@
 
 
 
+<li class="breadcrumb-item" >
+	<a href="https://docs.hyte.jp/docs/bungeecord/">BungeeCord</a>
+</li>
+
+
+
+
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="https://docs.hyte.jp/docs/vanilla/">公式サーバー</a>
+	<a href="https://docs.hyte.jp/docs/bungeecord/config/">設定</a>
 </li>
 
 	</ol>
@@ -838,8 +869,8 @@
 
             
 <div class="td-content">
-	<h1>公式サーバー</h1>
-  <div class="lead">公式サーバーの構築方法</div>
+	<h1>BungeeCordの設定</h1>
+	<div class="lead">BungeeCordのconfigファイルの解説</div>
 	<header class="article-meta">
 		
 		
@@ -854,87 +885,54 @@
 			
 		
 		
-	</header>
-	<p>このページでは、公式サーバーを構築する方法について解説していきます。<br>
-Javaがインストール済みであることが前提です。
-Javaのインストール方法は<a href="/docs/java/">こちら</a></p>
-
-        <div class="section-index">
-    
-    
-    
-    
-    
-    <hr class="panel-line">
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-                
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/vanilla/windows/">Windows</a>
-                    </h5>
-                    <p>Windowsに公式サーバーを構築する方法</p>
-                </div>
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-                
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/vanilla/ubuntu/">Ubuntu</a>
-                    </h5>
-                    <p>Ubuntuに公式サーバーを構築する方法</p>
-                </div>
-            
-        
-            
-        
-    
-</div>
-
+	</header>    
+	<h2 id="権限">権限</h2>
+<p>デフォルトの設定は以下のようになっています。defaultには<a href="https://docs.hyte.jp/docs/bungeecord/command/#server">server</a>と<a href="https://docs.hyte.jp/docs/bungeecord/command/#list">list</a>コマンド、adminには<a href="https://docs.hyte.jp/docs/bungeecord/command/#alert">alert</a>、<a href="https://docs.hyte.jp/docs/bungeecord/command/#end">end</a>、<a href="https://docs.hyte.jp/docs/bungeecord/command/#ip">ip</a>、<a href="https://docs.hyte.jp/docs/bungeecord/command/#reload">reload</a>コマンドを実行する権限が与えられています。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">permissions</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">default</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#000">bungeecord.command.server</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#000">bungeecord.command.list</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">admin</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#000">bungeecord.command.alert</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#000">bungeecord.command.end</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#000">bungeecord.command.ip</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#000">bungeecord.command.reload</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><h3 id="adminを追加する">Adminを追加する</h3>
+<p>configファイルのgroupsという項目で編集します。
+デフォルトはmd_5（BungeeCordの開発者）がadminに割り当てられています。
+このmd_5の部分を自分のIDに書き換えてください。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">groups</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">md_5</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#000">admin</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">groups</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">Hayate_0927</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#000">admin</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><h2 id="設定項目">設定項目</h2>
+<h3 id="player_limit">player_limit</h3>
+<p>BungeeCordの最大接続人数です。-1で無制限になります。</p>
+<h3 id="max_players">max_players</h3>
+<p>見かけ上の最大接続人数です。お好きな数字を入力してください。</p>
+<h3 id="servers">servers</h3>
+<p>BungeeCordのメインの機能である、他のMinecraftサーバーを接続するための設定項目です。<br>
+例: BungeeCordと同じマシンに建てられた25566ポートのlobbyサーバーを追加</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">servers</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">lobby</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">motd</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Lobby Server</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">	</span><span style="color:#204a87;font-weight:bold">address</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">localhost:25566</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">	</span><span style="color:#204a87;font-weight:bold">restricted</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div>
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
 
     最終更新
-    2021/09/15
-    : <a  href="https://github.com/hayate09273/docs/commit/49994399c0452aa7f22bc79fc67daf8bdb4d58af">docs/Vanilla/windowsを編集 (4999439)</a>
+    2021/09/22
+    : <a  href="https://github.com/hayate09273/docs/commit/8c8da07e0feb074c7647a534c507a215f374d1a8">BungeeCordの解説を追加 (8c8da07)</a>
 
 </div>
 
 </div>
+
 
           </main>
         </div>
