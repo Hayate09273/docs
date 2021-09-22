@@ -45,6 +45,84 @@ OpenJDK 64-Bit Server VM &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;
     </item>
     
     <item>
+      <title>Docs: BungeeCordのコマンド</title>
+      <link>https://docs.hyte.jp/docs/bungeecord/command/</link>
+      <pubDate>Wed, 22 Sep 2021 21:12:02 +0900</pubDate>
+      
+      <guid>https://docs.hyte.jp/docs/bungeecord/command/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;コマンド&#34;&gt;コマンド&lt;/h2&gt;
+&lt;h3 id=&#34;server&#34;&gt;server&lt;/h3&gt;
+&lt;p&gt;現在接続しているサーバーと、接続できるサーバーの一覧を表示、またはサーバー間を移動するコマンドです。&lt;br&gt;
+現在接続しているサーバーと、接続できるサーバーの一覧は「/server」、lobbyサーバーに移動するには、「/server lobby」と入力します。&lt;/p&gt;
+&lt;h3 id=&#34;list&#34;&gt;list&lt;/h3&gt;
+&lt;p&gt;現在どのサーバーに誰がいるのか表示するコマンドです。&lt;br&gt;
+「/list」ではなく「&lt;strong&gt;/glist&lt;/strong&gt;」で表示できます。&lt;/p&gt;
+&lt;h3 id=&#34;alert&#34;&gt;alert&lt;/h3&gt;
+&lt;p&gt;BungeeCordに接続されているサーバー全体にメッセージを流すコマンドです。メッセージはチャットに表示されます。&lt;br&gt;
+「/alert 内容」&lt;/p&gt;
+&lt;h3 id=&#34;end&#34;&gt;end&lt;/h3&gt;
+&lt;p&gt;BungeeCordを終了するコマンドです。&lt;/p&gt;
+&lt;h3 id=&#34;ip&#34;&gt;ip&lt;/h3&gt;
+&lt;p&gt;現在接続しているプレイヤーのIPアドレスを表示するコマンドです。&lt;br&gt;
+「/ip MCID」&lt;/p&gt;
+&lt;h3 id=&#34;reload&#34;&gt;reload&lt;/h3&gt;
+&lt;p&gt;BungeeCordのconfigファイルを再読込するコマンドです。&lt;br&gt;
+「/reload」ではなく「&lt;strong&gt;/gloread&lt;/strong&gt;」です。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: BungeeCordの設定</title>
+      <link>https://docs.hyte.jp/docs/bungeecord/config/</link>
+      <pubDate>Wed, 22 Sep 2021 20:36:33 +0900</pubDate>
+      
+      <guid>https://docs.hyte.jp/docs/bungeecord/config/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;権限&#34;&gt;権限&lt;/h2&gt;
+&lt;p&gt;デフォルトの設定は以下のようになっています。defaultには&lt;a href=&#34;https://docs.hyte.jp/docs/bungeecord/command/#server&#34;&gt;server&lt;/a&gt;と&lt;a href=&#34;https://docs.hyte.jp/docs/bungeecord/command/#list&#34;&gt;list&lt;/a&gt;コマンド、adminには&lt;a href=&#34;https://docs.hyte.jp/docs/bungeecord/command/#alert&#34;&gt;alert&lt;/a&gt;、&lt;a href=&#34;https://docs.hyte.jp/docs/bungeecord/command/#end&#34;&gt;end&lt;/a&gt;、&lt;a href=&#34;https://docs.hyte.jp/docs/bungeecord/command/#ip&#34;&gt;ip&lt;/a&gt;、&lt;a href=&#34;https://docs.hyte.jp/docs/bungeecord/command/#reload&#34;&gt;reload&lt;/a&gt;コマンドを実行する権限が与えられています。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;permissions&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;default&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;bungeecord.command.server&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;bungeecord.command.list&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;admin&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;bungeecord.command.alert&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;bungeecord.command.end&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;bungeecord.command.ip&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;bungeecord.command.reload&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;adminを追加する&#34;&gt;Adminを追加する&lt;/h3&gt;
+&lt;p&gt;configファイルのgroupsという項目で編集します。
+デフォルトはmd_5（BungeeCordの開発者）がadminに割り当てられています。
+このmd_5の部分を自分のIDに書き換えてください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;groups&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;md_5&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;admin&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;groups&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;Hayate_0927&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;admin&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;設定項目&#34;&gt;設定項目&lt;/h2&gt;
+&lt;h3 id=&#34;player_limit&#34;&gt;player_limit&lt;/h3&gt;
+&lt;p&gt;BungeeCordの最大接続人数です。-1で無制限になります。&lt;/p&gt;
+&lt;h3 id=&#34;max_players&#34;&gt;max_players&lt;/h3&gt;
+&lt;p&gt;見かけ上の最大接続人数です。お好きな数字を入力してください。&lt;/p&gt;
+&lt;h3 id=&#34;servers&#34;&gt;servers&lt;/h3&gt;
+&lt;p&gt;BungeeCordのメインの機能である、他のMinecraftサーバーを接続するための設定項目です。&lt;br&gt;
+例: BungeeCordと同じマシンに建てられた25566ポートのlobbyサーバーを追加&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;servers&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;lobby&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;motd&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Lobby Server&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;	&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;address&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;localhost:25566&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;	&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;restricted&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Arch LinuxにJavaをインストール</title>
       <link>https://docs.hyte.jp/docs/java/arch/</link>
       <pubDate>Fri, 17 Sep 2021 17:34:33 +0900</pubDate>
