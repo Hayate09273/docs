@@ -15,6 +15,122 @@
     
     
     <item>
+      <title>Docs: バージョンの選び方</title>
+      <link>https://docs.hyte.jp/docs/java/version/</link>
+      <pubDate>Mon, 16 Aug 2021 18:23:15 +0900</pubDate>
+      
+      <guid>https://docs.hyte.jp/docs/java/version/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;バージョンの選び方&#34;&gt;バージョンの選び方&lt;/h2&gt;
+&lt;p&gt;Java Edition 1.17はJava 16で開発されています。&lt;br&gt;
+そのため、Java Edition 1.17以降のサーバーが必要な場合、Java 16以降をインストールする必要があります。&lt;/p&gt;
+&lt;h3 id=&#34;javaとminecraftサーバーのバージョン別互換性&#34;&gt;JavaとMinecraftサーバーのバージョン別互換性&lt;/h3&gt;
+&lt;p&gt;JavaとMinecraftサーバーのバージョン別互換性についていくつかの組み合わせで検証し、下の表にまとめました。&lt;br&gt;
+Javaには後方互換性があるため、Java 16で古いソフトウェアを動作させることも可能ですが、安定して動作するかは分かりません。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Java 8&lt;/th&gt;
+&lt;th&gt;Java 11&lt;/th&gt;
+&lt;th&gt;Java 16&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;公式 1.2.1~1.16.5&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;公式 1.17.1&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spigot 1.8.8~1.16.5&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spigot 1.17~&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;BungeeCord #1598&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;javaとbuildtoolsのバージョン別互換性&#34;&gt;JavaとBuildToolsのバージョン別互換性&lt;/h3&gt;
+&lt;p&gt;Spigotを使用する場合、どのJavaバージョンでどのMinecraftバージョンのビルドが可能かを確認しておくと良いと思います。&lt;br&gt;
+「ビルドはできないけど、実行はできる」ということもありますので、少し注意が必要です。
+こちらもいくつかの組み合わせで検証しました。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Java 8&lt;/th&gt;
+&lt;th&gt;Java 11&lt;/th&gt;
+&lt;th&gt;Java 16&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1.8.8&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1.10.2&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1.12.2&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1.14.4&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1.16.5&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1.17.1&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;参考にしたサイト&#34;&gt;参考にしたサイト&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://ja.wikipedia.org/wiki/Java&#34;&gt;Java - Wikipedia&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ja.wikipedia.org/wiki/Java%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E5%B1%A5%E6%AD%B4&#34;&gt;Javaバージョン履歴 - Wikipedia&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: UbuntuにJavaをインストール</title>
       <link>https://docs.hyte.jp/docs/java/ubuntu/</link>
       <pubDate>Mon, 16 Aug 2021 18:21:10 +0900</pubDate>
@@ -668,132 +784,6 @@ Done!と表示されたら成功です！&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;サーバーを終了する場合は、「stop」と入力してEnterキーを押してください。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&amp;gt;stop
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: バージョンの選び方</title>
-      <link>https://docs.hyte.jp/docs/java/version/</link>
-      <pubDate>Mon, 16 Aug 2021 18:23:15 +0900</pubDate>
-      
-      <guid>https://docs.hyte.jp/docs/java/version/</guid>
-      <description>
-        
-        
-        &lt;h2 id=&#34;バージョンの選び方&#34;&gt;バージョンの選び方&lt;/h2&gt;
-&lt;p&gt;2021年8月現在、サポートされているJavaのバージョンは、8、11、16の3つです。&lt;/p&gt;
-
-
-&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-&lt;h4 class=&#34;alert-heading&#34;&gt;Info&lt;/h4&gt;
-
-    次期バージョンのJava 17は2021年9月にリリースされる予定です。
-
-&lt;/div&gt;
-
-&lt;p&gt;Minecraft Java Edition 1.17ではJava 16以降が必要なので、Minecraft Java Edition 1.17以降のサーバーが必要な場合、Java 16をインストールする必要があります。&lt;/p&gt;
-&lt;p&gt;基本はJava 16で、必要に迫られた時のみJava 8か11を使用すると良いと思います。&lt;/p&gt;
-&lt;h3 id=&#34;javaとminecraftサーバーのバージョン別互換性&#34;&gt;JavaとMinecraftサーバーのバージョン別互換性&lt;/h3&gt;
-&lt;p&gt;JavaとMinecraftサーバーのバージョン別互換性についていくつかの組み合わせで検証し、下の表にまとめました。&lt;br&gt;
-Javaには後方互換性があるため、最新のJava 16で古いソフトウェアを動作させることも可能ですが、安定して動作するかは分かりません。&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;Java 8&lt;/th&gt;
-&lt;th&gt;Java 11&lt;/th&gt;
-&lt;th&gt;Java 16&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;公式 1.2.1~1.16.5&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;公式 1.17.1&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Spigot 1.8.8~1.16.5&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Spigot 1.17~&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;BungeeCord #1598&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;javaとbuildtoolsのバージョン別互換性&#34;&gt;JavaとBuildToolsのバージョン別互換性&lt;/h3&gt;
-&lt;p&gt;Spigotを使用する場合、どのJavaバージョンでどのMinecraftバージョンのビルドが可能かを確認しておくと良いと思います。&lt;br&gt;
-「ビルドはできないけど、実行はできる」ということもありますので、少し注意が必要です。
-こちらもいくつかの組み合わせで検証しました。&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;Java 8&lt;/th&gt;
-&lt;th&gt;Java 11&lt;/th&gt;
-&lt;th&gt;Java 16&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1.8.8&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;1.10.2&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;1.12.2&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;1.14.4&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;1.16.5&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;1.17.1&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
-&lt;td&gt;X&lt;/td&gt;
-&lt;td&gt;O&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;参考にしたサイト&#34;&gt;参考にしたサイト&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://ja.wikipedia.org/wiki/Java&#34;&gt;Java - Wikipedia&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://ja.wikipedia.org/wiki/Java%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E5%B1%A5%E6%AD%B4&#34;&gt;Javaバージョン履歴 - Wikipedia&lt;/a&gt;&lt;/p&gt;
-
       </description>
     </item>
     
