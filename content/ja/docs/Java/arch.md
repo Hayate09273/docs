@@ -24,7 +24,7 @@ $ sudo pacman -S jre8-openjdk
 ```
 ## バージョンを確認
 「java -version」でバージョンを確認します。このように表示されたらインストール完了です。  
-ダブルクオーテーションで囲まれた部分がバージョンになります。これはインストール時期によって違うかもしれません。
+ダブルクオーテーションで囲まれた部分がバージョンです。
 ```bash
 openjdk version "16.0.2" 2021-07-20
 OpenJDK Runtime Environment (build 16.0.2+7)
