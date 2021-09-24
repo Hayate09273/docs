@@ -16,6 +16,41 @@
     
     
     <item>
+      <title>Docs: Spigotサーバーを接続</title>
+      <link>https://docs.hyte.jp/docs/bungeecord/spigot/</link>
+      <pubDate>Fri, 24 Sep 2021 21:26:21 +0900</pubDate>
+      
+      <guid>https://docs.hyte.jp/docs/bungeecord/spigot/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;spigotの設定&#34;&gt;Spigotの設定&lt;/h2&gt;
+&lt;p&gt;BungeeCordとSpigotを接続するために、Spigotで行う設定です。&lt;/p&gt;
+&lt;h3 id=&#34;serverproperties&#34;&gt;server.properties&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;online-mode&lt;br&gt;
+trueからfalseに変更してください。&lt;br&gt;
+この項目をfalseにするとSpigotは正規ユーザーかどうかを確認しませんが、代わりにBungeeCordで確認するので問題ありません。&lt;/li&gt;
+&lt;li&gt;server-port&lt;br&gt;
+1024から49151までの範囲で、他のソフトウェアと被らない番号に変更してください。&lt;br&gt;
+Minecraft Java Editionのマルチプレイでは25565を標準で使用するので、25565をBungeeCordに割り当てて、それ以外の数字をSpigotに割り当てると良いと思います。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;spigotyml&#34;&gt;spigot.yml&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;bungeecord:&lt;br&gt;
+falseからtrueに変更してください。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;bukkityml&#34;&gt;bukkit.yml&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;connection-throttle:&lt;br&gt;
+-1に変更してください。&lt;br&gt;
+これは、接続する速さが設定した値より早かった場合、それを弾くものですが、BungeeCordを使用する際は無効化する方が良いです。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: BungeeCordのコマンド</title>
       <link>https://docs.hyte.jp/docs/bungeecord/command/</link>
       <pubDate>Wed, 22 Sep 2021 21:12:02 +0900</pubDate>

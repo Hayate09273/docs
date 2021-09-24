@@ -2,7 +2,7 @@
 title: "Spigotサーバーを接続"
 linktitle: Spigot
 date: 2021-09-24T21:26:21+09:00
-draft: true
+draft: false
 description: BungeeCordとSpigotを接続する方法
 ---
 

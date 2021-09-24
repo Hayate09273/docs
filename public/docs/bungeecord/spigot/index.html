@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.86.0" /><link rel="alternate" type="application/rss&#43;xml" href="https://docs.hyte.jp/blog/index.xml">
-<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.86.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -18,16 +17,21 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>雑記帳 | みんなでマイクラ</title>
-<meta name="description" content="Docsy does docs"><meta property="og:title" content="雑記帳" />
-<meta property="og:description" content="Docsy does docs" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.hyte.jp/blog/" /><meta property="og:site_name" content="みんなでマイクラ" />
+<title>Spigotサーバーを接続 | みんなでマイクラ</title>
+<meta name="description" content="Docsy does docs"><meta property="og:title" content="Spigotサーバーを接続" />
+<meta property="og:description" content="BungeeCordとSpigotを接続する方法" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://docs.hyte.jp/docs/bungeecord/spigot/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2021-09-24T21:26:21+09:00" />
+<meta property="article:modified_time" content="2021-09-24T21:48:35+09:00" /><meta property="og:site_name" content="みんなでマイクラ" />
 
-<meta itemprop="name" content="雑記帳">
-<meta itemprop="description" content="Docsy does docs"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="雑記帳"/>
-<meta name="twitter:description" content="Docsy does docs"/>
+<meta itemprop="name" content="Spigotサーバーを接続">
+<meta itemprop="description" content="BungeeCordとSpigotを接続する方法"><meta itemprop="datePublished" content="2021-09-24T21:26:21+09:00" />
+<meta itemprop="dateModified" content="2021-09-24T21:48:35+09:00" />
+<meta itemprop="wordCount" content="18">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Spigotサーバーを接続"/>
+<meta name="twitter:description" content="BungeeCordとSpigotを接続する方法"/>
 
 
 
@@ -54,7 +58,7 @@
 <link rel="stylesheet" href="https://docs.hyte.jp/css/custom_heading.css">
 
   </head>
-  <body class="td-section td-blog">
+  <body class="td-page">
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
@@ -86,7 +90,7 @@
 				
 				
 				
-				<a class="nav-link" href="/docs/" ><i class='fas fa-server'></i><span>サーバーを建てる</span></a>
+				<a class="nav-link active" href="/docs/" ><i class='fas fa-server'></i><span class="active">サーバーを建てる</span></a>
 			</li>
 			
 			<li class="nav-item mr-4 mb-2 mb-lg-0">
@@ -98,7 +102,7 @@
 				
 				
 				
-				<a class="nav-link active" href="/blog/" ><i class="fa fa-sticky-note"></i><span class="active">雑記帳</span></a>
+				<a class="nav-link" href="/blog/" ><i class="fa fa-sticky-note"></i><span>雑記帳</span></a>
 			</li>
 			
 			
@@ -138,13 +142,13 @@
   <script>
     $(function() {
     $("#td-section-nav a").removeClass("active");
-    $("#td-section-nav #m-blog").addClass("active"); 
-    $("#td-section-nav #m-blog-li span").addClass("td-sidebar-nav-active-item"); 
-    $("#td-section-nav #m-blog").parents("li").addClass("active-path"); 
+    $("#td-section-nav #m-docsbungeecordspigot").addClass("active"); 
+    $("#td-section-nav #m-docsbungeecordspigot-li span").addClass("td-sidebar-nav-active-item"); 
+    $("#td-section-nav #m-docsbungeecordspigot").parents("li").addClass("active-path"); 
     $("#td-section-nav li.active-path").addClass("show"); 
     $("#td-section-nav li.active-path").children("input").prop('checked', true);
-    $("#td-section-nav #m-blog-li").siblings("li").addClass("show");  
-    $("#td-section-nav #m-blog-li").children("ul").children("li").addClass("show");  
+    $("#td-section-nav #m-docsbungeecordspigot-li").siblings("li").addClass("show");  
+    $("#td-section-nav #m-docsbungeecordspigot-li").children("ul").children("li").addClass("show");  
     $("#td-sidebar-menu").toggleClass("d-none"); 
     });
   </script>
@@ -199,9 +203,9 @@
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-blog-li">
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docs-li">
     
-      <a href="/blog/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-blog"><span class="">雑記帳</span></a>
+      <a href="/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">サーバーを建てる</span></a>
     
     
       
@@ -225,10 +229,10 @@
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blogjms-banner-li">
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docssoftware-li">
     
-      <input type="checkbox" id="m-blogjms-banner-check"/>
-      <label for="m-blogjms-banner-check"><a href="/blog/jms-banner/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blogjms-banner"><span class="">Japan Minecraft ServersのバナーをMarkdownで埋め込む</span></a></label>
+      <input type="checkbox" id="m-docssoftware-check"/>
+      <label for="m-docssoftware-check"><a href="/docs/software/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docssoftware"><span class="">サーバーソフト</span></a></label>
     
     
   </li>
@@ -253,11 +257,540 @@
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-blognfs-vs-luckperms-li">
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsjava-li">
     
-      <input type="checkbox" id="m-blognfs-vs-luckperms-check"/>
-      <label for="m-blognfs-vs-luckperms-check"><a href="/blog/nfs-vs-luckperms/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-blognfs-vs-luckperms"><span class="">NFSが原因でLuckPermsが動かなかった話</span></a></label>
+      <input type="checkbox" id="m-docsjava-check"/>
+      <label for="m-docsjava-check"><a href="/docs/java/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docsjava"><span class="">Javaのインストール</span></a></label>
     
+    
+      
+      <ul class="ul-2 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsjavaversion-li">
+    
+      <input type="checkbox" id="m-docsjavaversion-check"/>
+      <label for="m-docsjavaversion-check"><a href="/docs/java/version/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsjavaversion"><span class="">バージョンの選び方</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsjavaubuntu-li">
+    
+      <input type="checkbox" id="m-docsjavaubuntu-check"/>
+      <label for="m-docsjavaubuntu-check"><a href="/docs/java/ubuntu/" title="UbuntuにJavaをインストール" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsjavaubuntu"><span class="">Ubuntu</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsjavacentos8-li">
+    
+      <input type="checkbox" id="m-docsjavacentos8-check"/>
+      <label for="m-docsjavacentos8-check"><a href="/docs/java/centos8/" title="CentOS Stream 8にJavaをインストール" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsjavacentos8"><span class="">CentOS Stream 8</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsjavaarch-li">
+    
+      <input type="checkbox" id="m-docsjavaarch-check"/>
+      <label for="m-docsjavaarch-check"><a href="/docs/java/arch/" title="Arch LinuxにJavaをインストール" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsjavaarch"><span class="">Arch Linux</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsjavawindows-li">
+    
+      <input type="checkbox" id="m-docsjavawindows-check"/>
+      <label for="m-docsjavawindows-check"><a href="/docs/java/windows/" title="WindowsにJavaをインストール" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsjavawindows"><span class="">Windows</span></a></label>
+    
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsvanilla-li">
+    
+      <input type="checkbox" id="m-docsvanilla-check"/>
+      <label for="m-docsvanilla-check"><a href="/docs/vanilla/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docsvanilla"><span class="">公式サーバー</span></a></label>
+    
+    
+      
+      <ul class="ul-2 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsvanillawindows-li">
+    
+      <input type="checkbox" id="m-docsvanillawindows-check"/>
+      <label for="m-docsvanillawindows-check"><a href="/docs/vanilla/windows/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsvanillawindows"><span class="">Windows</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsvanillaubuntu-li">
+    
+      <input type="checkbox" id="m-docsvanillaubuntu-check"/>
+      <label for="m-docsvanillaubuntu-check"><a href="/docs/vanilla/ubuntu/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsvanillaubuntu"><span class="">Ubuntu</span></a></label>
+    
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsspigot-li">
+    
+      <input type="checkbox" id="m-docsspigot-check"/>
+      <label for="m-docsspigot-check"><a href="/docs/spigot/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docsspigot"><span class="">Spigot</span></a></label>
+    
+    
+      
+      <ul class="ul-2 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsspigotubuntu-li">
+    
+      <input type="checkbox" id="m-docsspigotubuntu-check"/>
+      <label for="m-docsspigotubuntu-check"><a href="/docs/spigot/ubuntu/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsspigotubuntu"><span class="">Ubuntu</span></a></label>
+    
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsbungeecord-li">
+    
+      <input type="checkbox" id="m-docsbungeecord-check"/>
+      <label for="m-docsbungeecord-check"><a href="/docs/bungeecord/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docsbungeecord"><span class="">BungeeCord</span></a></label>
+    
+    
+      
+      <ul class="ul-2 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbungeecordspigot-li">
+    
+      <input type="checkbox" id="m-docsbungeecordspigot-check"/>
+      <label for="m-docsbungeecordspigot-check"><a href="/docs/bungeecord/spigot/" title="Spigotサーバーを接続" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsbungeecordspigot"><span class="">Spigot</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbungeecordcommand-li">
+    
+      <input type="checkbox" id="m-docsbungeecordcommand-check"/>
+      <label for="m-docsbungeecordcommand-check"><a href="/docs/bungeecord/command/" title="BungeeCordのコマンド" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsbungeecordcommand"><span class="">コマンド</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbungeecordconfig-li">
+    
+      <input type="checkbox" id="m-docsbungeecordconfig-check"/>
+      <label for="m-docsbungeecordconfig-check"><a href="/docs/bungeecord/config/" title="BungeeCordの設定" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsbungeecordconfig"><span class="">設定</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbungeecordubuntu-li">
+    
+      <input type="checkbox" id="m-docsbungeecordubuntu-check"/>
+      <label for="m-docsbungeecordubuntu-check"><a href="/docs/bungeecord/ubuntu/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsbungeecordubuntu"><span class="">Ubuntu</span></a></label>
+    
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docslinux-li">
+    
+      <input type="checkbox" id="m-docslinux-check"/>
+      <label for="m-docslinux-check"><a href="/docs/linux/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docslinux"><span class="">Linux</span></a></label>
+    
+    
+      
+      <ul class="ul-2 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docslinuxdistribution-li">
+    
+      <input type="checkbox" id="m-docslinuxdistribution-check"/>
+      <label for="m-docslinuxdistribution-check"><a href="/docs/linux/distribution/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docslinuxdistribution"><span class="">Linuxディストリビューション</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docslinuxcommand-li">
+    
+      <input type="checkbox" id="m-docslinuxcommand-check"/>
+      <label for="m-docslinuxcommand-check"><a href="/docs/linux/command/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docslinuxcommand"><span class="">コマンド</span></a></label>
+    
+    
+  </li>
+
+          
+        
+      </ul>
     
   </li>
 
@@ -296,9 +829,9 @@
     
     
 
-    <a href="https://github.com/hayate09273/docs/edit/main/content/ja/blog/_index.md" target="_blank"><i class="fa fa-edit fa-fw"></i> ページの編集</a>
-    <a href="https://github.com/hayate09273/docs/new/main/content/ja/blog/_index.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" target="_blank"><i class="fa fa-edit fa-fw"></i> 子ページを作成</a>
-    <a href="https://github.com/hayate09273/docs/issues/new?title=%e9%9b%91%e8%a8%98%e5%b8%b3" target="_blank"><i class="fab fa-github fa-fw"></i> ドキュメントのissueを作成</a>
+    <a href="https://github.com/hayate09273/docs/edit/main/content/ja/docs/BungeeCord/spigot.md" target="_blank"><i class="fa fa-edit fa-fw"></i> ページの編集</a>
+    <a href="https://github.com/hayate09273/docs/new/main/content/ja/docs/BungeeCord/spigot.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" target="_blank"><i class="fa fa-edit fa-fw"></i> 子ページを作成</a>
+    <a href="https://github.com/hayate09273/docs/issues/new?title=Spigot%e3%82%b5%e3%83%bc%e3%83%90%e3%83%bc%e3%82%92%e6%8e%a5%e7%b6%9a" target="_blank"><i class="fab fa-github fa-fw"></i> ドキュメントのissueを作成</a>
     
       
       <a href="https://github.com/google/docsy/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> プロジェクトのissueを作成</a>
@@ -311,6 +844,18 @@
 
             
 
+
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#spigotの設定">Spigotの設定</a>
+      <ul>
+        <li><a href="#serverproperties">server.properties</a></li>
+        <li><a href="#spigotyml">spigot.yml</a></li>
+        <li><a href="#bukkityml">bukkit.yml</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 
 
 
@@ -335,97 +880,98 @@
 	
 
           </aside>
-          <main class="col-12 col-md-9 col-xl-8 pl-md-5 pr-md-4" role="main">
-            <a class="btn btn-lg -bg-orange td-rss-button d-none d-lg-block" href="https://docs.hyte.jp/blog/index.xml" target="_blank">
-              RSS <i class="fa fa-rss ml-2 "></i>
-            </a>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
 
 
 
 
-<div class="row">
-	<div class="col-12">
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="https://docs.hyte.jp/docs/">サーバーを建てる</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="https://docs.hyte.jp/docs/bungeecord/">BungeeCord</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="https://docs.hyte.jp/docs/bungeecord/spigot/">Spigot</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>Spigotサーバーを接続</h1>
+	<div class="lead">BungeeCordとSpigotを接続する方法</div>
+	<header class="article-meta">
+		
+		
 			
-			<h2>記事一覧 2021</h2>
-			<ul class="list-unstyled mt-4">
 				
-				<li class="media mb-4">
-					<div class="media-body">
-						<h5 class="mt-0 mb-1"><a href="/blog/jms-banner/">Japan Minecraft ServersのバナーをMarkdownで埋め込む</a></h5>
-						<p class="mb-2 mb-md-3"><small class="text-muted">2021/09/18 in 雑記帳</small></p>
-						<header class="article-meta">
-							
-							
-								
-									
 
 
-								
-									
-
-
-								
-							
-							
-						</header>
-						
-
-
-
-
-
-						<p class="pt-0 mt-0">導入 Japan Minecraft Serversは、Minecraftでマルチプレイを楽しんでいる人が一度は見たことがあると思います。
-Japan Minecraft Serversにはバナーという機能があり、これをWebサイトに埋め込むことで、現在のオンラインプレイヤー数やIPアドレスをお洒落に表示されることができます。
-サーバーのページに飛び、「バナー」タブをクリックして、バナータイプを選択します。
-するとこのようなHTMLのコードが生成されます。
-&lt;a href=&#34;リン …</p>
-						<p class="pt-0"><a href="/blog/jms-banner/" aria-label="続きを読む - Japan Minecraft ServersのバナーをMarkdownで埋め込む">続きを読む</a></p>
-					</div>
-				</li>
+			
 				
-				<li class="media mb-4">
-					<div class="media-body">
-						<h5 class="mt-0 mb-1"><a href="/blog/nfs-vs-luckperms/">NFSが原因でLuckPermsが動かなかった話</a></h5>
-						<p class="mb-2 mb-md-3"><small class="text-muted">2021/08/19 in 雑記帳</small></p>
-						<header class="article-meta">
-							
-							
-								
-									
 
 
-								
-									
-
-
-								
-							
-							
-						</header>
-						
-
-
-
-
-
-						<p class="pt-0 mt-0">症状  Spigot起動時に「Could not load &lsquo;plugins/LuckPerms-Bukkit-5.3.47.jar&rsquo; in folder &lsquo;plugins&rsquo;」というエラーが出る。 pluginsディレクトリ内にLuckPermsディレクトリが生成されない。  発生した環境  さくらのVPS V5 4Gプラン Ubuntu 20.04 LTS オプションの追加ストレージ(NFS)を使用  原因 NFSを/mntディレクトリにマウント …</p>
-						<p class="pt-0"><a href="/blog/nfs-vs-luckperms/" aria-label="続きを読む - NFSが原因でLuckPermsが動かなかった話">続きを読む</a></p>
-					</div>
-				</li>
-				
-			</ul>
 			
 		
-	</div>
+		
+	</header>    
+	<h2 id="spigotの設定">Spigotの設定</h2>
+<p>BungeeCordとSpigotを接続するために、Spigotで行う設定です。</p>
+<h3 id="serverproperties">server.properties</h3>
+<ul>
+<li>online-mode<br>
+trueからfalseに変更してください。<br>
+この項目をfalseにするとSpigotは正規ユーザーかどうかを確認しませんが、代わりにBungeeCordで確認するので問題ありません。</li>
+<li>server-port<br>
+1024から49151までの範囲で、他のソフトウェアと被らない番号に変更してください。<br>
+Minecraft Java Editionのマルチプレイでは25565を標準で使用するので、25565をBungeeCordに割り当てて、それ以外の数字をSpigotに割り当てると良いと思います。</li>
+</ul>
+<h3 id="spigotyml">spigot.yml</h3>
+<ul>
+<li>bungeecord:<br>
+falseからtrueに変更してください。</li>
+</ul>
+<h3 id="bukkityml">bukkit.yml</h3>
+<ul>
+<li>connection-throttle:<br>
+-1に変更してください。<br>
+これは、接続する速さが設定した値より早かった場合、それを弾くものですが、BungeeCordを使用する際は無効化する方が良いです。</li>
+</ul>
+
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">
+
+    最終更新
+    2021/09/24
+    : <a  href="https://github.com/hayate09273/docs/commit/ea85040a77d8c4e9d769caaf0ac8a6d64d445cc9">docs/BungeeCord/spigotを作成 (ea85040)</a>
+
 </div>
-<div class="row pl-2 pt-2">
-	<div class="col">
-		
-			
-		
-	</div>
+
 </div>
+
 
           </main>
         </div>
