@@ -1,31 +1,31 @@
 ---
-title: "Ubuntuに公式サーバーを構築"
-linktitle: "Ubuntu"
-date: 2021-08-16T18:27:50+09:00
+title: "CentOS Stream 8に公式サーバーを構築"
+linktitle: "CentOS Stream 8"
+date: 2021-09-26T16:41:22+09:00
 draft: false
-description: Ubuntuに公式サーバーを構築する方法
+description: CentOS Stream 8に公式サーバーを構築する方法
 ---
 
 ## サーバーのファイルをダウンロード
 まず、サーバー用のディレクトリを作成し、そのディレクトリに移動します。  
 名前はわかりやすいものにしておくと良いと思います。
 ```bash
-ubuntu@ubuntu-server:~$ mkdir server && cd server
+$ mkdir server && cd server
 ```
 サーバーのファイルをダウンロードします。このURLは1.17.1のものです。
 ```bash
-ubuntu@ubuntu-server:~/server$ wget https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2/server.jar
+$ wget https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2/server.jar
 ```
 lsコマンドでserver.jarが存在することを確認しておきます。
 ```bash
-ubuntu@ubuntu-server:~/server$ ls
+$ ls
 server.jar
 ```
 ## サーバーを実行する
 まず、サーバーを実行するためのスクリプトを作成し、お好きなエディタで編集します。
 ここでは、start.shを作成し、nanoで編集します。
 ```bash
-ubuntu@ubuntu-server:~/server$ nano start.sh
+$ nano start.sh
 ```
 下の内容をstart.shに書き込みます。
 ```bash
@@ -33,14 +33,14 @@ ubuntu@ubuntu-server:~/server$ nano start.sh
 java -Xms1G -Xmx1G -jar server.jar nogui
 ```
 所有者を設定して、所有者にstart.shを実行する権限を与えます。
-ここでは、所有者のユーザー名をubuntuとします。
+ここでは、所有者のユーザー名をcentosとします。
 ```bash
-ubuntu@ubuntu-server:~/server$ chown ubuntu start.sh
-ubuntu@ubuntu-server:~/server$ chmod 700 start.sh
+$ chown centos start.sh
+$ chmod 700 start.sh
 ```
 実行します。
 ```bash
-ubuntu@ubuntu-server:~/server$ ./start.sh
+$ ./start.sh
 ```
 初回起動時はこのような表示が出て、強制的に終了されます。
 ```bash
@@ -50,7 +50,7 @@ ubuntu@ubuntu-server:~/server$ ./start.sh
 ```
 これは、「EULAに同意してください」というメッセージです。EULAに同意するために、「eula.txt」を編集します。
 ```bash
-ubuntu@ubuntu-server:~/server$ nano eula.txt
+$ nano eula.txt
 
 #By changing the setting below to TRUE you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula).
 #Sat Aug 14 21:23:03 JST 2021
@@ -60,7 +60,7 @@ eula=false
 
 もう一度start.shを実行します。
 ```bash
-ubuntu@ubuntu-server:~/server$ ./start.sh
+$ ./start.sh
 ```
 設定が読み込まれ、ワールドが生成されます。  
 Done!と表示されたら成功です！
