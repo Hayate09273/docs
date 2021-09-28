@@ -8,19 +8,43 @@ description: BungeeCordのコマンドの解説
 
 ## コマンド
 ### server
-現在接続しているサーバーと、接続できるサーバーの一覧を表示、またはサーバー間を移動するコマンドです。  
-現在接続しているサーバーと、接続できるサーバーの一覧は「/server」、lobbyサーバーに移動するには、「/server lobby」と入力します。
-### list
+#### 引数なし  
+現在接続しているサーバーと、接続できるサーバーの一覧が表示されます。  
+#### 引数あり
+指定したサーバーに移動できます。
+```bash
+/server lobby
+```
+### glist
 現在どのサーバーに誰がいるのか表示するコマンドです。  
-「/list」ではなく「**/glist**」で表示できます。
 ### alert
 BungeeCordに接続されているサーバー全体にメッセージを流すコマンドです。メッセージはチャットに表示されます。  
-「/alert 内容」
+```bash
+/alert メッセージ
+```
 ### end
 BungeeCordを終了するコマンドです。
 ### ip
 現在接続しているプレイヤーのIPアドレスを表示するコマンドです。  
-「/ip MCID」
-### reload
+```bash
+/ip steve
+```
+### greload
 BungeeCordのconfigファイルを再読込するコマンドです。  
-「/reload」ではなく「**/gloread**」です。
+### send
+指定したプレイヤーを指定したサーバーへ移動するコマンドです。  
+```bash
+/send プレイヤー サーバー
+```
+#### プレイヤーの引数
+- all  
+BungeeCordのネットワーク上にいるが、指定したサーバーにいない全てのプレイヤー
+- current  
+BungeeCordのネットワーク上にいる全てのプレイヤー
+- MCID  
+指定したプレイヤーのみ
+```bash
+/send steve life
+
+/send all lobby
+```

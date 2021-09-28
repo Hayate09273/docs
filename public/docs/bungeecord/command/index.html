@@ -28,7 +28,7 @@
 <meta itemprop="name" content="BungeeCordのコマンド">
 <meta itemprop="description" content="BungeeCordのコマンドの解説"><meta itemprop="datePublished" content="2021-09-22T21:12:02+09:00" />
 <meta itemprop="dateModified" content="2021-09-22T21:32:03+09:00" />
-<meta itemprop="wordCount" content="21">
+<meta itemprop="wordCount" content="40">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="BungeeCordのコマンド"/>
 <meta name="twitter:description" content="BungeeCordのコマンドの解説"/>
@@ -120,7 +120,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.7cb04865b3bfeb760c65090fbdc1356f.json"
+  data-offline-search-index-json-src="/offline-search-index.007789112399f0d4629b1d1a14a6545e.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -169,7 +169,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.7cb04865b3bfeb760c65090fbdc1356f.json"
+  data-offline-search-index-json-src="/offline-search-index.007789112399f0d4629b1d1a14a6545e.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -906,11 +906,12 @@
     <li><a href="#コマンド">コマンド</a>
       <ul>
         <li><a href="#server">server</a></li>
-        <li><a href="#list">list</a></li>
+        <li><a href="#glist">glist</a></li>
         <li><a href="#alert">alert</a></li>
         <li><a href="#end">end</a></li>
         <li><a href="#ip">ip</a></li>
-        <li><a href="#reload">reload</a></li>
+        <li><a href="#greload">greload</a></li>
+        <li><a href="#send">send</a></li>
       </ul>
     </li>
   </ul>
@@ -998,23 +999,39 @@
 	</header>    
 	<h2 id="コマンド">コマンド</h2>
 <h3 id="server">server</h3>
-<p>現在接続しているサーバーと、接続できるサーバーの一覧を表示、またはサーバー間を移動するコマンドです。<br>
-現在接続しているサーバーと、接続できるサーバーの一覧は「/server」、lobbyサーバーに移動するには、「/server lobby」と入力します。</p>
-<h3 id="list">list</h3>
-<p>現在どのサーバーに誰がいるのか表示するコマンドです。<br>
-「/list」ではなく「<strong>/glist</strong>」で表示できます。</p>
+<h4 id="引数なし">引数なし</h4>
+<p>現在接続しているサーバーと、接続できるサーバーの一覧が表示されます。</p>
+<h4 id="引数あり">引数あり</h4>
+<p>指定したサーバーに移動できます。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/server lobby
+</code></pre></div><h3 id="glist">glist</h3>
+<p>現在どのサーバーに誰がいるのか表示するコマンドです。</p>
 <h3 id="alert">alert</h3>
-<p>BungeeCordに接続されているサーバー全体にメッセージを流すコマンドです。メッセージはチャットに表示されます。<br>
-「/alert 内容」</p>
-<h3 id="end">end</h3>
+<p>BungeeCordに接続されているサーバー全体にメッセージを流すコマンドです。メッセージはチャットに表示されます。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/alert メッセージ
+</code></pre></div><h3 id="end">end</h3>
 <p>BungeeCordを終了するコマンドです。</p>
 <h3 id="ip">ip</h3>
-<p>現在接続しているプレイヤーのIPアドレスを表示するコマンドです。<br>
-「/ip MCID」</p>
-<h3 id="reload">reload</h3>
-<p>BungeeCordのconfigファイルを再読込するコマンドです。<br>
-「/reload」ではなく「<strong>/gloread</strong>」です。</p>
+<p>現在接続しているプレイヤーのIPアドレスを表示するコマンドです。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/ip steve
+</code></pre></div><h3 id="greload">greload</h3>
+<p>BungeeCordのconfigファイルを再読込するコマンドです。</p>
+<h3 id="send">send</h3>
+<p>指定したプレイヤーを指定したサーバーへ移動するコマンドです。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/send プレイヤー サーバー
+</code></pre></div><h4 id="プレイヤーの引数">プレイヤーの引数</h4>
+<ul>
+<li>all<br>
+BungeeCordのネットワーク上にいるが、指定したサーバーにいない全てのプレイヤー</li>
+<li>current<br>
+BungeeCordのネットワーク上にいる全てのプレイヤー</li>
+<li>MCID<br>
+指定したプレイヤーのみ</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/send steve life
 
+/send all lobby
+</code></pre></div>
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
