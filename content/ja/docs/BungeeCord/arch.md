@@ -1,9 +1,9 @@
 ---
-title: "UbuntuにBungeeCordを構築"
-linktitle: "Ubuntu"
-date: 2021-08-16T20:52:28+09:00
+title: "Arch LinuxにBungeeCordを構築"
+linktitle: "Arch Linux"
+date: 2021-09-29T00:06:54+09:00
 draft: false
-description: UbuntuにBungeeCordを構築する方法
+description: Arch LinuxにBungeeCordを構築する方法
 ---
 
 ## BungeeCordをダウンロード
@@ -14,7 +14,7 @@ $ mkdir BungeeCord && cd BungeeCord
 ```
 BungeeCord.jarをダウンロードします。
 ```bash
-$ wget https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
+$ curl -O https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
 ```
 lsコマンドでBungeeCord.jarが存在することを確認しておきます。
 ```bash

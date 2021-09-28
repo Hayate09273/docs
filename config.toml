@@ -1,7 +1,7 @@
 baseURL = "https://docs.hyte.jp/"
 title = "みんなでマイクラ"
 
-enableRobotsTXT = true
+enableRobotsTXT = false
 
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
 theme = ["docsy"]
