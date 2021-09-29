@@ -28,7 +28,7 @@
 <meta itemprop="name" content="Spigotサーバーを接続">
 <meta itemprop="description" content="BungeeCordとSpigotを接続する方法"><meta itemprop="datePublished" content="2021-09-24T21:26:21+09:00" />
 <meta itemprop="dateModified" content="2021-09-24T21:49:20+09:00" />
-<meta itemprop="wordCount" content="18">
+<meta itemprop="wordCount" content="36">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Spigotサーバーを接続"/>
 <meta name="twitter:description" content="BungeeCordとSpigotを接続する方法"/>
@@ -120,7 +120,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.007789112399f0d4629b1d1a14a6545e.json"
+  data-offline-search-index-json-src="/offline-search-index.b3721964bc12b232c89dc43467363628.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -169,7 +169,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.007789112399f0d4629b1d1a14a6545e.json"
+  data-offline-search-index-json-src="/offline-search-index.b3721964bc12b232c89dc43467363628.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -910,6 +910,11 @@
         <li><a href="#bukkityml">bukkit.yml</a></li>
       </ul>
     </li>
+    <li><a href="#bungeecordの設定">BungeeCordの設定</a>
+      <ul>
+        <li><a href="#例">例</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
 
@@ -1001,7 +1006,7 @@
 trueからfalseに変更してください。<br>
 この項目をfalseにするとSpigotは正規ユーザーかどうかを確認しませんが、代わりにBungeeCordで確認するので問題ありません。</li>
 <li>server-port<br>
-1024から49151までの範囲で、他のソフトウェアと被らない番号に変更してください。<br>
+<a href="https://ja.wikipedia.org/wiki/TCP%E3%82%84UDP%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%9D%E3%83%BC%E3%83%88%E7%95%AA%E5%8F%B7%E3%81%AE%E4%B8%80%E8%A6%A7#%E7%99%BB%E9%8C%B2%E6%B8%88%E3%81%BF%E3%83%9D%E3%83%BC%E3%83%88%E7%95%AA%E5%8F%B7_(1024%E2%80%9349151)">1024から49151までの範囲</a>で、コンピューターで使用する他のソフトウェアと被らない番号に変更してください。<br>
 Minecraft Java Editionのマルチプレイでは25565を標準で使用するので、25565をBungeeCordに割り当てて、それ以外の数字をSpigotに割り当てると良いと思います。</li>
 </ul>
 <h3 id="spigotyml">spigot.yml</h3>
@@ -1015,7 +1020,40 @@ falseからtrueに変更してください。</li>
 -1に変更してください。<br>
 これは、接続する速さが設定した値より早かった場合、それを弾くものですが、BungeeCordを使用する際は無効化する方が良いです。</li>
 </ul>
-
+<h2 id="bungeecordの設定">BungeeCordの設定</h2>
+<p>BungeeCordとSpigotを接続するために、BungeeCordで行う設定です。<br>
+config.ymlのserversの項目を以下のように編集してください。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">servers</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">server1</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">motd</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Server1</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">	</span><span style="color:#204a87;font-weight:bold">address</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">localhost:25566</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">	</span><span style="color:#204a87;font-weight:bold">restricted</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><p>2行目はサーバー名（lobby、lifeなど）にしてください。<br>
+3行目はMOTDを設定してください。<br>
+4行目はSpigotのアドレスです。BungeeCordとSpigotを同じコンピューターで動かす場合は、「localhost:port」のようになります。<br>
+5行目はサーバーに接続する際、「bungeecord.server.サーバー名」の権限を必要とするかの設定です。trueにすると、この権限を持っていないプレイヤーはそのサーバーに参加出来なくなります。</p>
+<h3 id="例">例</h3>
+<ul>
+<li>lobbyサーバー（localhost、25566）を追加</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">servers</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">lobby</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">motd</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">A Lobby Server</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">address</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">localhost:25566</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">	</span><span style="color:#204a87;font-weight:bold">restricted</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div><ul>
+<li>lifeサーバー（localhost、25567）を追加</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#204a87;font-weight:bold">servers</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">lobby</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">motd</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">A Lobby Server</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">	</span><span style="color:#204a87;font-weight:bold">address</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">localhost:25566</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">	</span><span style="color:#204a87;font-weight:bold">restricted</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">life</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">motd</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">A Life Server</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">	</span><span style="color:#204a87;font-weight:bold">address</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">localhost:25567</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">	</span><span style="color:#204a87;font-weight:bold">restricted</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#f8f8f8;text-decoration:underline">
+</span></code></pre></div>
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">

@@ -15,6 +15,6 @@ Japan Minecraft Serversにはバナーという機能があり、これをWebサ
 ```
 ## Markdown
 これをMarkdownで表示させるには、このようにします。
-```markdown
+```md
 [![](画像リンク)](リンク)
 ```
