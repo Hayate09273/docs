@@ -161,6 +161,55 @@ OpenJDK 64-Bit Server VM &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;
     </item>
     
     <item>
+      <title>Docs: Arch Linuxに公式サーバーを構築</title>
+      <link>https://docs.hyte.jp/docs/vanilla/arch/</link>
+      <pubDate>Thu, 30 Sep 2021 22:27:21 +0900</pubDate>
+      
+      <guid>https://docs.hyte.jp/docs/vanilla/arch/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;サーバーのファイルをダウンロード&#34;&gt;サーバーのファイルをダウンロード&lt;/h2&gt;
+&lt;p&gt;まず、サーバー用のディレクトリを作成し、そのディレクトリに移動します。&lt;br&gt;
+名前はわかりやすいものにしておくと良いと思います。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ mkdir server &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;サーバーのファイルをダウンロードします。このURLは1.17.1のものです。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ wget https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;lsコマンドでserver.jarが存在することを確認しておきます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ls
+server.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;サーバーを実行する&#34;&gt;サーバーを実行する&lt;/h2&gt;
+&lt;p&gt;まず、サーバーを実行するためのスクリプトを作成し、お好きなエディタで編集します。&lt;br&gt;
+下の内容をstart.shに書き込みます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;java -Xms1G -Xmx1G -jar server.jar nogui
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;所有者にstart.shを実行する権限を与えます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ chmod &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;700&lt;/span&gt; start.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;実行します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ./start.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;初回起動時はこのような表示が出て、強制的に終了されます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;main/ERROR&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;: Failed to load properties from file: server.properties
+&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;main/WARN&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;: Failed to load eula.txt
+&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;main/INFO&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;: You need to agree to the EULA in order to run the server. Go to eula.txt &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; more info.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これは、「EULAに同意してください」というメッセージです。EULAに同意するために、「eula.txt」を編集します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;eula.txt
+
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#By changing the setting below to TRUE you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula).&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#Sat Aug 14 21:23:03 JST 2021&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;eula&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;false&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;「eula=false」となっている部分を、「eula=true」に書き換えて、保存してください。&lt;/p&gt;
+&lt;p&gt;もう一度start.shを実行します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ./start.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;設定が読み込まれ、ワールドが生成されます。&lt;br&gt;
+Done!と表示されたら成功です！&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;Server thread/INFO&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;: Done &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;30.000s&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;! For help, &lt;span style=&#34;color:#204a87&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;help&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;「stop」と入力するとサーバーが終了します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&amp;gt;stop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Arch LinuxにBungeeCordを構築</title>
       <link>https://docs.hyte.jp/docs/bungeecord/arch/</link>
       <pubDate>Wed, 29 Sep 2021 00:06:54 +0900</pubDate>
@@ -218,16 +267,13 @@ BungeeCord.jar
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ls
 server.jar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;サーバーを実行する&#34;&gt;サーバーを実行する&lt;/h2&gt;
-&lt;p&gt;まず、サーバーを実行するためのスクリプトを作成し、お好きなエディタで編集します。
-ここでは、start.shを作成し、nanoで編集します。&lt;/p&gt;
+&lt;p&gt;まず、サーバーを実行するためのスクリプトを作成し、お好きなエディタで編集します。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ nano start.sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;下の内容をstart.shに書き込みます。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;java -Xms1G -Xmx1G -jar server.jar nogui
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;所有者を設定して、所有者にstart.shを実行する権限を与えます。
-ここでは、所有者のユーザー名をcentosとします。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ chown centos start.sh
-$ chmod &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;700&lt;/span&gt; start.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;所有者にstart.shを実行する権限を与えます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ chmod &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;700&lt;/span&gt; start.sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;実行します。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ./start.sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;初回起動時はこのような表示が出て、強制的に終了されます。&lt;/p&gt;
@@ -235,7 +281,7 @@ $ chmod &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;700&lt;/span&
 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;main/WARN&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;: Failed to load eula.txt
 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;main/INFO&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;: You need to agree to the EULA in order to run the server. Go to eula.txt &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; more info.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これは、「EULAに同意してください」というメッセージです。EULAに同意するために、「eula.txt」を編集します。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ nano eula.txt
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;eula.txt
 
 &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#By changing the setting below to TRUE you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula).&lt;/span&gt;
 &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#Sat Aug 14 21:23:03 JST 2021&lt;/span&gt;
@@ -245,8 +291,8 @@ $ chmod &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;700&lt;/span&
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ./start.sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;設定が読み込まれ、ワールドが生成されます。&lt;br&gt;
 Done!と表示されたら成功です！&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;Server thread/INFO&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;: Done &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;62.449s&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;! For help, &lt;span style=&#34;color:#204a87&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;help&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;サーバーを終了する場合は、「stop」と入力してEnterキーを押してください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;Server thread/INFO&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;: Done &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;30.000s&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;! For help, &lt;span style=&#34;color:#204a87&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;help&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;「stop」と入力するとサーバーが終了します。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&amp;gt;stop
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
@@ -920,42 +966,39 @@ BungeeCord.jar
         &lt;h2 id=&#34;サーバーのファイルをダウンロード&#34;&gt;サーバーのファイルをダウンロード&lt;/h2&gt;
 &lt;p&gt;まず、サーバー用のディレクトリを作成し、そのディレクトリに移動します。&lt;br&gt;
 名前はわかりやすいものにしておくと良いと思います。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ubuntu@ubuntu-server:~$ mkdir server &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; server
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ mkdir server &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; server
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;サーバーのファイルをダウンロードします。このURLは1.17.1のものです。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ubuntu@ubuntu-server:~/server$ wget https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2/server.jar
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ wget https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2.jar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;lsコマンドでserver.jarが存在することを確認しておきます。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ubuntu@ubuntu-server:~/server$ ls
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ls
 server.jar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;サーバーを実行する&#34;&gt;サーバーを実行する&lt;/h2&gt;
-&lt;p&gt;まず、サーバーを実行するためのスクリプトを作成し、お好きなエディタで編集します。
-ここでは、start.shを作成し、nanoで編集します。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ubuntu@ubuntu-server:~/server$ nano start.sh
+&lt;p&gt;まず、サーバーを実行するためのスクリプトを作成し、お好きなエディタで編集します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ nano start.sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;下の内容をstart.shに書き込みます。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;java -Xms1G -Xmx1G -jar server.jar nogui
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;所有者を設定して、所有者にstart.shを実行する権限を与えます。
-ここでは、所有者のユーザー名をubuntuとします。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ubuntu@ubuntu-server:~/server$ chown ubuntu start.sh
-ubuntu@ubuntu-server:~/server$ chmod &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;700&lt;/span&gt; start.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;所有者にstart.shを実行する権限を与えます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ chmod &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;700&lt;/span&gt; start.sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;実行します。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ubuntu@ubuntu-server:~/server$ ./start.sh
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ./start.sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;初回起動時はこのような表示が出て、強制的に終了されます。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;main/ERROR&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;: Failed to load properties from file: server.properties
 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;main/WARN&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;: Failed to load eula.txt
 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;main/INFO&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;: You need to agree to the EULA in order to run the server. Go to eula.txt &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; more info.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これは、「EULAに同意してください」というメッセージです。EULAに同意するために、「eula.txt」を編集します。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ubuntu@ubuntu-server:~/server$ nano eula.txt
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;eula.txt
 
 &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#By changing the setting below to TRUE you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula).&lt;/span&gt;
 &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#Sat Aug 14 21:23:03 JST 2021&lt;/span&gt;
 &lt;span style=&#34;color:#000&#34;&gt;eula&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;false&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;「eula=false」となっている部分を、「eula=true」に書き換えて、保存してください。&lt;/p&gt;
 &lt;p&gt;もう一度start.shを実行します。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ubuntu@ubuntu-server:~/server$ ./start.sh
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ./start.sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;設定が読み込まれ、ワールドが生成されます。&lt;br&gt;
 Done!と表示されたら成功です！&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;Server thread/INFO&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;: Done &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;62.449s&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;! For help, &lt;span style=&#34;color:#204a87&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;help&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;サーバーを終了する場合は、「stop」と入力してEnterキーを押してください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;Server thread/INFO&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;: Done &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;30.000s&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;! For help, &lt;span style=&#34;color:#204a87&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;help&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;「stop」と入力するとサーバーが終了します。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&amp;gt;stop
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
