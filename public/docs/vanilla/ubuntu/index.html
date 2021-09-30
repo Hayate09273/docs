@@ -28,7 +28,7 @@
 <meta itemprop="name" content="Ubuntuに公式サーバーを構築">
 <meta itemprop="description" content="Ubuntuに公式サーバーを構築する方法"><meta itemprop="datePublished" content="2021-08-16T18:27:50+09:00" />
 <meta itemprop="dateModified" content="2021-09-26T17:29:21+09:00" />
-<meta itemprop="wordCount" content="121">
+<meta itemprop="wordCount" content="113">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ubuntuに公式サーバーを構築"/>
 <meta name="twitter:description" content="Ubuntuに公式サーバーを構築する方法"/>
@@ -120,7 +120,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.b3721964bc12b232c89dc43467363628.json"
+  data-offline-search-index-json-src="/offline-search-index.84698c926fb07ca2b934c52b4826709b.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -169,7 +169,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.b3721964bc12b232c89dc43467363628.json"
+  data-offline-search-index-json-src="/offline-search-index.84698c926fb07ca2b934c52b4826709b.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -438,6 +438,34 @@
     
       
       <ul class="ul-2 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsvanillaarch-li">
+    
+      <input type="checkbox" id="m-docsvanillaarch-check"/>
+      <label for="m-docsvanillaarch-check"><a href="/docs/vanilla/arch/" title="Arch Linuxに公式サーバーを構築" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsvanillaarch"><span class="">Arch Linux</span></a></label>
+    
+    
+  </li>
+
+          
         
           
             
@@ -991,42 +1019,39 @@
 	<h2 id="サーバーのファイルをダウンロード">サーバーのファイルをダウンロード</h2>
 <p>まず、サーバー用のディレクトリを作成し、そのディレクトリに移動します。<br>
 名前はわかりやすいものにしておくと良いと思います。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ubuntu@ubuntu-server:~$ mkdir server <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#204a87">cd</span> server
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir server <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#204a87">cd</span> server
 </code></pre></div><p>サーバーのファイルをダウンロードします。このURLは1.17.1のものです。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ubuntu@ubuntu-server:~/server$ wget https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2/server.jar
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ wget https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2.jar
 </code></pre></div><p>lsコマンドでserver.jarが存在することを確認しておきます。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ubuntu@ubuntu-server:~/server$ ls
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls
 server.jar
 </code></pre></div><h2 id="サーバーを実行する">サーバーを実行する</h2>
-<p>まず、サーバーを実行するためのスクリプトを作成し、お好きなエディタで編集します。
-ここでは、start.shを作成し、nanoで編集します。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ubuntu@ubuntu-server:~/server$ nano start.sh
+<p>まず、サーバーを実行するためのスクリプトを作成し、お好きなエディタで編集します。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nano start.sh
 </code></pre></div><p>下の内容をstart.shに書き込みます。</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">#!/bin/bash
 </span><span style="color:#8f5902;font-style:italic"></span>java -Xms1G -Xmx1G -jar server.jar nogui
-</code></pre></div><p>所有者を設定して、所有者にstart.shを実行する権限を与えます。
-ここでは、所有者のユーザー名をubuntuとします。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ubuntu@ubuntu-server:~/server$ chown ubuntu start.sh
-ubuntu@ubuntu-server:~/server$ chmod <span style="color:#0000cf;font-weight:bold">700</span> start.sh
+</code></pre></div><p>所有者にstart.shを実行する権限を与えます。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ chmod <span style="color:#0000cf;font-weight:bold">700</span> start.sh
 </code></pre></div><p>実行します。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ubuntu@ubuntu-server:~/server$ ./start.sh
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./start.sh
 </code></pre></div><p>初回起動時はこのような表示が出て、強制的に終了されます。</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>main/ERROR<span style="color:#ce5c00;font-weight:bold">]</span>: Failed to load properties from file: server.properties
 <span style="color:#ce5c00;font-weight:bold">[</span>main/WARN<span style="color:#ce5c00;font-weight:bold">]</span>: Failed to load eula.txt
 <span style="color:#ce5c00;font-weight:bold">[</span>main/INFO<span style="color:#ce5c00;font-weight:bold">]</span>: You need to agree to the EULA in order to run the server. Go to eula.txt <span style="color:#204a87;font-weight:bold">for</span> more info.
 </code></pre></div><p>これは、「EULAに同意してください」というメッセージです。EULAに同意するために、「eula.txt」を編集します。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ubuntu@ubuntu-server:~/server$ nano eula.txt
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">eula.txt
 
 <span style="color:#8f5902;font-style:italic">#By changing the setting below to TRUE you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula).</span>
 <span style="color:#8f5902;font-style:italic">#Sat Aug 14 21:23:03 JST 2021</span>
 <span style="color:#000">eula</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87">false</span>
 </code></pre></div><p>「eula=false」となっている部分を、「eula=true」に書き換えて、保存してください。</p>
 <p>もう一度start.shを実行します。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ubuntu@ubuntu-server:~/server$ ./start.sh
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ./start.sh
 </code></pre></div><p>設定が読み込まれ、ワールドが生成されます。<br>
 Done!と表示されたら成功です！</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>Server thread/INFO<span style="color:#ce5c00;font-weight:bold">]</span>: Done <span style="color:#ce5c00;font-weight:bold">(</span>62.449s<span style="color:#ce5c00;font-weight:bold">)</span>! For help, <span style="color:#204a87">type</span> <span style="color:#4e9a06">&#34;help&#34;</span>
-</code></pre></div><p>サーバーを終了する場合は、「stop」と入力してEnterキーを押してください。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>Server thread/INFO<span style="color:#ce5c00;font-weight:bold">]</span>: Done <span style="color:#ce5c00;font-weight:bold">(</span>30.000s<span style="color:#ce5c00;font-weight:bold">)</span>! For help, <span style="color:#204a87">type</span> <span style="color:#4e9a06">&#34;help&#34;</span>
+</code></pre></div><p>「stop」と入力するとサーバーが終了します。</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt;stop
 </code></pre></div>
 	
@@ -1081,17 +1106,6 @@ Done!と表示されたら成功です！</p>
 
 
  
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/katex.min.css" integrity="sha384-Cqd8ihRLum0CCg8rz0hYKPoLZ3uw+gES2rXQXycqnL5pgVQIflxAUDS7ZSjITLb5" crossorigin="anonymous">
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/katex.min.js" integrity="sha384-1Or6BdeNQb0ezrmtGeqQHFpppNd7a/gw29xeiSikBbsb44xu3uAo8c7FwbF5jhbd" crossorigin="anonymous"></script>
- 
-
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/contrib/mhchem.min.js" integrity="sha384-LIgAiYlGSAdpNC9+YDjDPF6JeS/RRIumtNo0CmyQERZ/+g0h9MbuYQwf/5pQ4Y4M"  crossorigin="anonymous"></script>
-
-
-<script defer src='https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/contrib/auto-render.min.js' integrity='sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl' crossorigin='anonymous' onload='renderMathInElement(document.body, null);'></script>
 
 
 

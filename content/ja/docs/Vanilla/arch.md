@@ -1,9 +1,9 @@
 ---
-title: "CentOS Stream 8に公式サーバーを構築"
-linktitle: "CentOS Stream 8"
-date: 2021-09-26T16:41:22+09:00
+title: "Arch Linuxに公式サーバーを構築"
+linktitle: "Arch Linux"
+date: 2021-09-30T22:27:21+09:00
 draft: false
-description: CentOS Stream 8に公式サーバーを構築する方法
+description: Arch Linuxに公式サーバーを構築する方法
 ---
 
 ## サーバーのファイルをダウンロード
@@ -14,7 +14,7 @@ $ mkdir server && cd server
 ```
 サーバーのファイルをダウンロードします。このURLは1.17.1のものです。
 ```bash
-$ wget https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2/server.jar
+$ wget https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2.jar
 ```
 lsコマンドでserver.jarが存在することを確認しておきます。
 ```bash
@@ -22,10 +22,7 @@ $ ls
 server.jar
 ```
 ## サーバーを実行する
-まず、サーバーを実行するためのスクリプトを作成し、お好きなエディタで編集します。
-```bash
-$ nano start.sh
-```
+まず、サーバーを実行するためのスクリプトを作成し、お好きなエディタで編集します。  
 下の内容をstart.shに書き込みます。
 ```bash
 #!/bin/bash
