@@ -23,7 +23,7 @@ server.jar
 ```
 ## サーバーを実行する
 まず、サーバーを実行するためのスクリプトを作成し、お好きなエディタで編集します。  
-下の内容をstart.shに書き込みます。
+下の内容をスクリプトに書き込みます。
 ```bash
 #!/bin/bash
 java -Xms1G -Xmx1G -jar server.jar nogui
