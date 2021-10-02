@@ -39,6 +39,17 @@ $ java -jar BuildTools.jar
 ```bash
 $ java -jar BuildTools.jar --rev 1.16.5
 ```
+|生成されるファイル|
+|---|
+|BuilData|
+|BuildTools.log.txt|
+|CraftBukkit|
+|apache-maven-3.6.0|
+|work|
+|BuildTools.jar|
+|Bukkit|
+|Spigot|
+|spigot-1.xx.x.jar|
 ## サーバーを実行する
 まず、サーバーを実行するためのスクリプトを作成し、お好きなエディタで編集します。  
 下の内容を先ほど作成したスクリプトに書き込みます。  

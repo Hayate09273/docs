@@ -23,12 +23,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.hyte.jp/docs/spigot/ubuntu/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2021-08-18T23:40:32+09:00" />
-<meta property="article:modified_time" content="2021-09-17T18:43:22+09:00" /><meta property="og:site_name" content="みんなでマイクラ" />
+<meta property="article:modified_time" content="2021-10-01T22:09:53+09:00" /><meta property="og:site_name" content="みんなでマイクラ" />
 
 <meta itemprop="name" content="UbuntuにSpigotサーバーを構築">
 <meta itemprop="description" content="UbuntuにSpigotサーバーを構築する方法"><meta itemprop="datePublished" content="2021-08-18T23:40:32+09:00" />
-<meta itemprop="dateModified" content="2021-09-17T18:43:22+09:00" />
-<meta itemprop="wordCount" content="139">
+<meta itemprop="dateModified" content="2021-10-01T22:09:53+09:00" />
+<meta itemprop="wordCount" content="149">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="UbuntuにSpigotサーバーを構築"/>
 <meta name="twitter:description" content="UbuntuにSpigotサーバーを構築する方法"/>
@@ -120,7 +120,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.6f16a0697188532775d0ffc2f77ed78c.json"
+  data-offline-search-index-json-src="/offline-search-index.4e923f7cb12dc19e361da317754be5a9.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -169,7 +169,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.6f16a0697188532775d0ffc2f77ed78c.json"
+  data-offline-search-index-json-src="/offline-search-index.4e923f7cb12dc19e361da317754be5a9.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -583,6 +583,34 @@
     
       
       <ul class="ul-2 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsspigotcentos8-li">
+    
+      <input type="checkbox" id="m-docsspigotcentos8-check"/>
+      <label for="m-docsspigotcentos8-check"><a href="/docs/spigot/centos8/" title="CentOS Stream 8にSpigotサーバーを構築" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsspigotcentos8"><span class="">CentOS Stream 8</span></a></label>
+    
+    
+  </li>
+
+          
         
           
             
@@ -1070,7 +1098,43 @@ BuildTools.jar
 <p>上のコマンドの末尾に、「&ndash;rev」を追加することで、バージョンを指定できます。<br>
 例えば、1.16.5のSpigotをビルドしたい場合は、このコマンドを実行します。</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ java -jar BuildTools.jar --rev 1.16.5
-</code></pre></div><h2 id="サーバーを実行する">サーバーを実行する</h2>
+</code></pre></div><table>
+<thead>
+<tr>
+<th>生成されるファイル</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BuilData</td>
+</tr>
+<tr>
+<td>BuildTools.log.txt</td>
+</tr>
+<tr>
+<td>CraftBukkit</td>
+</tr>
+<tr>
+<td>apache-maven-3.6.0</td>
+</tr>
+<tr>
+<td>work</td>
+</tr>
+<tr>
+<td>BuildTools.jar</td>
+</tr>
+<tr>
+<td>Bukkit</td>
+</tr>
+<tr>
+<td>Spigot</td>
+</tr>
+<tr>
+<td>spigot-1.xx.x.jar</td>
+</tr>
+</tbody>
+</table>
+<h2 id="サーバーを実行する">サーバーを実行する</h2>
 <p>まず、サーバーを実行するためのスクリプトを作成し、お好きなエディタで編集します。 ここでは、start.shを作成し、nanoで編集します。</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ nano start.sh
 </code></pre></div><p>下の内容をstart.shに書き込みます。</p>
@@ -1105,8 +1169,8 @@ Done!と表示されたら成功です！</p>
 	<div class="text-muted mt-5 pt-3 border-top">
 
     最終更新
-    2021/09/17
-    : <a  href="https://github.com/hayate09273/docs/commit/18020c594fcc78a38dbefd9f3b9f4766f8993a84">docs/Java/archを作成 (18020c5)</a>
+    2021/10/01
+    : <a  href="https://github.com/hayate09273/docs/commit/ea0b8da9756be7c55fd81b1a0f5ab5a42c661cb4">docs/Spigot/archを作成 (ea0b8da)</a>
 
 </div>
 
