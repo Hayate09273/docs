@@ -132,7 +132,7 @@ time_format_default = "2006/01/02"
 rss_sections = ["blog"]
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
-#gcs_engine_id = "011217106833237091527:la2vtv2emlw"
+#gcs_engine_id = "011217106833237091527:07c99a4ee66d70b4d"
 
 # Enable Algolia DocSearch
 algolia_docsearch = false
@@ -143,7 +143,7 @@ offlineSearchSummaryLength = 70
 offlineSearchMaxResults = 10
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
-prism_syntax_highlighting = false
+prism_syntax_highlighting = true
 
 # User interface configuration
 [params.ui]

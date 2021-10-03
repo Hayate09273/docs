@@ -26,6 +26,10 @@ Spigotを改良したサーバーソフトです。
 
 「Spigotに比べて高速」と公式は謳っています。Spigotと互換性があるため、Spigotのプラグインが使用出来ます。
 
+### MohistMC
+MODとSpigotプラグインの両方が使用できるサーバーソフトです。  
+対応バージョンは限られていますが高機能です。
+
 ### BungeeCord
 サーバーとサーバーを繋げるためのソフトです。
 
@@ -41,4 +45,5 @@ flowchart TD
 ```
 
 ## 参考にしたサイト
-[PaperMC - The High Performance Fork](https://papermc.io/)
+- [PaperMC - The High Performance Fork](https://papermc.io/)
+- [MohistMC — Minecraft Forge Server software implementing Paper/Spigot/Bukkit API](https://mohistmc.com/)
