@@ -4,6 +4,7 @@ linktitle: "Arch Linux"
 date: 2021-09-29T00:06:54+09:00
 draft: false
 description: Arch LinuxにBungeeCordを構築する方法
+weight: 10
 ---
 
 ## BungeeCordをダウンロード

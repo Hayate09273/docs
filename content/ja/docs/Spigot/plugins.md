@@ -15,8 +15,8 @@ description: Spigotプラグインの紹介
 |[Dynmap](https://www.spigotmc.org/resources/dynmap.274/)|ワールドをWebブラウザで表示することができるプラグイン。|
 |[ChestSafe](https://github.com/HimaJyun/ChestSafe/releases)|チェストやシュルカーボックスなどを保護できるプラグイン。|
 |[LuckPerms](https://www.spigotmc.org/resources/luckperms.28140/)|権限を細かく設定できるプラグイン。|
-|||
-|||
-|||
+|[DiscordSRV](https://www.spigotmc.org/resources/discordsrv.18494/)|ゲーム内のチャットとDiscordを連携できるプラグイン。|
+|[Vault](https://www.spigotmc.org/resources/vault.34315/)|APIを提供するプラグイン。|
+|[CoreProtect](https://www.spigotmc.org/resources/coreprotect.8631/)|ブロックの設置、破壊ログや、ロールバックなどの機能を追加するプラグイン。|
 |||
 |||

@@ -14,7 +14,7 @@ $ mkdir server && cd server
 ```
 サーバーのファイルをダウンロードします。このURLは1.17.1のものです。
 ```bash
-$ wget https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2.jar
+$ curl -O https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2.jar
 ```
 lsコマンドでserver.jarが存在することを確認しておきます。
 ```bash

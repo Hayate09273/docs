@@ -4,6 +4,7 @@ linktitle: "設定"
 date: 2021-09-22T20:36:33+09:00
 draft: false
 description: BungeeCordのconfigファイルの解説
+weight: 40
 ---
 
 ## 権限

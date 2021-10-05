@@ -4,6 +4,7 @@ linktitle: コマンド
 date: 2021-09-22T21:12:02+09:00
 draft: false
 description: BungeeCordのコマンドの解説
+weight: 30
 ---
 
 ## コマンド

@@ -4,6 +4,7 @@ linktitle: "Ubuntu"
 date: 2021-08-16T20:52:28+09:00
 draft: false
 description: UbuntuにBungeeCordを構築する方法
+weight: 20
 ---
 
 ## BungeeCordをダウンロード
