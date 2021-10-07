@@ -4,6 +4,7 @@ linktitle: "Arch Linux"
 date: 2021-09-30T22:27:21+09:00
 draft: false
 description: Arch Linuxに公式サーバーを構築する方法
+weight: 10
 ---
 
 ## サーバーのファイルをダウンロード

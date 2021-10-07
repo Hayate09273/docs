@@ -4,6 +4,7 @@ linktitle: "プラグイン"
 date: 2021-10-04T19:28:02+09:00
 draft: true
 description: Spigotプラグインの紹介
+weight: 5
 ---
 
 このページでは、お勧めできるSpigotプラグインを紹介します。

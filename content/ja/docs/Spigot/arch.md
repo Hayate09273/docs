@@ -4,6 +4,7 @@ linktitle: "Arch Linux"
 date: 2021-10-01T21:39:48+09:00
 draft: false
 description: Arch LinuxにSpigotサーバーを構築する方法
+weight: 10
 ---
 
 ## Gitをインストール

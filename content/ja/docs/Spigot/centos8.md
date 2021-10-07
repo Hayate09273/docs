@@ -4,6 +4,7 @@ linktitle: "CentOS Stream 8"
 date: 2021-10-02T15:05:07+09:00
 draft: false
 description: CentOS Stream 8にSpigotサーバーを構築する方法
+weight: 20
 ---
 
 ## Gitをインストール

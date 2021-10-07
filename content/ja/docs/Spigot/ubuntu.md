@@ -4,6 +4,7 @@ linktitle: "Ubuntu"
 date: 2021-08-18T23:40:32+09:00
 draft: false
 description: UbuntuにSpigotサーバーを構築する方法
+weight: 30
 ---
 
 ## Gitをインストール

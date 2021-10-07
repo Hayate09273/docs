@@ -4,6 +4,7 @@ linktitle: "CentOS Stream 8"
 date: 2021-09-26T16:41:22+09:00
 draft: false
 description: CentOS Stream 8に公式サーバーを構築する方法
+weight: 20
 ---
 
 ## サーバーのファイルをダウンロード
