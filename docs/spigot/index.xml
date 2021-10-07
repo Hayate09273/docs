@@ -16,23 +16,23 @@
     
     
     <item>
-      <title>Docs: CentOS Stream 8にSpigotサーバーを構築</title>
-      <link>https://docs.hyte.jp/docs/spigot/centos8/</link>
-      <pubDate>Sat, 02 Oct 2021 15:05:07 +0900</pubDate>
+      <title>Docs: Arch LinuxにSpigotサーバーを構築</title>
+      <link>https://docs.hyte.jp/docs/spigot/arch/</link>
+      <pubDate>Fri, 01 Oct 2021 21:39:48 +0900</pubDate>
       
-      <guid>https://docs.hyte.jp/docs/spigot/centos8/</guid>
+      <guid>https://docs.hyte.jp/docs/spigot/arch/</guid>
       <description>
         
         
         &lt;h2 id=&#34;gitをインストール&#34;&gt;Gitをインストール&lt;/h2&gt;
 &lt;p&gt;Spigotサーバーを構築するには、ビルドという工程を踏む必要があります。
 ビルドをするためにはGitが必要なので、このコマンドでインストールします。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# dnf install git&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# pacman -S git&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;buildtoolsをダウンロード&#34;&gt;BuildToolsをダウンロード&lt;/h2&gt;
 &lt;p&gt;まず、Spigotサーバー用のディレクトリを作成し、そのディレクトリに移動します。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ mkdir spigot &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; spigot
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;BuildToolsをダウンロードします。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ curl -O https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;lsコマンドでBuildTools.jarが存在することを確認します。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ls
 BuildTools.jar
@@ -112,23 +112,23 @@ Done!と表示されたら成功です！&lt;/p&gt;
     </item>
     
     <item>
-      <title>Docs: Arch LinuxにSpigotサーバーを構築</title>
-      <link>https://docs.hyte.jp/docs/spigot/arch/</link>
-      <pubDate>Fri, 01 Oct 2021 21:39:48 +0900</pubDate>
+      <title>Docs: CentOS Stream 8にSpigotサーバーを構築</title>
+      <link>https://docs.hyte.jp/docs/spigot/centos8/</link>
+      <pubDate>Sat, 02 Oct 2021 15:05:07 +0900</pubDate>
       
-      <guid>https://docs.hyte.jp/docs/spigot/arch/</guid>
+      <guid>https://docs.hyte.jp/docs/spigot/centos8/</guid>
       <description>
         
         
         &lt;h2 id=&#34;gitをインストール&#34;&gt;Gitをインストール&lt;/h2&gt;
 &lt;p&gt;Spigotサーバーを構築するには、ビルドという工程を踏む必要があります。
 ビルドをするためにはGitが必要なので、このコマンドでインストールします。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# pacman -S git&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# dnf install git&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;buildtoolsをダウンロード&#34;&gt;BuildToolsをダウンロード&lt;/h2&gt;
 &lt;p&gt;まず、Spigotサーバー用のディレクトリを作成し、そのディレクトリに移動します。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ mkdir spigot &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; spigot
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;BuildToolsをダウンロードします。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ curl -O https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;lsコマンドでBuildTools.jarが存在することを確認します。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ls
 BuildTools.jar
