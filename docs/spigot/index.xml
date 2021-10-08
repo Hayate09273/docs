@@ -305,5 +305,86 @@ Done!と表示されたら成功です！&lt;/p&gt;
       </description>
     </item>
     
+    <item>
+      <title>Docs: WindowsにSpigotサーバーを構築</title>
+      <link>https://docs.hyte.jp/docs/spigot/windows/</link>
+      <pubDate>Thu, 07 Oct 2021 19:42:59 +0900</pubDate>
+      
+      <guid>https://docs.hyte.jp/docs/spigot/windows/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;拡張子を表示&#34;&gt;拡張子を表示&lt;/h2&gt;
+&lt;p&gt;Windowsでは、拡張子をデフォルトで表示しない設定になっています。&lt;br&gt;
+エクスプローラーを開き、上部にある「表示」タブの、「ファイル名拡張子」にチェックを入れてください。&lt;/p&gt;
+&lt;h2 id=&#34;gitをインストール&#34;&gt;Gitをインストール&lt;/h2&gt;
+&lt;p&gt;Spigotサーバーを構築するには、ビルドという工程を踏む必要があります。 ビルドをするためにはGit for Windowsが必要なので、&lt;a href=&#34;https://gitforwindows.org/&#34;&gt;こちら&lt;/a&gt;のサイトからダウンロードします。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Downloadボタンをクリックして、インストーラーをダウンロードします。&lt;/li&gt;
+&lt;li&gt;ダウンロードしたインストーラーを実行します。ユーザーアカウント制御の確認ダイアログが表示されたら、はいを押してください。&lt;/li&gt;
+&lt;li&gt;重要なことが書いてあるらしいです。Nextを押します。&lt;br&gt;
+&lt;img src=&#34;https://docs.hyte.jp/images/git_win_install1.png&#34; alt=&#34;Git&#34;&gt;&lt;/li&gt;
+&lt;li&gt;インストール先を選択します。デフォルトの場所でOKならNext、変更したい場合はBrowseを押してインストール先を選択してください。&lt;br&gt;
+&lt;img src=&#34;https://docs.hyte.jp/images/git_win_install2.png&#34; alt=&#34;Git&#34;&gt;&lt;/li&gt;
+&lt;li&gt;インストールするコンポーネントを選択する画面です。デフォルトで大丈夫なのでNextを押してください。&lt;br&gt;
+&lt;img src=&#34;https://docs.hyte.jp/images/git_win_install3.png&#34; alt=&#34;Git&#34;&gt;&lt;/li&gt;
+&lt;li&gt;スタートメニューにフォルダーを作成するかの画面です。デフォルトで大丈夫だと思いますので、Nextを押してください。&lt;br&gt;
+&lt;img src=&#34;https://docs.hyte.jp/images/git_win_install4.png&#34; alt=&#34;Git&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Gitで使用するエディタを選択する画面です。デフォルトの&lt;strong&gt;Vim&lt;/strong&gt;で大丈夫であれば、Nextを押してください。&lt;br&gt;
+&lt;img src=&#34;https://docs.hyte.jp/images/git_win_install5.png&#34; alt=&#34;Git&#34;&gt;&lt;/li&gt;
+&lt;li&gt;デフォルトのブランチ名を選択する画面です。デフォルトの「&lt;strong&gt;Let Git decide&lt;/strong&gt;」で大丈夫だと思いますので、Nextを押してください。&lt;br&gt;
+&lt;img src=&#34;https://docs.hyte.jp/images/git_win_install6.png&#34; alt=&#34;Git&#34;&gt;&lt;/li&gt;
+&lt;li&gt;コマンドプロンプトやPowerShellでGitが使えるようにするかを選択する画面です。デフォルトの「&lt;strong&gt;Git from the command line and also from 3rd-party software&lt;/strong&gt;」で大丈夫なのでNextを押してください。&lt;br&gt;
+&lt;img src=&#34;https://docs.hyte.jp/images/git_win_install7.png&#34; alt=&#34;Git&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Gitが使用するSSHを選択する画面です。デフォルトの「&lt;strong&gt;Use bundled OpenSSH&lt;/strong&gt;」で大丈夫なのでNextを押してください。&lt;br&gt;
+&lt;img src=&#34;https://docs.hyte.jp/images/git_win_install8.png&#34; alt=&#34;Git&#34;&gt;&lt;/li&gt;
+&lt;li&gt;GitがHTTPS接続に使用するSSLライブラリを選択する画面です。デフォルトの「&lt;strong&gt;Use the OpenSSL library&lt;/strong&gt;」で大丈夫なのでNextを押してください。&lt;br&gt;
+&lt;img src=&#34;https://docs.hyte.jp/images/git_win_install9.png&#34; alt=&#34;Git&#34;&gt;&lt;/li&gt;
+&lt;li&gt;改行コードの設定です。一応「&lt;strong&gt;Checkout as-is, commit Unix-style line endings&lt;/strong&gt;」に変更してNextを押してください。&lt;br&gt;
+&lt;img src=&#34;https://docs.hyte.jp/images/git_win_install10.png&#34; alt=&#34;Git&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Gitで使用する端末エミュレータを選択する画面です。デフォルトの「&lt;strong&gt;Use MinTTY&lt;/strong&gt;」で大丈夫なので、Nextを押してください。
+&lt;img src=&#34;https://docs.hyte.jp/images/git_win_install11.png&#34; alt=&#34;Git&#34;&gt;&lt;/li&gt;
+&lt;li&gt;「git pull」を実行したときの動作を選択する画面です。デフォルトの「&lt;strong&gt;Default (fast-forward or merge)&lt;/strong&gt;」で大丈夫であれば、Nextを押してください。&lt;br&gt;
+&lt;img src=&#34;https://docs.hyte.jp/images/git_win_install12.png&#34; alt=&#34;Git&#34;&gt;&lt;/li&gt;
+&lt;li&gt;認証関係の設定画面です。デフォルトの「&lt;strong&gt;Git Credential Manager Core&lt;/strong&gt;」で大丈夫なので、Nextを押してください。&lt;br&gt;
+&lt;img src=&#34;https://docs.hyte.jp/images/git_win_install13.png&#34; alt=&#34;Git&#34;&gt;&lt;/li&gt;
+&lt;li&gt;オプションの機能の設定画面です。デフォルトで大丈夫だと思いますので、Nextを押してください。&lt;br&gt;
+&lt;img src=&#34;https://docs.hyte.jp/images/git_win_install14.png&#34; alt=&#34;Git&#34;&gt;&lt;/li&gt;
+&lt;li&gt;こちらもオプションの機能の設定画面です。デフォルトのどちらにもチェックが入っていない状態で大丈夫だと思います。&lt;strong&gt;Install&lt;/strong&gt;をクリックすると、インストールが始まります。&lt;br&gt;
+&lt;img src=&#34;https://docs.hyte.jp/images/git_win_install15.png&#34; alt=&#34;Git&#34;&gt;&lt;/li&gt;
+&lt;li&gt;インストールが完了するとこちらの画面が表示されます。チェックボックスは外して&lt;strong&gt;Finish&lt;/strong&gt;を押してください。&lt;br&gt;
+&lt;img src=&#34;https://docs.hyte.jp/images/git_win_install16.png&#34; alt=&#34;Git&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;buildtoolsをダウンロード&#34;&gt;BuildToolsをダウンロード&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;まず、サーバーのファイルを保管するためのフォルダを好きな場所に作成してください。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hub.spigotmc.org/jenkins/job/BuildTools/&#34;&gt;こちら&lt;/a&gt;のサイトからBuildToolsをダウンロードします。画面中央の「最新成功ビルドの成果物」の下の「BuildTools.jar」をクリックしてください。&lt;/li&gt;
+&lt;li&gt;先ほど作成したフォルダの中にBuildTools.jarを保存してください。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;ビルドする&#34;&gt;ビルドする&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;先ほど作成したフォルダをエクスプローラーで開き、ファイルが表示される場所のなにもないところを右クリックし、「Git Bash Here」をクリックします。&lt;/li&gt;
+&lt;li&gt;このコマンドを実行すると、最新バージョンのSpigotのビルドが始まります。&lt;br&gt;
+少し時間がかかりますので、気長に待ちましょう。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ java -jar BuildTools.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;バージョンを指定する方法&#34;&gt;バージョンを指定する方法&lt;/h3&gt;
+&lt;p&gt;上のコマンドの末尾に、「–rev」を追加することで、バージョンを指定できます。&lt;br&gt;
+例えば、1.16.5のSpigotをビルドしたい場合は、このコマンドを実行します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ java -jar BuildTools.jar --rev 1.16.5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;サーバーを実行する&#34;&gt;サーバーを実行する&lt;/h2&gt;
+&lt;h3 id=&#34;スタートスクリプトを作成&#34;&gt;スタートスクリプトを作成&lt;/h3&gt;
+&lt;p&gt;spigot-1.xx.x.jarと同じフォルダ内に、スタートスクリプトを作成します。&lt;br&gt;
+名前は「start.bat」など分かりやすいものにしておくと良いと思います。&lt;br&gt;
+拡張子は、一度start.txtを作成してから、start.batに変更してください。&lt;/p&gt;
+&lt;h3 id=&#34;作成したスタートスクリプトを編集&#34;&gt;作成したスタートスクリプトを編集&lt;/h3&gt;
+&lt;p&gt;拡張子が.batの場合、ダブルクリックするとコマンドプロンプトが起動するので、編集する場合はstart.batを選択して右クリック→編集(E)をクリックしてください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;@ECHO OFF
+java -Xms1G -Xmx1G -jar spigot-1.xx.x.jar nogui
+PAUSE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
   </channel>
 </rss>
