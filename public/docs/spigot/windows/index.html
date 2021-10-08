@@ -1,0 +1,1292 @@
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.86.0" />
+<META NAME=“ROBOTS” CONTENT=“INDEX, FOLLOW”>
+
+
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>WindowsにSpigotサーバーを構築 | みんなでマイクラ</title>
+<meta name="description" content="Docsy does docs"><meta property="og:title" content="WindowsにSpigotサーバーを構築" />
+<meta property="og:description" content="WindowsにSpigotサーバーを構築する方法" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://docs.hyte.jp/docs/spigot/windows/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2021-10-07T19:42:59+09:00" />
+<meta property="article:modified_time" content="2021-10-07T20:23:48+09:00" /><meta property="og:site_name" content="みんなでマイクラ" />
+
+<meta itemprop="name" content="WindowsにSpigotサーバーを構築">
+<meta itemprop="description" content="WindowsにSpigotサーバーを構築する方法"><meta itemprop="datePublished" content="2021-10-07T19:42:59+09:00" />
+<meta itemprop="dateModified" content="2021-10-07T20:23:48+09:00" />
+<meta itemprop="wordCount" content="94">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="WindowsにSpigotサーバーを構築"/>
+<meta name="twitter:description" content="WindowsにSpigotサーバーを構築する方法"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.cbab2144395e7a7dffe8a6fd9e296345bf10713849d6b4a91dedb949be49776f.css" as="style">
+<link href="/scss/main.min.cbab2144395e7a7dffe8a6fd9e296345bf10713849d6b4a91dedb949be49776f.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+<script
+  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
+  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
+  crossorigin="anonymous"></script>
+
+
+
+<link rel="stylesheet" href="/css/prism.css"/>
+
+
+
+
+
+<link rel="stylesheet" href="https://docs.hyte.jp/css/custom_heading.css">
+
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="300" viewBox="0 0 300 300" enable-background="new 0 0 300 300"><image id="image0" width="300" height="300" x="0" y="0" href="data:image/png;base64,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 9DXePxfHumRYvYmA9cipvFxhrF5PwHoCVB6uTgCr2FWMY82fBpXI1dG7dSOW3q2OYs2Fb0VZ9DX9 Oa4CRsLqCVhFIPV0qIBL06Rg6QD9KVExLpv5imHZ4t/ToiJcTlY1hOUUlZ8alcNFMvY+LDJZ4elR WS5WDZKw2CSYp0iluTq+ZrBgctXTpCq4IljCTLSnSpW3EJYwE+2xZBba5VJUHGvR57oETcISZqI9 U6mWgrXoc1yiFsNa9PktWQthLfrclrD5sBZ9XkvaJKxFn9MSN4616PNZ8uZiLfpcHkAzWIs+jwfS cqxFn8Nze25/rv0f+96QhYdaMjEAAAANdEVYdENhbWVyYQBDYW1lcmFo/+/pAAAAGHRFWHREYXRl ADIwMTkvMDIvMjQgMTQ6MzY6MjBaPzy1AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIxLTA4LTE0VDA5 OjIxOjEzKzAwOjAwjPtaZwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0wOC0xNFQwOToyMToxMysw MDowMP2m4tsAAAAydEVYdEZpbGUAQzpcVXNlcnNcbWluZXlfMDAwXERvd25sb2Fkc1xtdWx0aTMw MHB4LmJsZW5kInMy4wAAAAd0RVh0RnJhbWUAN0bxERMAAAATdEVYdFJlbmRlclRpbWUAMDA6MDAu MTS+QasZAAAAC3RFWHRTY2VuZQBTY2VuZeUhXZYAAAAQdEVYdFRpbWUAMDA6MDA6MDA6MDcFoIP3 AAAAAElFTkSuQmCC"/></svg></span><span class="text-uppercase font-weight-bold">みんなでマイクラ</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/about/" ><i class='fas fa-info'></i><span>このサイトについて</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="/docs/" ><i class='fas fa-server'></i><span class="active">サーバーを建てる</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/blog/" ><i class="fa fa-sticky-note"></i><span>雑記帳</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; サイトを検索..."
+  aria-label="サイトを検索..."
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.4934793a0aa2aaed82374d6565a60a4c.json"
+  data-offline-search-base-href="/"
+  data-offline-search-max-results="10"
+>
+
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+  
+  <script>
+    $(function() {
+    $("#td-section-nav a").removeClass("active");
+    $("#td-section-nav #m-docsspigotwindows").addClass("active"); 
+    $("#td-section-nav #m-docsspigotwindows-li span").addClass("td-sidebar-nav-active-item"); 
+    $("#td-section-nav #m-docsspigotwindows").parents("li").addClass("active-path"); 
+    $("#td-section-nav li.active-path").addClass("show"); 
+    $("#td-section-nav li.active-path").children("input").prop('checked', true);
+    $("#td-section-nav #m-docsspigotwindows-li").siblings("li").addClass("show");  
+    $("#td-section-nav #m-docsspigotwindows-li").children("ul").children("li").addClass("show");  
+    $("#td-sidebar-menu").toggleClass("d-none"); 
+    });
+  </script>
+  
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner d-none">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; サイトを検索..."
+  aria-label="サイトを検索..."
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.4934793a0aa2aaed82374d6565a60a4c.json"
+  data-offline-search-base-href="/"
+  data-offline-search-max-results="10"
+>
+
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav foldable-nav" id="td-section-nav">
+    
+    
+    
+    
+    
+    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docs-li">
+    
+      <a href="/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">サーバーを建てる</span></a>
+    
+    
+      
+      <ul class="ul-1">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docssoftware-li">
+    
+      <input type="checkbox" id="m-docssoftware-check"/>
+      <label for="m-docssoftware-check"><a href="/docs/software/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docssoftware"><span class="">サーバーソフト</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsjava-li">
+    
+      <input type="checkbox" id="m-docsjava-check"/>
+      <label for="m-docsjava-check"><a href="/docs/java/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docsjava"><span class="">Javaのインストール</span></a></label>
+    
+    
+      
+      <ul class="ul-2 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsjavaversion-li">
+    
+      <input type="checkbox" id="m-docsjavaversion-check"/>
+      <label for="m-docsjavaversion-check"><a href="/docs/java/version/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsjavaversion"><span class="">バージョンの選び方</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsjavaubuntu-li">
+    
+      <input type="checkbox" id="m-docsjavaubuntu-check"/>
+      <label for="m-docsjavaubuntu-check"><a href="/docs/java/ubuntu/" title="UbuntuにJavaをインストール" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsjavaubuntu"><span class="">Ubuntu</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsjavacentos8-li">
+    
+      <input type="checkbox" id="m-docsjavacentos8-check"/>
+      <label for="m-docsjavacentos8-check"><a href="/docs/java/centos8/" title="CentOS Stream 8にJavaをインストール" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsjavacentos8"><span class="">CentOS Stream 8</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsjavaarch-li">
+    
+      <input type="checkbox" id="m-docsjavaarch-check"/>
+      <label for="m-docsjavaarch-check"><a href="/docs/java/arch/" title="Arch LinuxにJavaをインストール" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsjavaarch"><span class="">Arch Linux</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsjavawindows-li">
+    
+      <input type="checkbox" id="m-docsjavawindows-check"/>
+      <label for="m-docsjavawindows-check"><a href="/docs/java/windows/" title="WindowsにJavaをインストール" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsjavawindows"><span class="">Windows</span></a></label>
+    
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsvanilla-li">
+    
+      <input type="checkbox" id="m-docsvanilla-check"/>
+      <label for="m-docsvanilla-check"><a href="/docs/vanilla/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docsvanilla"><span class="">公式サーバー</span></a></label>
+    
+    
+      
+      <ul class="ul-2 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsvanillaarch-li">
+    
+      <input type="checkbox" id="m-docsvanillaarch-check"/>
+      <label for="m-docsvanillaarch-check"><a href="/docs/vanilla/arch/" title="Arch Linuxに公式サーバーを構築" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsvanillaarch"><span class="">Arch Linux</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsvanillacentos8-li">
+    
+      <input type="checkbox" id="m-docsvanillacentos8-check"/>
+      <label for="m-docsvanillacentos8-check"><a href="/docs/vanilla/centos8/" title="CentOS Stream 8に公式サーバーを構築" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsvanillacentos8"><span class="">CentOS Stream 8</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsvanillaubuntu-li">
+    
+      <input type="checkbox" id="m-docsvanillaubuntu-check"/>
+      <label for="m-docsvanillaubuntu-check"><a href="/docs/vanilla/ubuntu/" title="Ubuntuに公式サーバーを構築" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsvanillaubuntu"><span class="">Ubuntu</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsvanillawindows-li">
+    
+      <input type="checkbox" id="m-docsvanillawindows-check"/>
+      <label for="m-docsvanillawindows-check"><a href="/docs/vanilla/windows/" title="Windowsに公式サーバーを構築" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsvanillawindows"><span class="">Windows</span></a></label>
+    
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsspigot-li">
+    
+      <input type="checkbox" id="m-docsspigot-check"/>
+      <label for="m-docsspigot-check"><a href="/docs/spigot/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docsspigot"><span class="">Spigot</span></a></label>
+    
+    
+      
+      <ul class="ul-2 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsspigotarch-li">
+    
+      <input type="checkbox" id="m-docsspigotarch-check"/>
+      <label for="m-docsspigotarch-check"><a href="/docs/spigot/arch/" title="Arch LinuxにSpigotサーバーを構築" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsspigotarch"><span class="">Arch Linux</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsspigotcentos8-li">
+    
+      <input type="checkbox" id="m-docsspigotcentos8-check"/>
+      <label for="m-docsspigotcentos8-check"><a href="/docs/spigot/centos8/" title="CentOS Stream 8にSpigotサーバーを構築" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsspigotcentos8"><span class="">CentOS Stream 8</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsspigotubuntu-li">
+    
+      <input type="checkbox" id="m-docsspigotubuntu-check"/>
+      <label for="m-docsspigotubuntu-check"><a href="/docs/spigot/ubuntu/" title="UbuntuにSpigotサーバーを構築" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsspigotubuntu"><span class="">Ubuntu</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsspigotwindows-li">
+    
+      <input type="checkbox" id="m-docsspigotwindows-check"/>
+      <label for="m-docsspigotwindows-check"><a href="/docs/spigot/windows/" title="WindowsにSpigotサーバーを構築" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsspigotwindows"><span class="">Windows</span></a></label>
+    
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsbungeecord-li">
+    
+      <input type="checkbox" id="m-docsbungeecord-check"/>
+      <label for="m-docsbungeecord-check"><a href="/docs/bungeecord/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docsbungeecord"><span class="">BungeeCord</span></a></label>
+    
+    
+      
+      <ul class="ul-2 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbungeecordarch-li">
+    
+      <input type="checkbox" id="m-docsbungeecordarch-check"/>
+      <label for="m-docsbungeecordarch-check"><a href="/docs/bungeecord/arch/" title="Arch LinuxにBungeeCordを構築" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsbungeecordarch"><span class="">Arch Linux</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbungeecordubuntu-li">
+    
+      <input type="checkbox" id="m-docsbungeecordubuntu-check"/>
+      <label for="m-docsbungeecordubuntu-check"><a href="/docs/bungeecord/ubuntu/" title="UbuntuにBungeeCordを構築" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsbungeecordubuntu"><span class="">Ubuntu</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbungeecordcentos8-li">
+    
+      <input type="checkbox" id="m-docsbungeecordcentos8-check"/>
+      <label for="m-docsbungeecordcentos8-check"><a href="/docs/bungeecord/centos8/" title="CentOS Stream 8にBungeeCordを構築" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsbungeecordcentos8"><span class="">CentOS Stream 8</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbungeecordcommand-li">
+    
+      <input type="checkbox" id="m-docsbungeecordcommand-check"/>
+      <label for="m-docsbungeecordcommand-check"><a href="/docs/bungeecord/command/" title="BungeeCordのコマンド" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsbungeecordcommand"><span class="">コマンド</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbungeecordconfig-li">
+    
+      <input type="checkbox" id="m-docsbungeecordconfig-check"/>
+      <label for="m-docsbungeecordconfig-check"><a href="/docs/bungeecord/config/" title="BungeeCordの設定" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsbungeecordconfig"><span class="">設定</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbungeecordspigot-li">
+    
+      <input type="checkbox" id="m-docsbungeecordspigot-check"/>
+      <label for="m-docsbungeecordspigot-check"><a href="/docs/bungeecord/spigot/" title="BungeeCordとSpigotサーバーを接続" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsbungeecordspigot"><span class="">Spigotを接続</span></a></label>
+    
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docslinux-li">
+    
+      <input type="checkbox" id="m-docslinux-check"/>
+      <label for="m-docslinux-check"><a href="/docs/linux/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-docslinux"><span class="">Linux</span></a></label>
+    
+    
+      
+      <ul class="ul-2 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docslinuxdistribution-li">
+    
+      <input type="checkbox" id="m-docslinuxdistribution-check"/>
+      <label for="m-docslinuxdistribution-check"><a href="/docs/linux/distribution/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docslinuxdistribution"><span class="">Linuxディストリビューション</span></a></label>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docslinuxcommand-li">
+    
+      <input type="checkbox" id="m-docslinuxcommand-check"/>
+      <label for="m-docslinuxcommand-check"><a href="/docs/linux/command/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docslinuxcommand"><span class="">コマンド</span></a></label>
+    
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+    </ul>
+  </nav>
+</div>
+
+
+
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+  
+  
+  
+  
+  
+  
+  <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+  
+    
+    
+      
+    
+    
+    
+    
+    
+    
+    
+
+    <a href="https://github.com/hayate09273/docs/edit/main/content/ja/docs/Spigot/windows.md" target="_blank"><i class="fa fa-edit fa-fw"></i> ページの編集</a>
+    <a href="https://github.com/hayate09273/docs/new/main/content/ja/docs/Spigot/windows.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" target="_blank"><i class="fa fa-edit fa-fw"></i> 子ページを作成</a>
+    <a href="https://github.com/hayate09273/docs/issues/new?title=Windows%e3%81%abSpigot%e3%82%b5%e3%83%bc%e3%83%90%e3%83%bc%e3%82%92%e6%a7%8b%e7%af%89" target="_blank"><i class="fab fa-github fa-fw"></i> ドキュメントのissueを作成</a>
+    
+      
+      <a href="https://github.com/google/docsy/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> プロジェクトのissueを作成</a>
+    
+
+  
+  
+  </div>
+
+
+            
+
+
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#拡張子を表示">拡張子を表示</a></li>
+    <li><a href="#gitをインストール">Gitをインストール</a></li>
+    <li><a href="#buildtoolsをダウンロード">BuildToolsをダウンロード</a></li>
+    <li><a href="#ビルドする">ビルドする</a>
+      <ul>
+        <li><a href="#バージョンを指定する方法">バージョンを指定する方法</a></li>
+      </ul>
+    </li>
+    <li><a href="#サーバーを実行する">サーバーを実行する</a>
+      <ul>
+        <li><a href="#スタートスクリプトを作成">スタートスクリプトを作成</a></li>
+        <li><a href="#作成したスタートスクリプトを編集">作成したスタートスクリプトを編集</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+
+
+
+            
+
+	
+		
+
+
+
+  
+  
+
+	
+		
+
+
+
+  
+  
+
+	
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="https://docs.hyte.jp/docs/">サーバーを建てる</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="https://docs.hyte.jp/docs/spigot/">Spigot</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="https://docs.hyte.jp/docs/spigot/windows/">Windows</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>WindowsにSpigotサーバーを構築</h1>
+	<div class="lead">WindowsにSpigotサーバーを構築する方法</div>
+	<header class="article-meta">
+		
+		
+			
+				
+
+
+			
+				
+
+
+			
+		
+		
+	</header>    
+	<h2 id="拡張子を表示">拡張子を表示</h2>
+<p>Windowsでは、拡張子をデフォルトで表示しない設定になっています。<br>
+エクスプローラーを開き、上部にある「表示」タブの、「ファイル名拡張子」にチェックを入れてください。</p>
+<h2 id="gitをインストール">Gitをインストール</h2>
+<p>Spigotサーバーを構築するには、ビルドという工程を踏む必要があります。 ビルドをするためにはGit for Windowsが必要なので、<a href="https://gitforwindows.org/">こちら</a>のサイトからダウンロードします。</p>
+<ol>
+<li>Downloadボタンをクリックして、インストーラーをダウンロードします。</li>
+<li>ダウンロードしたインストーラーを実行します。ユーザーアカウント制御の確認ダイアログが表示されたら、はいを押してください。</li>
+<li>重要なことが書いてあるらしいです。Nextを押します。<br>
+<img src="/images/git_win_install1.png" alt="Git"></li>
+<li>インストール先を選択します。デフォルトの場所でOKならNext、変更したい場合はBrowseを押してインストール先を選択してください。<br>
+<img src="/images/git_win_install2.png" alt="Git"></li>
+<li>インストールするコンポーネントを選択する画面です。デフォルトで大丈夫なのでNextを押してください。<br>
+<img src="/images/git_win_install3.png" alt="Git"></li>
+<li>スタートメニューにフォルダーを作成するかの画面です。デフォルトで大丈夫だと思いますので、Nextを押してください。<br>
+<img src="/images/git_win_install4.png" alt="Git"></li>
+<li>Gitで使用するエディタを選択する画面です。デフォルトの<strong>Vim</strong>で大丈夫であれば、Nextを押してください。<br>
+<img src="/images/git_win_install5.png" alt="Git"></li>
+<li>デフォルトのブランチ名を選択する画面です。デフォルトの「<strong>Let Git decide</strong>」で大丈夫だと思いますので、Nextを押してください。<br>
+<img src="/images/git_win_install6.png" alt="Git"></li>
+<li>コマンドプロンプトやPowerShellでGitが使えるようにするかを選択する画面です。デフォルトの「<strong>Git from the command line and also from 3rd-party software</strong>」で大丈夫なのでNextを押してください。<br>
+<img src="/images/git_win_install7.png" alt="Git"></li>
+<li>Gitが使用するSSHを選択する画面です。デフォルトの「<strong>Use bundled OpenSSH</strong>」で大丈夫なのでNextを押してください。<br>
+<img src="/images/git_win_install8.png" alt="Git"></li>
+<li>GitがHTTPS接続に使用するSSLライブラリを選択する画面です。デフォルトの「<strong>Use the OpenSSL library</strong>」で大丈夫なのでNextを押してください。<br>
+<img src="/images/git_win_install9.png" alt="Git"></li>
+<li>改行コードの設定です。一応「<strong>Checkout as-is, commit Unix-style line endings</strong>」に変更してNextを押してください。<br>
+<img src="/images/git_win_install10.png" alt="Git"></li>
+<li>Gitで使用する端末エミュレータを選択する画面です。デフォルトの「<strong>Use MinTTY</strong>」で大丈夫なので、Nextを押してください。
+<img src="/images/git_win_install11.png" alt="Git"></li>
+<li>「git pull」を実行したときの動作を選択する画面です。デフォルトの「<strong>Default (fast-forward or merge)</strong>」で大丈夫であれば、Nextを押してください。<br>
+<img src="/images/git_win_install12.png" alt="Git"></li>
+<li>認証関係の設定画面です。デフォルトの「<strong>Git Credential Manager Core</strong>」で大丈夫なので、Nextを押してください。<br>
+<img src="/images/git_win_install13.png" alt="Git"></li>
+<li>オプションの機能の設定画面です。デフォルトで大丈夫だと思いますので、Nextを押してください。<br>
+<img src="/images/git_win_install14.png" alt="Git"></li>
+<li>こちらもオプションの機能の設定画面です。デフォルトのどちらにもチェックが入っていない状態で大丈夫だと思います。<strong>Install</strong>をクリックすると、インストールが始まります。<br>
+<img src="/images/git_win_install15.png" alt="Git"></li>
+<li>インストールが完了するとこちらの画面が表示されます。チェックボックスは外して<strong>Finish</strong>を押してください。<br>
+<img src="/images/git_win_install16.png" alt="Git"></li>
+</ol>
+<h2 id="buildtoolsをダウンロード">BuildToolsをダウンロード</h2>
+<ol>
+<li>まず、サーバーのファイルを保管するためのフォルダを好きな場所に作成してください。</li>
+<li><a href="https://hub.spigotmc.org/jenkins/job/BuildTools/">こちら</a>のサイトからBuildToolsをダウンロードします。画面中央の「最新成功ビルドの成果物」の下の「BuildTools.jar」をクリックしてください。</li>
+<li>先ほど作成したフォルダの中にBuildTools.jarを保存してください。</li>
+</ol>
+<h2 id="ビルドする">ビルドする</h2>
+<ol>
+<li>先ほど作成したフォルダをエクスプローラーで開き、ファイルが表示される場所のなにもないところを右クリックし、「Git Bash Here」をクリックします。</li>
+<li>このコマンドを実行すると、最新バージョンのSpigotのビルドが始まります。<br>
+少し時間がかかりますので、気長に待ちましょう。</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ java -jar BuildTools.jar
+</code></pre></div><h3 id="バージョンを指定する方法">バージョンを指定する方法</h3>
+<p>上のコマンドの末尾に、「–rev」を追加することで、バージョンを指定できます。<br>
+例えば、1.16.5のSpigotをビルドしたい場合は、このコマンドを実行します。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ java -jar BuildTools.jar --rev 1.16.5
+</code></pre></div><h2 id="サーバーを実行する">サーバーを実行する</h2>
+<h3 id="スタートスクリプトを作成">スタートスクリプトを作成</h3>
+<p>spigot-1.xx.x.jarと同じフォルダ内に、スタートスクリプトを作成します。<br>
+名前は「start.bat」など分かりやすいものにしておくと良いと思います。<br>
+拡張子は、一度start.txtを作成してから、start.batに変更してください。</p>
+<h3 id="作成したスタートスクリプトを編集">作成したスタートスクリプトを編集</h3>
+<p>拡張子が.batの場合、ダブルクリックするとコマンドプロンプトが起動するので、編集する場合はstart.batを選択して右クリック→編集(E)をクリックしてください。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">@ECHO OFF
+java -Xms1G -Xmx1G -jar spigot-1.xx.x.jar nogui
+PAUSE
+</code></pre></div>
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">
+
+    最終更新
+    2021/10/07
+    : <a  href="https://github.com/hayate09273/docs/commit/51bccfe3e528d2475fbb6198d85928bdba8c984f">docs/Spigot/windowsを作成 (51bccfe)</a>
+
+</div>
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2021 みんなでマイクラ All Rights Reserved</small>
+        <small class="ml-1"><a href="/about/#%e3%83%97%e3%83%a9%e3%82%a4%e3%83%90%e3%82%b7%e3%83%bc%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc" target="_blank" rel="noopener">プライバシーポリシー</a></small>
+	
+		<p class="mt-2"><a href="/about/">このサイトについて</a></p>
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" integrity="sha384-uQikAXnCAqsMb3ygtdqBYvcwvHUkzGIpjdGyy9owhURXHUxLC5LgTcSxJQH/RzjK" crossorigin="anonymous"></script>
+
+
+
+
+<script src='/js/deflate.js'></script>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.32bb414d5f5161683e69a38070aceef9ca60a5062b44acbe4b19f20db754d6f0.js" integrity="sha256-MrtBTV9RYWg&#43;aaOAcKzu&#43;cpgpQYrRKy&#43;SxnyDbdU1vA=" crossorigin="anonymous"></script>
+
+
+
+<script src='/js/prism.js'></script>
+
+
+
+  </body>
+</html>
