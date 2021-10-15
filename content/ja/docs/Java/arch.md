@@ -7,28 +7,30 @@ description: Arch LinuxにJavaをインストールする方法
 ---
 
 ## インストール
-Arch Linuxの場合は、pacmanを使用してインストールするのが良いと思います。
-Arch Linuxは、Java 7、8、11、16を公式でサポートしています。  
+Arch Linuxの場合は、pacmanを使用してインストールするのが良いと思います。Arch Linuxは、Java 7、8、11、17を公式でサポートしています。  
+
 このコマンドを実行すると、最新のJavaがインストールされます。
-2021年9月17日現在では、Java 16がインストールされました。
+2021年10月15日現在では、Java 17がインストールされました。
 ```bash
-$ sudo pacman -S jre-openjdk
+# pacman -S jre-openjdk
 ```
 
 古いバージョンのJavaを使用したい場合は、「jre」の部分を「jre11」などに変更してください。
 ```bash
-$ sudo pacman -S jre11-openjdk
+# pacman -S jre11-openjdk
 ```
 ```bash
-$ sudo pacman -S jre8-openjdk
+# pacman -S jre8-openjdk
 ```
 ## バージョンを確認
 「java -version」でバージョンを確認します。このように表示されたらインストール完了です。  
 ダブルクオーテーションで囲まれた部分がバージョンです。
 ```bash
-openjdk version "16.0.2" 2021-07-20
-OpenJDK Runtime Environment (build 16.0.2+7)
-OpenJDK 64-Bit Server VM (build 16.0.2+7, mixed mode)
+$ java -version
+
+openjdk version "17" 2021-09-14
+OpenJDK Runtime Environment (build 17+35)
+OpenJDK 64-Bit Server VM (build 17+35, mixed mode)
 ```
 
 ## 参考にしたサイト

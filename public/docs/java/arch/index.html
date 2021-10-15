@@ -31,7 +31,7 @@
 <meta itemprop="name" content="Arch LinuxにJavaをインストール">
 <meta itemprop="description" content="Arch LinuxにJavaをインストールする方法"><meta itemprop="datePublished" content="2021-09-17T17:34:33+09:00" />
 <meta itemprop="dateModified" content="2021-09-23T22:12:44+09:00" />
-<meta itemprop="wordCount" content="50">
+<meta itemprop="wordCount" content="49">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Arch LinuxにJavaをインストール"/>
 <meta name="twitter:description" content="Arch LinuxにJavaをインストールする方法"/>
@@ -126,7 +126,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.4934793a0aa2aaed82374d6565a60a4c.json"
+  data-offline-search-index-json-src="/offline-search-index.0a93cf6b5fc154a915487d138c469c9f.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -175,7 +175,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.4934793a0aa2aaed82374d6565a60a4c.json"
+  data-offline-search-index-json-src="/offline-search-index.0a93cf6b5fc154a915487d138c469c9f.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -1136,20 +1136,21 @@
 		
 	</header>    
 	<h2 id="インストール">インストール</h2>
-<p>Arch Linuxの場合は、pacmanを使用してインストールするのが良いと思います。
-Arch Linuxは、Java 7、8、11、16を公式でサポートしています。<br>
-このコマンドを実行すると、最新のJavaがインストールされます。
-2021年9月17日現在では、Java 16がインストールされました。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo pacman -S jre-openjdk
+<p>Arch Linuxの場合は、pacmanを使用してインストールするのが良いと思います。Arch Linuxは、Java 7、8、11、17を公式でサポートしています。</p>
+<p>このコマンドを実行すると、最新のJavaがインストールされます。
+2021年10月15日現在では、Java 17がインストールされました。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># pacman -S jre-openjdk</span>
 </code></pre></div><p>古いバージョンのJavaを使用したい場合は、「jre」の部分を「jre11」などに変更してください。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo pacman -S jre11-openjdk
-</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo pacman -S jre8-openjdk
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># pacman -S jre11-openjdk</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># pacman -S jre8-openjdk</span>
 </code></pre></div><h2 id="バージョンを確認">バージョンを確認</h2>
 <p>「java -version」でバージョンを確認します。このように表示されたらインストール完了です。<br>
 ダブルクオーテーションで囲まれた部分がバージョンです。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">openjdk version <span style="color:#4e9a06">&#34;16.0.2&#34;</span> 2021-07-20
-OpenJDK Runtime Environment <span style="color:#ce5c00;font-weight:bold">(</span>build 16.0.2+7<span style="color:#ce5c00;font-weight:bold">)</span>
-OpenJDK 64-Bit Server VM <span style="color:#ce5c00;font-weight:bold">(</span>build 16.0.2+7, mixed mode<span style="color:#ce5c00;font-weight:bold">)</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ java -version
+
+openjdk version <span style="color:#4e9a06">&#34;17&#34;</span> 2021-09-14
+OpenJDK Runtime Environment <span style="color:#ce5c00;font-weight:bold">(</span>build 17+35<span style="color:#ce5c00;font-weight:bold">)</span>
+OpenJDK 64-Bit Server VM <span style="color:#ce5c00;font-weight:bold">(</span>build 17+35, mixed mode<span style="color:#ce5c00;font-weight:bold">)</span>
 </code></pre></div><h2 id="参考にしたサイト">参考にしたサイト</h2>
 <p><a href="https://wiki.archlinux.org/title/Java">Java - ArchWiki</a></p>
 
