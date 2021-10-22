@@ -31,7 +31,7 @@
 <meta itemprop="name" content="WindowsにJavaをインストール">
 <meta itemprop="description" content="WindowsにJavaをインストールする方法"><meta itemprop="datePublished" content="2021-09-11T22:27:45+09:00" />
 <meta itemprop="dateModified" content="2021-09-20T22:10:52+09:00" />
-<meta itemprop="wordCount" content="48">
+<meta itemprop="wordCount" content="51">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="WindowsにJavaをインストール"/>
 <meta name="twitter:description" content="WindowsにJavaをインストールする方法"/>
@@ -126,7 +126,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0a93cf6b5fc154a915487d138c469c9f.json"
+  data-offline-search-index-json-src="/offline-search-index.58f1af8cab37b4fe240c6592a7d41a89.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -175,7 +175,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0a93cf6b5fc154a915487d138c469c9f.json"
+  data-offline-search-index-json-src="/offline-search-index.58f1af8cab37b4fe240c6592a7d41a89.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -1137,28 +1137,30 @@
 	</header>    
 	<h2 id="インストーラーのダウンロード">インストーラーのダウンロード</h2>
 <p><a href="https://www.oracle.com/jp/java/technologies/javase-downloads.html">Oracleの公式サイト</a>からJavaをダウンロードします。<br>
-バージョンは8、11、16がありますが、Minecraft Java Edition 1.17ではJava 16が要件となっているので、16をお勧めします。<br>
-「JDK Download」をクリックし、「Windows x64 Installer」の右にあるファイル名をクリックします。<br>
-チェックボックスにチェックを入れて同意し、緑色のダウンロードボタンをクリックします。</p>
+バージョンは8、11、17がありますが、Minecraft Java Edition 1.17ではJava 16以上が要件となっているので、17をお勧めします。<br>
+<strong>Java SE Development Kit 17.0.1 downloads</strong>の下にある<strong>Windows</strong>タブをクリックし、<strong>x64 Installer</strong>の右にあるURLをクリックします。<br>
+これでインストーラーがダウンロードできます。</p>
 <h2 id="インストール">インストール</h2>
-<p>先ほどダウンロードしたインストーラーを起動します。ユーザーアカウント制御の確認画面が表示されたら「はい」をクリックしてください。
-セットアップが始まります。</p>
-<p>「Java SE Development Kit 16.0.2のインストール・ウィザードへようこそ</p>
-<p>このウィザードでは、Java SE Development Kit 16.0.2のインストール・プロセスを順を追って説明します。」<br>
-この画面では次を選択します。</p>
-<p>「プライベートJREおよびsrc.zipを含むJava(TM) SE Development Kit 16.0.2 (64-bit)。
-ハードドライブに420MBが必要です。インストール・フォルダを変更するには、『変更』ボタンをクリックします。」<br>
-この画面では、インストールフォルダを変更しない場合は次を選択します。</p>
-<p>コンピューターにJavaがインストールされるので、少し待ちます。</p>
-<p>「Java(TM) SE Development Kit 16.0.2 (64-bit)が正常にインストールされました」<br>
-この画面が表示されたら、閉じるを選択して終了します。</p>
+<ol>
+<li>先ほどダウンロードしたインストーラーを起動します。ユーザーアカウント制御の確認画面が表示されたら「はい」をクリックしてください。セットアップが始まります。</li>
+<li>この画面では、次へをクリックしてください。<br>
+<img src="/images/java_win_install1.png" alt="Javaのインストール画面1"></li>
+<li>インストールフォルダを選択する画面です。このままで大丈夫であれば、次へをクリックするとインストールが始まります。<br>
+<img src="/images/java_win_install2.png" alt="Javaのインストール画面2"></li>
+<li>インストールが終了するとこの画面が表示されます。閉じるをクリックしてください。<br>
+<img src="/images/java_win_install3.png" alt="Javaのインストール画面3"></li>
+</ol>
 <h2 id="javaのpathの確認">JavaのPATHの確認</h2>
 <ol>
 <li>スタートボタンを右クリックし、「Windows PowerShell(I)」をクリックします。</li>
 <li>「java -version」と入力してEnterキーを押します。</li>
 <li>Javaのバージョンが表示されていたらOKです。</li>
 </ol>
-
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#204a87">PS </span><span style="color:#000">C:</span><span style="color:#000;font-weight:bold">\</span><span style="color:#000">Users</span><span style="color:#000;font-weight:bold">\</span><span style="color:#000">user</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#000">java</span> <span style="color:#000">-version</span>
+<span style="color:#000">java</span> <span style="color:#000">version</span> <span style="color:#4e9a06">&#34;17.0.1&#34;</span> <span style="color:#000">2021</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">10</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">19</span> <span style="color:#000">LTS</span>
+<span style="color:#000">Java</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">TM</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000">SE</span> <span style="color:#000">Runtime</span> <span style="color:#000">Environment</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">build</span> <span style="color:#000">17</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">0</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">1</span><span style="color:#000;font-weight:bold">+</span><span style="color:#000">12-LTS</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">39</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">Java</span> <span style="color:#000">HotSpot</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">TM</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000">64-Bit</span> <span style="color:#000">Server</span> <span style="color:#000">VM</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">build</span> <span style="color:#000">17</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">0</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">1</span><span style="color:#000;font-weight:bold">+</span><span style="color:#000">12-LTS</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000">39</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">mixed</span> <span style="color:#000">mode</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">sharing</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div>
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
