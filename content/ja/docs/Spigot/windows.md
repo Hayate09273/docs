@@ -17,37 +17,37 @@ Spigotサーバーを構築するには、ビルドという工程を踏む必�
 1. Downloadボタンをクリックして、インストーラーをダウンロードします。
 2. ダウンロードしたインストーラーを実行します。ユーザーアカウント制御の確認ダイアログが表示されたら、はいを押してください。
 3. 重要なことが書いてあるらしいです。Nextを押します。  
-![Git](/images/git_win_install1.png)
+![Gitのインストール画面1](/images/git_win_install1.png)
 4. インストール先を選択します。デフォルトの場所でOKならNext、変更したい場合はBrowseを押してインストール先を選択してください。  
-![Git](/images/git_win_install2.png)
+![Gitのインストール画面2](/images/git_win_install2.png)
 5. インストールするコンポーネントを選択する画面です。デフォルトで大丈夫なのでNextを押してください。  
-![Git](/images/git_win_install3.png)
+![Gitのインストール画面3](/images/git_win_install3.png)
 6. スタートメニューにフォルダーを作成するかの画面です。デフォルトで大丈夫だと思いますので、Nextを押してください。  
-![Git](/images/git_win_install4.png)
+![Gitのインストール画面4](/images/git_win_install4.png)
 7. Gitで使用するエディタを選択する画面です。デフォルトの**Vim**で大丈夫であれば、Nextを押してください。  
-![Git](/images/git_win_install5.png)
+![Gitのインストール画面5](/images/git_win_install5.png)
 8. デフォルトのブランチ名を選択する画面です。デフォルトの「**Let Git decide**」で大丈夫だと思いますので、Nextを押してください。  
-![Git](/images/git_win_install6.png)
+![Gitのインストール画面6](/images/git_win_install6.png)
 9. コマンドプロンプトやPowerShellでGitが使えるようにするかを選択する画面です。デフォルトの「**Git from the command line and also from 3rd-party software**」で大丈夫なのでNextを押してください。  
-![Git](/images/git_win_install7.png)
+![Gitのインストール画面7](/images/git_win_install7.png)
 10. Gitが使用するSSHを選択する画面です。デフォルトの「**Use bundled OpenSSH**」で大丈夫なのでNextを押してください。  
-![Git](/images/git_win_install8.png)
+![Gitのインストール画面8](/images/git_win_install8.png)
 11. GitがHTTPS接続に使用するSSLライブラリを選択する画面です。デフォルトの「**Use the OpenSSL library**」で大丈夫なのでNextを押してください。  
-![Git](/images/git_win_install9.png)
+![Gitのインストール画面9](/images/git_win_install9.png)
 12. 改行コードの設定です。一応「**Checkout as-is, commit Unix-style line endings**」に変更してNextを押してください。  
-![Git](/images/git_win_install10.png)
+![Gitのインストール画面10](/images/git_win_install10.png)
 13. Gitで使用する端末エミュレータを選択する画面です。デフォルトの「**Use MinTTY**」で大丈夫なので、Nextを押してください。 
-![Git](/images/git_win_install11.png)
+![Gitのインストール画面11](/images/git_win_install11.png)
 14. 「git pull」を実行したときの動作を選択する画面です。デフォルトの「**Default (fast-forward or merge)**」で大丈夫であれば、Nextを押してください。  
-![Git](/images/git_win_install12.png)
+![Gitのインストール画面12](/images/git_win_install12.png)
 15. 認証関係の設定画面です。デフォルトの「**Git Credential Manager Core**」で大丈夫なので、Nextを押してください。  
-![Git](/images/git_win_install13.png)
+![Gitのインストール画面13](/images/git_win_install13.png)
 16. オプションの機能の設定画面です。デフォルトで大丈夫だと思いますので、Nextを押してください。  
-![Git](/images/git_win_install14.png)
+![Gitのインストール画面14](/images/git_win_install14.png)
 17. こちらもオプションの機能の設定画面です。デフォルトのどちらにもチェックが入っていない状態で大丈夫だと思います。**Install**をクリックすると、インストールが始まります。  
-![Git](/images/git_win_install15.png)
+![Gitのインストール画面15](/images/git_win_install15.png)
 18. インストールが完了するとこちらの画面が表示されます。チェックボックスは外して**Finish**を押してください。  
-![Git](/images/git_win_install16.png)
+![Gitのインストール画面16](/images/git_win_install16.png)
 
 ## BuildToolsをダウンロード
 1. まず、サーバーのファイルを保管するためのフォルダを好きな場所に作成してください。
