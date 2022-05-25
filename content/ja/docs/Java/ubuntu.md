@@ -10,14 +10,14 @@ weight: 1
 ## インストール
 
 Ubuntuの場合は、aptを使用してインストールするのが良いと思います。  
-このコマンドを実行すると、Java 16がインストールされます。
+このコマンドを実行すると、Java 17がインストールされます。
 ```bash
 $ sudo apt update
 
-$ sudo apt install openjdk-16-jre -y
+$ sudo apt install openjdk-17-jre -y
 ```
 
-古いバージョンのJavaを使用したい場合は、「16」の部分を他の数字に置き換えてください。
+古いバージョンのJavaを使用したい場合は、「17」の部分を他の数字に置き換えてください。
 ```bash
 $ sudo apt install openjdk-11-jre -y
 ```
@@ -30,7 +30,7 @@ $ sudo apt install openjdk-8-jre -y
 ```bash
 $ java -version
 
-openjdk version "16.0.1" 2021-04-20
-OpenJDK Runtime Environment (build 16.0.1+9-Ubuntu-120.04)
-OpenJDK 64-Bit Server VM (build 16.0.1+9-Ubuntu-120.04, mixed mode, sharing)
+openjdk version "17.0.3" 2022-04-19
+OpenJDK Runtime Environment (build 17.0.3+7-Ubuntu-0ubuntu0.22.04.1)
+OpenJDK 64-Bit Server VM (build 17.0.3+7-Ubuntu-0ubuntu0.22.04.1, mixed mode, sharing)
 ```
