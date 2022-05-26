@@ -1,0 +1,71 @@
+---
+title: "CentOS Stream 8に公式サーバーを構築"
+linktitle: "CentOS Stream 8"
+date: 2021-09-26T16:41:22+09:00
+draft: false
+description: CentOS Stream 8に公式サーバーを構築する方法
+weight: 20
+---
+
+## サーバーのファイルをダウンロード
+まず、サーバー用のディレクトリを作成し、そのディレクトリに移動します。  
+名前はわかりやすいものにしておくと良いと思います。
+```bash
+$ mkdir server && cd server
+```
+サーバーのファイルをダウンロードします。このURLは1.18.2のものです。
+```bash
+$ wget https://launcher.mojang.com/v1/objects/c8f83c5655308435b3dcf03c06d9fe8740a77469/server.jar
+```
+lsコマンドでserver.jarが存在することを確認しておきます。
+```bash
+$ ls
+server.jar
+```
+## サーバーを実行する
+まず、サーバーを実行するためのスクリプトを作成し、お好きなエディタで編集します。
+```bash
+$ nano start.sh
+```
+下の内容をスクリプトに書き込みます。
+```bash
+#!/bin/bash
+java -Xms1G -Xmx1G -jar server.jar nogui
+```
+所有者にstart.shを実行する権限を与えます。
+```bash
+$ chmod 700 start.sh
+```
+実行します。
+```bash
+$ ./start.sh
+```
+初回起動時はこのような表示が出て、強制的に終了されます。
+```bash
+[main/ERROR]: Failed to load properties from file: server.properties
+[main/WARN]: Failed to load eula.txt
+[main/INFO]: You need to agree to the EULA in order to run the server. Go to eula.txt for more info.
+```
+これは、「EULAに同意してください」というメッセージです。EULAに同意するために、「eula.txt」を編集します。
+```bash
+eula.txt
+
+#By changing the setting below to TRUE you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula).
+#Sat Aug 14 21:23:03 JST 2021
+eula=false
+```
+「eula=false」となっている部分を、「eula=true」に書き換えて、保存してください。
+
+もう一度start.shを実行します。
+```bash
+$ ./start.sh
+```
+設定が読み込まれ、ワールドが生成されます。  
+Done!と表示されたら成功です！
+```bash
+[Server thread/INFO]: Done (30.000s)! For help, type "help"
+```
+「stop」と入力するとサーバーが終了します。
+```bash
+>stop
+```

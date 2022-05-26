@@ -1,0 +1,181 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>みんなでマイクラ – Linux</title>
+    <link>https://docs.hyte.jp/docs/linux/</link>
+    <description>Recent content in Linux on みんなでマイクラ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 16 Aug 2021 18:43:50 +0900</lastBuildDate>
+    
+	  <atom:link href="https://docs.hyte.jp/docs/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Linuxディストリビューション</title>
+      <link>https://docs.hyte.jp/docs/linux/distribution/</link>
+      <pubDate>Thu, 09 Sep 2021 23:27:23 +0900</pubDate>
+      
+      <guid>https://docs.hyte.jp/docs/linux/distribution/</guid>
+      <description>
+        
+        
+        &lt;p&gt;このページでは、Linuxディストリビューションについて解説していきます。
+Linuxディストリビューションを大きく3つに分けると次のようになります。&lt;/p&gt;
+&lt;h3 id=&#34;debian系&#34;&gt;Debian系&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Debian&lt;br&gt;
+100%自由ソフトウェアであることを理念として開発されたOS。&lt;/li&gt;
+&lt;li&gt;Ubuntu&lt;br&gt;
+Debianから派生したOS。世界的にかなり人気です。デスクトップ用途とサーバー用途どちらにも使われることが多いと思います。また、Ubuntuから派生したOSもかなり多いです。&lt;/li&gt;
+&lt;li&gt;Linux Mint&lt;br&gt;
+Ubuntuから派生したOSの一つ。デスクトップ用途で使われることが多いと思います。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;redhat系&#34;&gt;RedHat系&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;RedHat Enterprise Linux (RHEL)&lt;br&gt;
+主に企業向けのOS。個人で使うことはあまりないと思います。&lt;/li&gt;
+&lt;li&gt;CentOS&lt;br&gt;
+RHELとの完全互換を目指したOS。サーバー用途で使われることが多いと思います。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;arch系&#34;&gt;Arch系&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Arch Linux&lt;br&gt;
+シンプルなOS。初期状態でインストールされているソフトはかなり少ないですが、カスタマイズ性が高いとも言えます。&lt;/li&gt;
+&lt;li&gt;Manjaro&lt;br&gt;
+Arch Linuxベースのお洒落で使いやすいOS。Arch Linuxに比べるとハードルが低いです。デスクトップ用途で使われることが多いと思います。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: コマンド</title>
+      <link>https://docs.hyte.jp/docs/linux/command/</link>
+      <pubDate>Sat, 28 Aug 2021 21:43:18 +0900</pubDate>
+      
+      <guid>https://docs.hyte.jp/docs/linux/command/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;ls&#34;&gt;ls&lt;/h3&gt;
+&lt;p&gt;ディレクトリの中に存在するファイルやディレクトリを表示するコマンドです。&lt;/p&gt;
+&lt;h4 id=&#34;オプション&#34;&gt;オプション&lt;/h4&gt;
+&lt;p&gt;lsコマンドのオプションです。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ls -la
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;などのように、複数のオプションを同時に使うこともできます。&lt;br&gt;
+-laの場合は、隠しファイルなども含めて、ファイルやディレクトリの詳細を表示するということになります。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-a 隠しファイルなども全て表示&lt;/li&gt;
+&lt;li&gt;-l 最終更新時間などの詳細も表示&lt;/li&gt;
+&lt;li&gt;-t 最終更新時間の新しい順に表示&lt;/li&gt;
+&lt;li&gt;-r 逆順に表示&lt;/li&gt;
+&lt;li&gt;-1 縦に並べて表示&lt;/li&gt;
+&lt;li&gt;-x 横に並べて表示&lt;/li&gt;
+&lt;li&gt;-S ファイルサイズ順に表示&lt;/li&gt;
+&lt;li&gt;-X 拡張子順に表示&lt;/li&gt;
+&lt;li&gt;-R ディレクトリの中身も表示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;pwd&#34;&gt;pwd&lt;/h3&gt;
+&lt;p&gt;現在いるディレクトリを表示するコマンドです。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ &lt;span style=&#34;color:#204a87&#34;&gt;pwd&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/home/ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;cd&#34;&gt;cd&lt;/h3&gt;
+&lt;p&gt;指定したディレクトリへ移動するコマンドです。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ &lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; dir1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;mkdir&#34;&gt;mkdir&lt;/h3&gt;
+&lt;p&gt;ディレクトリを作成するコマンドです。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ mkdir dir1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ls
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dir1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;rmdir&#34;&gt;rmdir&lt;/h3&gt;
+&lt;p&gt;空のディレクトリを削除するコマンドです。&lt;br&gt;
+中身ごと削除したい場合は、rmコマンドを使用します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ls -R
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dir1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./dir1:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ rmdir dir1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ls
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;touch&#34;&gt;touch&lt;/h3&gt;
+&lt;p&gt;ファイルを作成するコマンドです。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ touch file
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ls
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;file
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;rm&#34;&gt;rm&lt;/h3&gt;
+&lt;p&gt;ファイルやディレクトリを削除するコマンドです。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ls
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;file
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ rm file
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ls
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;cp&#34;&gt;cp&lt;/h3&gt;
+&lt;p&gt;ファイルやディレクトリをコピーするコマンドです。&lt;br&gt;
+使用例の解説を書こうと思ったらめっちゃ長くなりました。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;pwdコマンドで現在のディレクトリを確認&lt;/li&gt;
+&lt;li&gt;lsコマンドで現在のディレクトリに保存されているファイルやディレクトリの一覧を表示&lt;br&gt;
+-Rオプションが付いているので、現在のディレクトリに保存されているディレクトリの中身も表示されますが、現在は中身がないので何も表示されていません。&lt;/li&gt;
+&lt;li&gt;catコマンドでfile1の中身を表示&lt;/li&gt;
+&lt;li&gt;file1をdir1の中に「file1_copy」というファイル名でコピー&lt;/li&gt;
+&lt;li&gt;再びlsコマンドでファイルやディレクトリの一覧を表示&lt;/li&gt;
+&lt;li&gt;dir1の中に「file1_copy」があることを確認&lt;/li&gt;
+&lt;li&gt;catコマンドでdir1/file1_copyの中身がfile1と同じ「Hello World!」であることを確認&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ &lt;span style=&#34;color:#204a87&#34;&gt;pwd&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/home/ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ls -R
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dir1 file1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./dir1:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ cat file1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Hello World!
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ cp file1 dir1/file1_copy
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ls -R
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dir1 file1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./dir1:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;file1_copy
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ cat dir1/file1_copy
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Hello World!
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;グラフで表すとこのようになります。  青で囲んだものはディレクトリです。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph LR
+	home:::dir---ubuntu:::dir---dir1:::dir
+	ubuntu:::dir---file1
+	dir1:::dir---file1_copy
+	classDef dir stroke:blue
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;mv&#34;&gt;mv&lt;/h3&gt;
+&lt;p&gt;ファイル名やディレクトリ名を変更したり、ファイルやディレクトリを移動させるコマンドです。&lt;/p&gt;
+&lt;p&gt;例　ファイル名を「file」から「file1」へ変更&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ls
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;file
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ mv file file1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;$ls&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;file1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;例　「file」を「dir」の中へ移動&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ls -R
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dir file
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ mv file dir/.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ls -R
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dir
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./dir: file
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>
