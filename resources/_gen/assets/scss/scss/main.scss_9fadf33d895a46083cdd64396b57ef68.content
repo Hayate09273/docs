@@ -13534,14 +13534,13 @@ readers do not read off random characters that represent icons */
       margin-right: -30px; }
     .td-navbar .navbar-brand svg {
       display: inline-block;
-      margin: 0 10px;
-      height: 30px; }
+      margin: -100px -120px;
+      height: 25px; }
   .td-navbar .nav-link {
     text-transform: none;
     font-weight: 700; }
   .td-navbar .td-search-input {
-    border: none;
-    color: rgba(255, 255, 255, 0.75); }
+    border: none; }
     .td-navbar .td-search-input::-webkit-input-placeholder {
       color: rgba(255, 255, 255, 0.75); }
     .td-navbar .td-search-input:-moz-placeholder {

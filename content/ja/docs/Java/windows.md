@@ -8,7 +8,7 @@ description: WindowsにJavaをインストールする方法
 
 ## インストーラーのダウンロード
 [Oracleの公式サイト](https://www.oracle.com/jp/java/technologies/javase-downloads.html)からJavaをダウンロードします。  
-バージョンは8、11、17がありますが、Minecraft Java Edition 1.17ではJava 16以上が要件となっているので、17をお勧めします。  
+バージョンは8、11、17がありますが、Minecraft Java Edition 1.17以降ではJava 16以上が要件となっているので、17をお勧めします。  
 **Java SE Development Kit 17.0.1 downloads**の下にある**Windows**タブをクリックし、**x64 Installer**の右にあるURLをクリックします。  
 これでインストーラーがダウンロードできます。
 
