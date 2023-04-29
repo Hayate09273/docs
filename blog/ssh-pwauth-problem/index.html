@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.99.1" /><link rel="alternate" type="application/rss&#43;xml" href="https://docs.hyte.jp/blog/index.xml">
-
+<meta name="generator" content="Hugo 0.99.1" />
 <META NAME=“ROBOTS” CONTENT=“INDEX, FOLLOW”>
 
 
@@ -21,16 +20,30 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>雑記帳 | みんなでマイクラ</title>
-<meta name="description" content="Docsy does docs"><meta property="og:title" content="雑記帳" />
-<meta property="og:description" content="Docsy does docs" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.hyte.jp/blog/" /><meta property="og:site_name" content="みんなでマイクラ" />
+<title>sshd_configのPasswordAuthenticationをnoにしてもパスワード認証で接続できてしまう時の対処法 | みんなでマイクラ</title>
+<meta name="description" content="Docsy does docs"><meta property="og:title" content="sshd_configのPasswordAuthenticationをnoにしてもパスワード認証で接続できてしまう時の対処法" />
+<meta property="og:description" content="対処法 /etc/ssh/sshd_config.d/50-cloud-init.conf をテキストエディタで開き、
+「PasswordAuthentication yes」と書いてあるのでコメントアウトする。
+症状 sshd_configのPasswordAuthenticationをnoにしても何故かパスワード認証で接続できてしまう。 再読み込み、再起動等行っても直らず。
+発生した環境  Ubuntu Server 22.04.3 (新規インストール直後) OpenSSH ServerはOSインストール時に一緒にインストールした  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://docs.hyte.jp/blog/ssh-pwauth-problem/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-04-30T00:40:50+09:00" />
+<meta property="article:modified_time" content="2023-04-30T00:40:50+09:00" /><meta property="og:site_name" content="みんなでマイクラ" />
 
-<meta itemprop="name" content="雑記帳">
-<meta itemprop="description" content="Docsy does docs"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="雑記帳"/>
-<meta name="twitter:description" content="Docsy does docs"/>
+<meta itemprop="name" content="sshd_configのPasswordAuthenticationをnoにしてもパスワード認証で接続できてしまう時の対処法">
+<meta itemprop="description" content="対処法 /etc/ssh/sshd_config.d/50-cloud-init.conf をテキストエディタで開き、
+「PasswordAuthentication yes」と書いてあるのでコメントアウトする。
+症状 sshd_configのPasswordAuthenticationをnoにしても何故かパスワード認証で接続できてしまう。 再読み込み、再起動等行っても直らず。
+発生した環境  Ubuntu Server 22.04.3 (新規インストール直後) OpenSSH ServerはOSインストール時に一緒にインストールした  "><meta itemprop="datePublished" content="2023-04-30T00:40:50+09:00" />
+<meta itemprop="dateModified" content="2023-04-30T00:40:50+09:00" />
+<meta itemprop="wordCount" content="15">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="sshd_configのPasswordAuthenticationをnoにしてもパスワード認証で接続できてしまう時の対処法"/>
+<meta name="twitter:description" content="対処法 /etc/ssh/sshd_config.d/50-cloud-init.conf をテキストエディタで開き、
+「PasswordAuthentication yes」と書いてあるのでコメントアウトする。
+症状 sshd_configのPasswordAuthenticationをnoにしても何故かパスワード認証で接続できてしまう。 再読み込み、再起動等行っても直らず。
+発生した環境  Ubuntu Server 22.04.3 (新規インストール直後) OpenSSH ServerはOSインストール時に一緒にインストールした  "/>
 
 
 
@@ -60,7 +73,7 @@
 <link rel="stylesheet" href="https://docs.hyte.jp/css/custom_heading.css">
 
   </head>
-  <body class="td-section td-blog">
+  <body class="td-page td-blog">
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
@@ -144,13 +157,13 @@
   <script>
     $(function() {
     $("#td-section-nav a").removeClass("active");
-    $("#td-section-nav #m-blog").addClass("active"); 
-    $("#td-section-nav #m-blog-li span").addClass("td-sidebar-nav-active-item"); 
-    $("#td-section-nav #m-blog").parents("li").addClass("active-path"); 
+    $("#td-section-nav #m-blogssh-pwauth-problem").addClass("active"); 
+    $("#td-section-nav #m-blogssh-pwauth-problem-li span").addClass("td-sidebar-nav-active-item"); 
+    $("#td-section-nav #m-blogssh-pwauth-problem").parents("li").addClass("active-path"); 
     $("#td-section-nav li.active-path").addClass("show"); 
     $("#td-section-nav li.active-path").children("input").prop('checked', true);
-    $("#td-section-nav #m-blog-li").siblings("li").addClass("show");  
-    $("#td-section-nav #m-blog-li").children("ul").children("li").addClass("show");  
+    $("#td-section-nav #m-blogssh-pwauth-problem-li").siblings("li").addClass("show");  
+    $("#td-section-nav #m-blogssh-pwauth-problem-li").children("ul").children("li").addClass("show");  
     $("#td-sidebar-menu").toggleClass("d-none"); 
     });
   </script>
@@ -330,9 +343,9 @@
     
     
 
-    <a href="https://github.com/hayate09273/docs/edit/main/content/ja/blog/_index.md" target="_blank"><i class="fa fa-edit fa-fw"></i> ページの編集</a>
-    <a href="https://github.com/hayate09273/docs/new/main/content/ja/blog/_index.md?filename=change-me.md&amp;value=---%0D%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0D%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0D%0Aweight%3A&#43;100%0D%0Adescription%3A&#43;%3E-%0D%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0D%0A---%0D%0A%0D%0A%23%23&#43;Heading%0D%0A%0D%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0D%0A%0D%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0D%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0D%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0D%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0D%0A" target="_blank"><i class="fa fa-edit fa-fw"></i> 子ページを作成</a>
-    <a href="https://github.com/hayate09273/docs/issues/new?title=%e9%9b%91%e8%a8%98%e5%b8%b3" target="_blank"><i class="fab fa-github fa-fw"></i> ドキュメントのissueを作成</a>
+    <a href="https://github.com/hayate09273/docs/edit/main/content/ja/blog/ssh-pwauth-problem.md" target="_blank"><i class="fa fa-edit fa-fw"></i> ページの編集</a>
+    <a href="https://github.com/hayate09273/docs/new/main/content/ja/blog/ssh-pwauth-problem.md?filename=change-me.md&amp;value=---%0D%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0D%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0D%0Aweight%3A&#43;100%0D%0Adescription%3A&#43;%3E-%0D%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0D%0A---%0D%0A%0D%0A%23%23&#43;Heading%0D%0A%0D%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0D%0A%0D%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0D%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0D%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0D%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0D%0A" target="_blank"><i class="fa fa-edit fa-fw"></i> 子ページを作成</a>
+    <a href="https://github.com/hayate09273/docs/issues/new?title=sshd_config%e3%81%aePasswordAuthentication%e3%82%92no%e3%81%ab%e3%81%97%e3%81%a6%e3%82%82%e3%83%91%e3%82%b9%e3%83%af%e3%83%bc%e3%83%89%e8%aa%8d%e8%a8%bc%e3%81%a7%e6%8e%a5%e7%b6%9a%e3%81%a7%e3%81%8d%e3%81%a6%e3%81%97%e3%81%be%e3%81%86%e6%99%82%e3%81%ae%e5%af%be%e5%87%a6%e6%b3%95" target="_blank"><i class="fab fa-github fa-fw"></i> ドキュメントのissueを作成</a>
     
       
       <a href="https://github.com/google/docsy/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> プロジェクトのissueを作成</a>
@@ -345,6 +358,14 @@
 
             
 
+
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#対処法">対処法</a></li>
+    <li><a href="#症状">症状</a></li>
+    <li><a href="#発生した環境">発生した環境</a></li>
+  </ul>
+</nav></div>
 
 
 
@@ -374,130 +395,52 @@
               RSS <i class="fa fa-rss ml-2 "></i>
             </a>
             
-
-
-
-
-<div class="row">
-	<div class="col-12">
-			
-			<h2>記事一覧 2023</h2>
-			<ul class="list-unstyled mt-4">
-				
-				<li class="media mb-4">
-					<div class="media-body">
-						<h5 class="mt-0 mb-1"><a href="/blog/ssh-pwauth-problem/">sshd_configのPasswordAuthenticationをnoにしてもパスワード認証で接続できてしまう時の対処法</a></h5>
-						<p class="mb-2 mb-md-3"><small class="text-muted">2023/04/30 in 雑記帳</small></p>
-						<header class="article-meta">
-							
-							
-								
-									
-
-
-								
-									
-
-
-								
-							
-							
-						</header>
-						
-
-
-
-
-
-						<p class="pt-0 mt-0">対処法 /etc/ssh/sshd_config.d/50-cloud-init.conf をテキストエディタで開き、
-「PasswordAuthentication yes」と書いてあるのでコメントアウトする。
-症状 sshd_configのPasswordAuthenticationをnoにしても何故かパスワード認証で接続できてしまう。 再読み込み、再起動等行っても直らず。
-発生した環境  Ubuntu Server 22.04.3 (新規インストール直後) OpenSSH Server …</p>
-						<p class="pt-0"><a href="/blog/ssh-pwauth-problem/" aria-label="続きを読む - sshd_configのPasswordAuthenticationをnoにしてもパスワード認証で接続できてしまう時の対処法">続きを読む</a></p>
-					</div>
-				</li>
-				
-			</ul>
-			
-			<h2>記事一覧 2021</h2>
-			<ul class="list-unstyled mt-4">
-				
-				<li class="media mb-4">
-					<div class="media-body">
-						<h5 class="mt-0 mb-1"><a href="/blog/jms-banner/">Japan Minecraft ServersのバナーをMarkdownで埋め込む</a></h5>
-						<p class="mb-2 mb-md-3"><small class="text-muted">2021/09/18 in 雑記帳</small></p>
-						<header class="article-meta">
-							
-							
-								
-									
-
-
-								
-									
-
-
-								
-							
-							
-						</header>
-						
-
-
-
-
-
-						<p class="pt-0 mt-0">導入 Japan Minecraft Serversは、Minecraftでマルチプレイを楽しんでいる人が一度は見たことがあると思います。
-Japan Minecraft Serversにはバナーという機能があり、これをWebサイトに埋め込むことで、現在のオンラインプレイヤー数やIPアドレスをお洒落に表示されることができます。
-サーバーのページに飛び、「バナー」タブをクリックして、バナータイプを選択します。
-するとこのようなHTMLのコードが生成されます。
-&lt;a href=&#34;リン …</p>
-						<p class="pt-0"><a href="/blog/jms-banner/" aria-label="続きを読む - Japan Minecraft ServersのバナーをMarkdownで埋め込む">続きを読む</a></p>
-					</div>
-				</li>
-				
-				<li class="media mb-4">
-					<div class="media-body">
-						<h5 class="mt-0 mb-1"><a href="/blog/nfs-vs-luckperms/">NFSが原因でLuckPermsが動かなかった話</a></h5>
-						<p class="mb-2 mb-md-3"><small class="text-muted">2021/08/19 in 雑記帳</small></p>
-						<header class="article-meta">
-							
-							
-								
-									
-
-
-								
-									
-
-
-								
-							
-							
-						</header>
-						
-
-
-
-
-
-						<p class="pt-0 mt-0">症状  Spigot起動時に「Could not load &lsquo;plugins/LuckPerms-Bukkit-5.3.47.jar&rsquo; in folder &lsquo;plugins&rsquo;」というエラーが出る。 pluginsディレクトリ内にLuckPermsディレクトリが生成されない。  発生した環境  さくらのVPS V5 4Gプラン Ubuntu 20.04 LTS オプションの追加ストレージ(NFS)を使用  原因 NFSを/mntディレクトリにマウント …</p>
-						<p class="pt-0"><a href="/blog/nfs-vs-luckperms/" aria-label="続きを読む - NFSが原因でLuckPermsが動かなかった話">続きを読む</a></p>
-					</div>
-				</li>
-				
-			</ul>
-			
+<div class="td-content">
+	<h1>sshd_configのPasswordAuthenticationをnoにしてもパスワード認証で接続できてしまう時の対処法</h1>
+	
+	<div class="td-byline mb-4">
 		
+		<time datetime="2023-04-30" class="text-muted">2023/04/30</time>
 	</div>
-</div>
-<div class="row pl-2 pt-2">
-	<div class="col">
+	<header class="article-meta">
+		
 		
 			
+				
+
+
+			
+				
+
+
+			
 		
-	</div>
+		
+	</header>
+	<h2 id="対処法">対処法</h2>
+<p><strong>/etc/ssh/sshd_config.d/50-cloud-init.conf</strong> をテキストエディタで開き、<br>
+「PasswordAuthentication yes」と書いてあるのでコメントアウトする。</p>
+<h2 id="症状">症状</h2>
+<p>sshd_configのPasswordAuthenticationをnoにしても何故かパスワード認証で接続できてしまう。
+再読み込み、再起動等行っても直らず。</p>
+<h2 id="発生した環境">発生した環境</h2>
+<ul>
+<li>Ubuntu Server 22.04.3 (新規インストール直後)</li>
+<li>OpenSSH ServerはOSインストール時に一緒にインストールした</li>
+</ul>
+
+	
+
+	<ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
+  <li>
+    <a href="/blog/jms-banner/"aria-label="前へ - Japan Minecraft ServersのバナーをMarkdownで埋め込む" class="btn btn-primary "><span class="mr-1">←</span> 前へ</a>
+  </li>
+    <a  class="btn btn-primary  disabled">次へ <span class="ml-1">→</span></a>
+  </li>
+</ul>
+
 </div>
+
 
           </main>
         </div>
