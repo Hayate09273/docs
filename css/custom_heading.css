@@ -88,3 +88,5 @@ h2.left {
         }
     }
 }
+
+.td-page-meta--child { display: none !important; }
