@@ -20422,7 +20422,7 @@ body:lang(he) {
 body:lang(ar) {
   font-family: 'Tajawal', "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
-.td-page-meta--child {
+.td-page-meta {
   display: none !important; }
 
 /*# sourceMappingURL=main.css.map */
