@@ -55,6 +55,7 @@ Spigotサーバーを構築するには、ビルドという工程を踏む必�
 3. 先ほど作成したフォルダの中にBuildTools.jarを保存してください。
 ## ビルドする
 1. 先ほど作成したフォルダをエクスプローラーで開き、ファイルが表示される場所のなにもないところを右クリックし、「Git Bash Here」をクリックします。  
+Windows 11の場合は、「その他のオプションを表示」を押すと「Git Bash Here」が表示されます。  
 2. このコマンドを実行すると、最新バージョンのSpigotのビルドが始まります。  
 少し時間がかかりますので、気長に待ちましょう。
 ```bash
@@ -66,6 +67,17 @@ $ java -jar BuildTools.jar
 ```bash
 $ java -jar BuildTools.jar --rev 1.16.5
 ```
+|現在のフォルダの中身|
+|---|
+|apache-maven-3.6.0|
+|BuilData|
+|Bukkit|
+|CraftBukkit|
+|Spigot|
+|work|
+|BuildTools.jar|
+|BuildTools.log.txt|
+|spigot-1.xx.x.jar|
 ## サーバーを実行する
 ### スタートスクリプトを作成  
 spigot-1.xx.x.jarと同じフォルダ内に、スタートスクリプトを作成します。  
@@ -73,8 +85,21 @@ spigot-1.xx.x.jarと同じフォルダ内に、スタートスクリプトを作
 拡張子は、一度start.txtを作成してから、start.batに変更してください。
 ### 作成したスタートスクリプトを編集  
 拡張子が.batの場合、ダブルクリックするとコマンドプロンプトが起動するので、編集する場合はstart.batを選択して右クリック→編集(E)をクリックしてください。
+下の内容をstart.batに書き込みます。spigot-1.xx.x.jar の部分は、自分がビルドしたものに書き換えてください。
 ```bash
 @ECHO OFF
-java -Xms1G -Xmx1G -jar spigot-1.xx.x.jar nogui
+java -Xms4G -Xmx4G -jar spigot-1.xx.x.jar nogui
 PAUSE
 ```
+### start.batを実行  
+start.batを実行してください。   
+初回起動時には「You need to agree to the EULA in order to run the server. Go to eula.txt for more info.」という表示が出て、強制的に終了されます。  
+これは、「EULAに同意してください」というメッセージです。  
+EULAに同意するために、一度何かキーを押しウインドウを閉じて、「eula.txt」を編集します。
+eula=falseをeula=trueに変更し、保存します。
+### もう一度start.batを実行
+もう一度start.batを実行します。  
+設定が読み込まれ、ワールドが生成されます。「Done!」と表示されていたらOKです！
+### サーバーを終了する
+コンソールに「stop」と入力してEnterキーを押してください。  
+データが保存された後、「続行するには何かキーを押してください」と表示されたら、何かキーを押してウインドウを閉じます。

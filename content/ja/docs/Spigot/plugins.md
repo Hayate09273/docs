@@ -2,7 +2,7 @@
 title: "Spigotプラグイン"
 linktitle: "プラグイン"
 date: 2021-10-04T19:28:02+09:00
-draft: true
+draft: false
 description: Spigotプラグインの紹介
 weight: 5
 ---
@@ -19,5 +19,3 @@ weight: 5
 |[DiscordSRV](https://www.spigotmc.org/resources/discordsrv.18494/)|ゲーム内のチャットとDiscordを連携できるプラグイン。|
 |[Vault](https://www.spigotmc.org/resources/vault.34315/)|APIを提供するプラグイン。|
 |[CoreProtect](https://www.spigotmc.org/resources/coreprotect.8631/)|ブロックの設置、破壊ログや、ロールバックなどの機能を追加するプラグイン。|
-|||
-|||

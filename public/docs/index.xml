@@ -25,7 +25,8 @@
         
         &lt;h2 id=&#34;バージョンの選び方&#34;&gt;バージョンの選び方&lt;/h2&gt;
 &lt;p&gt;Java Edition 1.17はJava 16で開発されています。&lt;br&gt;
-そのため、Java Edition 1.17以降のサーバーが必要な場合、Java 16以降をインストールする必要があります。&lt;/p&gt;
+そのため、Java Edition 1.17以降のサーバーが必要な場合、Java 16以降をインストールする必要があります。&lt;br&gt;
+2023年5月現在、Java Edition 1.17以降のバージョンでサーバーを建てる場合、とりえあずJava 17をインストールすれば大丈夫です。&lt;/p&gt;
 &lt;h3 id=&#34;javaとminecraftサーバーのバージョン別互換性&#34;&gt;JavaとMinecraftサーバーのバージョン別互換性&lt;/h3&gt;
 &lt;p&gt;JavaとMinecraftサーバーのバージョン別互換性についていくつかの組み合わせで検証し、下の表にまとめました。&lt;br&gt;
 Javaには後方互換性があるため、Java 16で古いソフトウェアを動作させることも可能ですが、安定して動作するかは分かりません。&lt;/p&gt;
@@ -157,6 +158,62 @@ Javaには後方互換性があるため、Java 16で古いソフトウェアを
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;OpenJDK Runtime Environment &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;build 17.0.3+7-Ubuntu-0ubuntu0.22.04.1&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;OpenJDK 64-Bit Server VM &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;build 17.0.3+7-Ubuntu-0ubuntu0.22.04.1, mixed mode, sharing&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Spigotプラグイン</title>
+      <link>https://docs.hyte.jp/docs/spigot/plugins/</link>
+      <pubDate>Mon, 04 Oct 2021 19:28:02 +0900</pubDate>
+      
+      <guid>https://docs.hyte.jp/docs/spigot/plugins/</guid>
+      <description>
+        
+        
+        &lt;p&gt;このページでは、お勧めできるSpigotプラグインを紹介します。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;プラグイン名&lt;/th&gt;
+&lt;th&gt;概要&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://dev.bukkit.org/projects/worldedit&#34;&gt;WorldEdit&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;指定した範囲にブロックを設置したりすることができるプラグイン。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://dev.bukkit.org/projects/worldguard&#34;&gt;WorldGuard&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;指定した範囲に保護をかけることができるプラグイン。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.spigotmc.org/resources/dynmap.274/&#34;&gt;Dynmap&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;ワールドをWebブラウザで表示することができるプラグイン。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/HimaJyun/ChestSafe/releases&#34;&gt;ChestSafe&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;チェストやシュルカーボックスなどを保護できるプラグイン。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.spigotmc.org/resources/luckperms.28140/&#34;&gt;LuckPerms&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;権限を細かく設定できるプラグイン。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.spigotmc.org/resources/discordsrv.18494/&#34;&gt;DiscordSRV&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;ゲーム内のチャットとDiscordを連携できるプラグイン。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.spigotmc.org/resources/vault.34315/&#34;&gt;Vault&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;APIを提供するプラグイン。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.spigotmc.org/resources/coreprotect.8631/&#34;&gt;CoreProtect&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;ブロックの設置、破壊ログや、ロールバックなどの機能を追加するプラグイン。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
       </description>
     </item>
     
@@ -682,12 +739,11 @@ BungeeCordのネットワーク上にいる全てのプレイヤー&lt;/li&gt;
 &lt;h2 id=&#34;サーバーを実行する&#34;&gt;サーバーを実行する&lt;/h2&gt;
 &lt;p&gt;まず、サーバーを実行するためのスクリプトを作成し、お好きなエディタで編集します。 ここでは、start.shを作成し、nanoで編集します。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ nano start.sh
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;下の内容をstart.shに書き込みます。&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;下の内容をstart.shに書き込みます。spigot-1.xx.x.jar の部分は、自分がビルドしたものに書き換えてください。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;java -Xms1G -Xmx1G -jar spigot-1.17.1.jar nogui
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;所有者を設定して、所有者にstart.shを実行する権限を与えます。ここでは、所有者のユーザー名をubuntuとします。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ chown ubuntu start.sh
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ chmod &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;700&lt;/span&gt; start.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;java -Xms4G -Xmx4G -jar spigot-1.xx.x.jar nogui
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;所有者にstart.shを実行する権限を与えます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ chmod &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;744&lt;/span&gt; start.sh
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;実行します。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ./start.sh
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;初回起動時はこのような表示が出て、強制的に終了されます。&lt;/p&gt;
@@ -695,15 +751,14 @@ BungeeCordのネットワーク上にいる全てのプレイヤー&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;main/WARN&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;: Failed to load eula.txt
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;main/INFO&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;: You need to agree to the EULA in order to run the server. Go to eula.txt &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; more info.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これは、「EULAに同意してください」というメッセージです。EULAに同意するために、「eula.txt」を編集します。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;eula.txt
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#By changing the setting below to TRUE you are indicating your agreement to our&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ nano eula.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#By changing the setting below to TRUE you are indicating your agreement to our&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#Sun Aug 22 19:51:18 JST 2021&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;eula&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;false&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;「eula=false」となっている部分を、「eula=true」に書き換えて、保存してください。
 もう一度start.shを実行します。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ./start.sh
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;設定が読み込まれ、ワールドが生成されます。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;設定が読み込まれ、ワールドが生成されます。初回のワールド生成は少し時間がかかります。&lt;br&gt;
 Done!と表示されたら成功です！&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;Server thread/INFO&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;: Done &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;30.000s&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;! For help, &lt;span style=&#34;color:#204a87&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;help&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;サーバーを終了する場合は、「stop」と入力してEnterキーを押してください。&lt;/p&gt;
@@ -820,7 +875,8 @@ Done!と表示されたら成功です！&lt;/p&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;ビルドする&#34;&gt;ビルドする&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;先ほど作成したフォルダをエクスプローラーで開き、ファイルが表示される場所のなにもないところを右クリックし、「Git Bash Here」をクリックします。&lt;/li&gt;
+&lt;li&gt;先ほど作成したフォルダをエクスプローラーで開き、ファイルが表示される場所のなにもないところを右クリックし、「Git Bash Here」をクリックします。&lt;br&gt;
+Windows 11の場合は、「その他のオプションを表示」を押すと「Git Bash Here」が表示されます。&lt;/li&gt;
 &lt;li&gt;このコマンドを実行すると、最新バージョンのSpigotのビルドが始まります。&lt;br&gt;
 少し時間がかかりますので、気長に待ちましょう。&lt;/li&gt;
 &lt;/ol&gt;
@@ -829,17 +885,66 @@ Done!と表示されたら成功です！&lt;/p&gt;
 &lt;p&gt;上のコマンドの末尾に、「–rev」を追加することで、バージョンを指定できます。&lt;br&gt;
 例えば、1.16.5のSpigotをビルドしたい場合は、このコマンドを実行します。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ java -jar BuildTools.jar --rev 1.16.5
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;サーバーを実行する&#34;&gt;サーバーを実行する&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;現在のフォルダの中身&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;apache-maven-3.6.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;BuilData&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Bukkit&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CraftBukkit&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spigot&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;work&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;BuildTools.jar&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;BuildTools.log.txt&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;spigot-1.xx.x.jar&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;サーバーを実行する&#34;&gt;サーバーを実行する&lt;/h2&gt;
 &lt;h3 id=&#34;スタートスクリプトを作成&#34;&gt;スタートスクリプトを作成&lt;/h3&gt;
 &lt;p&gt;spigot-1.xx.x.jarと同じフォルダ内に、スタートスクリプトを作成します。&lt;br&gt;
 名前は「start.bat」など分かりやすいものにしておくと良いと思います。&lt;br&gt;
 拡張子は、一度start.txtを作成してから、start.batに変更してください。&lt;/p&gt;
 &lt;h3 id=&#34;作成したスタートスクリプトを編集&#34;&gt;作成したスタートスクリプトを編集&lt;/h3&gt;
-&lt;p&gt;拡張子が.batの場合、ダブルクリックするとコマンドプロンプトが起動するので、編集する場合はstart.batを選択して右クリック→編集(E)をクリックしてください。&lt;/p&gt;
+&lt;p&gt;拡張子が.batの場合、ダブルクリックするとコマンドプロンプトが起動するので、編集する場合はstart.batを選択して右クリック→編集(E)をクリックしてください。
+下の内容をstart.batに書き込みます。spigot-1.xx.x.jar の部分は、自分がビルドしたものに書き換えてください。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;@ECHO OFF
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;java -Xms1G -Xmx1G -jar spigot-1.xx.x.jar nogui
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;java -Xms4G -Xmx4G -jar spigot-1.xx.x.jar nogui
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;PAUSE
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;startbatを実行&#34;&gt;start.batを実行&lt;/h3&gt;
+&lt;p&gt;start.batを実行してください。&lt;br&gt;
+初回起動時には「You need to agree to the EULA in order to run the server. Go to eula.txt for more info.」という表示が出て、強制的に終了されます。&lt;br&gt;
+これは、「EULAに同意してください」というメッセージです。&lt;br&gt;
+EULAに同意するために、一度何かキーを押しウインドウを閉じて、「eula.txt」を編集します。
+eula=falseをeula=trueに変更し、保存します。&lt;/p&gt;
+&lt;h3 id=&#34;もう一度startbatを実行&#34;&gt;もう一度start.batを実行&lt;/h3&gt;
+&lt;p&gt;もう一度start.batを実行します。&lt;br&gt;
+設定が読み込まれ、ワールドが生成されます。「Done!」と表示されていたらOKです！&lt;/p&gt;
+&lt;h3 id=&#34;サーバーを終了する&#34;&gt;サーバーを終了する&lt;/h3&gt;
+&lt;p&gt;コンソールに「stop」と入力してEnterキーを押してください。&lt;br&gt;
+データが保存された後、「続行するには何かキーを押してください」と表示されたら、何かキーを押してウインドウを閉じます。&lt;/p&gt;
+
       </description>
     </item>
     
@@ -929,7 +1034,7 @@ Done!と表示されたら成功です！&lt;/p&gt;
 &lt;h3 id=&#34;作成したスタートスクリプトを編集&#34;&gt;作成したスタートスクリプトを編集&lt;/h3&gt;
 &lt;p&gt;拡張子が.batの場合、ダブルクリックするとコマンドプロンプトが起動するので、編集する場合はstart.batを選択して右クリック→編集(E)をクリックしてください。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;@ECHO OFF
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;java -Xms1G -Xmx1G -jar server.jar nogui
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;java -Xms4G -Xmx4G -jar server.jar nogui
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;PAUSE
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
 &lt;thead&gt;

@@ -56,15 +56,14 @@ $ java -jar BuildTools.jar --rev 1.16.5
 ```bash
 $ nano start.sh
 ```
-下の内容をstart.shに書き込みます。
+下の内容をstart.shに書き込みます。spigot-1.xx.x.jar の部分は、自分がビルドしたものに書き換えてください。
 ```bash
 #!/bin/bash
-java -Xms1G -Xmx1G -jar spigot-1.17.1.jar nogui
+java -Xms4G -Xmx4G -jar spigot-1.xx.x.jar nogui
 ```
-所有者を設定して、所有者にstart.shを実行する権限を与えます。ここでは、所有者のユーザー名をubuntuとします。
+所有者にstart.shを実行する権限を与えます。
 ```bash
-$ chown ubuntu start.sh
-$ chmod 700 start.sh
+$ chmod 744 start.sh
 ```
 実行します。
 ```bash
@@ -78,8 +77,9 @@ $ ./start.sh
 ```
 これは、「EULAに同意してください」というメッセージです。EULAに同意するために、「eula.txt」を編集します。
 ```bash
-eula.txt
-
+$ nano eula.txt
+```
+```bash
 #By changing the setting below to TRUE you are indicating your agreement to our>
 #Sun Aug 22 19:51:18 JST 2021
 eula=false
@@ -89,7 +89,7 @@ eula=false
 ```bash
 $ ./start.sh
 ```
-設定が読み込まれ、ワールドが生成されます。
+設定が読み込まれ、ワールドが生成されます。初回のワールド生成は少し時間がかかります。  
 Done!と表示されたら成功です！
 ```bash
 [Server thread/INFO]: Done (30.000s)! For help, type "help"
