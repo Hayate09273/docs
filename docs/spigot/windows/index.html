@@ -31,7 +31,7 @@
 <meta itemprop="name" content="WindowsにSpigotサーバーを構築">
 <meta itemprop="description" content="WindowsにSpigotサーバーを構築する方法"><meta itemprop="datePublished" content="2021-10-07T19:42:59+09:00" />
 <meta itemprop="dateModified" content="2021-10-22T21:17:58+09:00" />
-<meta itemprop="wordCount" content="94">
+<meta itemprop="wordCount" content="140">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="WindowsにSpigotサーバーを構築"/>
 <meta name="twitter:description" content="WindowsにSpigotサーバーを構築する方法"/>
@@ -126,7 +126,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.ed01c3bb4b47ad08b65b5b71e0206918.json"
+  data-offline-search-index-json-src="/offline-search-index.76a5b66a0fbee12f7f00bfd7537d9bb1.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -175,7 +175,7 @@
   aria-label="サイトを検索..."
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.ed01c3bb4b47ad08b65b5b71e0206918.json"
+  data-offline-search-index-json-src="/offline-search-index.76a5b66a0fbee12f7f00bfd7537d9bb1.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -589,6 +589,34 @@
     
       
       <ul class="ul-2 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsspigotplugins-li">
+    
+      <input type="checkbox" id="m-docsspigotplugins-check"/>
+      <label for="m-docsspigotplugins-check"><a href="/docs/spigot/plugins/" title="Spigotプラグイン" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-docsspigotplugins"><span class="">プラグイン</span></a></label>
+    
+    
+  </li>
+
+          
         
           
             
@@ -1061,6 +1089,9 @@
       <ul>
         <li><a href="#スタートスクリプトを作成">スタートスクリプトを作成</a></li>
         <li><a href="#作成したスタートスクリプトを編集">作成したスタートスクリプトを編集</a></li>
+        <li><a href="#startbatを実行">start.batを実行</a></li>
+        <li><a href="#もう一度startbatを実行">もう一度start.batを実行</a></li>
+        <li><a href="#サーバーを終了する">サーバーを終了する</a></li>
       </ul>
     </li>
   </ul>
@@ -1195,7 +1226,8 @@
 </ol>
 <h2 id="ビルドする">ビルドする</h2>
 <ol>
-<li>先ほど作成したフォルダをエクスプローラーで開き、ファイルが表示される場所のなにもないところを右クリックし、「Git Bash Here」をクリックします。</li>
+<li>先ほど作成したフォルダをエクスプローラーで開き、ファイルが表示される場所のなにもないところを右クリックし、「Git Bash Here」をクリックします。<br>
+Windows 11の場合は、「その他のオプションを表示」を押すと「Git Bash Here」が表示されます。</li>
 <li>このコマンドを実行すると、最新バージョンのSpigotのビルドが始まります。<br>
 少し時間がかかりますので、気長に待ちましょう。</li>
 </ol>
@@ -1204,17 +1236,66 @@
 <p>上のコマンドの末尾に、「–rev」を追加することで、バージョンを指定できます。<br>
 例えば、1.16.5のSpigotをビルドしたい場合は、このコマンドを実行します。</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ java -jar BuildTools.jar --rev 1.16.5
-</span></span></code></pre></div><h2 id="サーバーを実行する">サーバーを実行する</h2>
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th>現在のフォルダの中身</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>apache-maven-3.6.0</td>
+</tr>
+<tr>
+<td>BuilData</td>
+</tr>
+<tr>
+<td>Bukkit</td>
+</tr>
+<tr>
+<td>CraftBukkit</td>
+</tr>
+<tr>
+<td>Spigot</td>
+</tr>
+<tr>
+<td>work</td>
+</tr>
+<tr>
+<td>BuildTools.jar</td>
+</tr>
+<tr>
+<td>BuildTools.log.txt</td>
+</tr>
+<tr>
+<td>spigot-1.xx.x.jar</td>
+</tr>
+</tbody>
+</table>
+<h2 id="サーバーを実行する">サーバーを実行する</h2>
 <h3 id="スタートスクリプトを作成">スタートスクリプトを作成</h3>
 <p>spigot-1.xx.x.jarと同じフォルダ内に、スタートスクリプトを作成します。<br>
 名前は「start.bat」など分かりやすいものにしておくと良いと思います。<br>
 拡張子は、一度start.txtを作成してから、start.batに変更してください。</p>
 <h3 id="作成したスタートスクリプトを編集">作成したスタートスクリプトを編集</h3>
-<p>拡張子が.batの場合、ダブルクリックするとコマンドプロンプトが起動するので、編集する場合はstart.batを選択して右クリック→編集(E)をクリックしてください。</p>
+<p>拡張子が.batの場合、ダブルクリックするとコマンドプロンプトが起動するので、編集する場合はstart.batを選択して右クリック→編集(E)をクリックしてください。
+下の内容をstart.batに書き込みます。spigot-1.xx.x.jar の部分は、自分がビルドしたものに書き換えてください。</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>@ECHO OFF
-</span></span><span style="display:flex;"><span>java -Xms1G -Xmx1G -jar spigot-1.xx.x.jar nogui
+</span></span><span style="display:flex;"><span>java -Xms4G -Xmx4G -jar spigot-1.xx.x.jar nogui
 </span></span><span style="display:flex;"><span>PAUSE
-</span></span></code></pre></div>
+</span></span></code></pre></div><h3 id="startbatを実行">start.batを実行</h3>
+<p>start.batを実行してください。<br>
+初回起動時には「You need to agree to the EULA in order to run the server. Go to eula.txt for more info.」という表示が出て、強制的に終了されます。<br>
+これは、「EULAに同意してください」というメッセージです。<br>
+EULAに同意するために、一度何かキーを押しウインドウを閉じて、「eula.txt」を編集します。
+eula=falseをeula=trueに変更し、保存します。</p>
+<h3 id="もう一度startbatを実行">もう一度start.batを実行</h3>
+<p>もう一度start.batを実行します。<br>
+設定が読み込まれ、ワールドが生成されます。「Done!」と表示されていたらOKです！</p>
+<h3 id="サーバーを終了する">サーバーを終了する</h3>
+<p>コンソールに「stop」と入力してEnterキーを押してください。<br>
+データが保存された後、「続行するには何かキーを押してください」と表示されたら、何かキーを押してウインドウを閉じます。</p>
+
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">

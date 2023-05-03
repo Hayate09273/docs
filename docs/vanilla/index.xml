@@ -203,7 +203,7 @@ Done!と表示されたら成功です！&lt;/p&gt;
 &lt;h3 id=&#34;作成したスタートスクリプトを編集&#34;&gt;作成したスタートスクリプトを編集&lt;/h3&gt;
 &lt;p&gt;拡張子が.batの場合、ダブルクリックするとコマンドプロンプトが起動するので、編集する場合はstart.batを選択して右クリック→編集(E)をクリックしてください。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;@ECHO OFF
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;java -Xms1G -Xmx1G -jar server.jar nogui
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;java -Xms4G -Xmx4G -jar server.jar nogui
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;PAUSE
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
 &lt;thead&gt;
