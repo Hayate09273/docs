@@ -1,5 +1,5 @@
 ---
-title: "sshd_configのPasswordAuthenticationをnoにしてもパスワード認証で接続できてしまう時の対処法"
+title: "sshd_configのPasswordAuthenticationが効かないときの対処法"
 date: 2023-04-30T00:40:50+09:00
 draft: false
 description: 

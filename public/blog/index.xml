@@ -16,7 +16,7 @@
     
     
     <item>
-      <title>Blog: sshd_configのPasswordAuthenticationをnoにしてもパスワード認証で接続できてしまう時の対処法</title>
+      <title>Blog: sshd_configのPasswordAuthenticationが効かないときの対処法</title>
       <link>https://docs.hyte.jp/blog/ssh-pwauth-problem/</link>
       <pubDate>Sun, 30 Apr 2023 00:40:50 +0900</pubDate>
       
