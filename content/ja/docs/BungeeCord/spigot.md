@@ -14,7 +14,7 @@ BungeeCordとSpigotを接続するために、Spigotで行う設定です。
 trueからfalseに変更してください。  
 この項目をfalseにするとSpigotは正規ユーザーかどうかを確認しませんが、代わりにBungeeCordで確認するので問題ありません。
 - server-port  
-[1024から49151までの範囲](https://ja.wikipedia.org/wiki/TCP%E3%82%84UDP%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%9D%E3%83%BC%E3%83%88%E7%95%AA%E5%8F%B7%E3%81%AE%E4%B8%80%E8%A6%A7#%E7%99%BB%E9%8C%B2%E6%B8%88%E3%81%BF%E3%83%9D%E3%83%BC%E3%83%88%E7%95%AA%E5%8F%B7_(1024%E2%80%9349151))で、コンピューターで使用する他のソフトウェアと被らない番号に変更してください。  
+[1024から49151までの範囲](https://ja.wikipedia.org/wiki/TCP%E3%82%84UDP%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%9D%E3%83%BC%E3%83%88%E7%95%AA%E5%8F%B7%E3%81%AE%E4%B8%80%E8%A6%A7#%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%9D%E3%83%BC%E3%83%88%E7%95%AA%E5%8F%B7_(1024%E2%80%9349151))で、コンピューターで使用する他のソフトウェアと被らない番号に変更してください。  
 Minecraft Java Editionのマルチプレイでは25565を標準で使用するので、25565をBungeeCordに割り当てて、それ以外の数字をSpigotに割り当てると良いと思います。
 ### spigot.yml
 - bungeecord:  
